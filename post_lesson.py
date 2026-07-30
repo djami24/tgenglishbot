@@ -17,6 +17,7 @@ Kerakli muhit o'zgaruvchilari (GitHub Secrets orqali beriladi):
 """
 
 import html
+import json
 import os
 import sys
 import random
@@ -30,6 +31,47 @@ TELEGRAM_CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
 
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.6-flash")
 CHANNEL_LINK = "https://t.me/djami_teacher"
+
+# Har bir turkum (grammar/vocab/fact/tip) bo'yicha oxirgi marta ishlatilgan
+# mavzularni shu faylda saqlaymiz, shunda bir xil mavzu ketma-ket yoki tez-tez
+# takrorlanmaydi. Workflow bu faylni har run'dan keyin repoga commit qiladi.
+USED_TOPICS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "used_topics.json")
+
+
+def _load_used_topics() -> dict:
+    try:
+        with open(USED_TOPICS_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+def _save_used_topics(data: dict) -> None:
+    with open(USED_TOPICS_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def choose_topic(category: str, topics: list) -> str:
+    """Shu turkum uchun hali ishlatilmagan mavzuni tanlaydi. Barcha mavzular
+    bir marta ishlatib bo'lingach, ro'yxat qaytadan boshidan boshlanadi
+    (lekin darhol oldingi mavzu bilan bir xil bo'lmaydi, agar boshqa variant
+    mavjud bo'lsa)."""
+    state = _load_used_topics()
+    used = state.get(category, [])
+
+    available = [t for t in topics if t not in used]
+    if not available:
+        # Barcha mavzular ishlatilgan - ro'yxatni yangilaymiz, lekin
+        # oxirgi ishlatilgan mavzuni birinchi urinishda tanlamaslikka harakat qilamiz
+        last_used = used[-1] if used else None
+        available = [t for t in topics if t != last_used] or list(topics)
+        used = []
+
+    topic = random.choice(available)
+    used.append(topic)
+    state[category] = used
+    _save_used_topics(state)
+    return topic
 
 # ---------------------------------------------------------------------------
 # Kunlik aylanish tartibi: grammar -> lugat -> fakt -> grammar -> tip
@@ -165,7 +207,7 @@ Umumiy uzunlik 600-1000 belgidan oshmasin."""
 def generate_post() -> str:
     category = pick_category()
     info = CATEGORY_INFO[category]
-    topic = random.choice(info["topics"])
+    topic = choose_topic(category, info["topics"])
     prompt = PROMPT_TEMPLATE.format(topic=topic, instruction=info["instruction"])
 
     url = (
@@ -209,8 +251,8 @@ def build_html_message(raw_text: str) -> str:
     escaped_rest = html.escape(rest)
 
     body = f"<b>{escaped_title}</b>\n{escaped_rest}"
-    body += "\n\nShare\n📢 @djami_teacher"
     body += "\n\n<i>AI</i>"
+    body += "\n\nShare\n@djami_teacher"
     return body
 
 
