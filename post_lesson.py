@@ -41,8 +41,12 @@ TOPICS = [
 PROMPT_TEMPLATE = """Sen tajribali ingliz tili o'qituvchisisan. Telegram kanali uchun
 qisqa va foydali ingliz tili darsi tayyorla. Mavzu: {topic}.
 
-Format (Telegram HTML uchun, faqat <b>, <i>, <code> teglaridan foydalan):
-1. Qiziqarli sarlavha (emoji bilan)
+MUHIM: Javobda HECH QANDAY HTML yoki Markdown belgisi ishlatma (masalan <b>, <i>, **, __, #
+kabi belgilar butunlay taqiqlangan). Faqat oddiy matn, emoji va qator ko'chirish (enter)
+dan foydalan.
+
+Format:
+1. Qiziqarli sarlavha (emoji bilan, hech qanday teg yoki yulduzchasiz)
 2. Qisqacha tushuntirish (o'zbek tilida, 2-4 gap)
 3. Kamida 3 ta misol jumla (ingliz tili + o'zbekcha tarjimasi)
 4. Oxirida qisqa maslahat yoki eslatma
@@ -75,11 +79,15 @@ def generate_lesson() -> str:
 
 
 def send_to_telegram(text: str) -> None:
+    # Ehtiyot chorasi: agar model baribir < yoki > belgi qo'shib qo'ysa,
+    # ularni olib tashlaymiz, shunda Telegram hech qachon uni teg deb
+    # o'ylab, matnni kesib tashlamaydi.
+    safe_text = text.replace("<", "").replace(">", "")
+
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
     payload = {
         "chat_id": TELEGRAM_CHAT_ID,
-        "text": text,
-        "parse_mode": "HTML",
+        "text": safe_text,
         "disable_web_page_preview": True,
     }
     resp = requests.post(url, json=payload, timeout=30)
