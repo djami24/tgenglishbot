@@ -2,22 +2,32 @@ name: Ingliz tili postini Telegramga yuborish
 
 on:
   schedule:
-    # Vaqtlar UTC bo'yicha. Toshkent = UTC+5.
-    # Har bir vaqt post_lesson.py'dagi SCHEDULE_BY_HOUR bilan mos:
-    # 02:00 UTC -> 07:00 Toshkent -> Grammar
-    # 06:00 UTC -> 11:00 Toshkent -> Lug'at (vocab)
-    # 09:00 UTC -> 14:00 Toshkent -> Qiziqarli fakt
-    # 12:00 UTC -> 17:00 Toshkent -> Grammar
-    # 15:00 UTC -> 20:00 Toshkent -> Tip
-    - cron: '0 2 * * *'
+    # Vaqtlar UTC bo'yicha. Toshkent = UTC+5 (DST yo'q).
+    # Har kuni 09:00 dan 18:00 gacha (Toshkent), har soatda 1 marta, jami 10 marta.
+    # 04:00 UTC -> 09:00 Toshkent
+    # 05:00 UTC -> 10:00 Toshkent
+    # 06:00 UTC -> 11:00 Toshkent
+    # 07:00 UTC -> 12:00 Toshkent
+    # 08:00 UTC -> 13:00 Toshkent
+    # 09:00 UTC -> 14:00 Toshkent
+    # 10:00 UTC -> 15:00 Toshkent
+    # 11:00 UTC -> 16:00 Toshkent
+    # 12:00 UTC -> 17:00 Toshkent
+    # 13:00 UTC -> 18:00 Toshkent
+    - cron: '0 4 * * *'
+    - cron: '0 5 * * *'
     - cron: '0 6 * * *'
+    - cron: '0 7 * * *'
+    - cron: '0 8 * * *'
     - cron: '0 9 * * *'
+    - cron: '0 10 * * *'
+    - cron: '0 11 * * *'
     - cron: '0 12 * * *'
-    - cron: '0 15 * * *'
+    - cron: '0 13 * * *'
   workflow_dispatch:
     inputs:
       category:
-        description: "Majburiy turkum (bo'sh qoldirsangiz vaqtga qarab avtomatik tanlanadi)"
+        description: "Majburiy turkum (bo'sh qoldirsangiz navbat bo'yicha avtomatik tanlanadi)"
         required: false
         type: choice
         options:
@@ -25,7 +35,16 @@ on:
           - grammar
           - vocab
           - fact
-          - tip
+          - advanced_grammar
+          - ielts_tips
+          - beginner_grammar
+          - synonyms
+          - listening_tips
+          - reading_tips
+          - cefr_tips
+          - motivational_quotes
+          - grammar_tests
+          - topic_vocab
 
 permissions:
   contents: write
