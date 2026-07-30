@@ -1,5 +1,5 @@
 {
-  "category_index": 4,
+  "category_index": 5,
   "topics": {
     "grammar": [
       "ingliz tilida shart gaplar (conditionals)"
@@ -12,6 +12,9 @@
     ],
     "advanced_grammar": [
       "shart gaplarning aralash turlari (mixed conditionals)"
+    ],
+    "ielts_tips": [
+      "IELTS General Training haqida umumiy strategiya"
     ]
   }
 }
