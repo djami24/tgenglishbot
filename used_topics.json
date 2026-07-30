@@ -1,11 +1,14 @@
 {
-  "category_index": 2,
+  "category_index": 3,
   "topics": {
     "grammar": [
       "ingliz tilida shart gaplar (conditionals)"
     ],
     "vocab": [
       "ish joyida ishlatiladigan so'zlar"
+    ],
+    "fact": [
+      "ingliz tilida ko'p ma'noli so'zlar haqida qiziqarli fakt"
     ]
   }
 }
