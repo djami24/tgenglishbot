@@ -1,15 +1,31 @@
-name: Ingliz tili darsini Telegramga yuborish
+name: Ingliz tili postini Telegramga yuborish
 
 on:
   schedule:
     # Vaqtlar UTC bo'yicha. Toshkent = UTC+5.
-    # 02:00 UTC -> 07:00 Toshkent
-    # 09:00 UTC -> 14:00 Toshkent
-    # 15:00 UTC -> 20:00 Toshkent
+    # Har bir vaqt post_lesson.py'dagi SCHEDULE_BY_HOUR bilan mos:
+    # 02:00 UTC -> 07:00 Toshkent -> Grammar
+    # 06:00 UTC -> 11:00 Toshkent -> Lug'at (vocab)
+    # 09:00 UTC -> 14:00 Toshkent -> Qiziqarli fakt
+    # 12:00 UTC -> 17:00 Toshkent -> Grammar
+    # 15:00 UTC -> 20:00 Toshkent -> Tip
     - cron: '0 2 * * *'
+    - cron: '0 6 * * *'
     - cron: '0 9 * * *'
+    - cron: '0 12 * * *'
     - cron: '0 15 * * *'
-  workflow_dispatch: {}   # "Run workflow" tugmasi orqali qo'lda ham ishga tushirish mumkin
+  workflow_dispatch:
+    inputs:
+      category:
+        description: "Majburiy turkum (bo'sh qoldirsangiz vaqtga qarab avtomatik tanlanadi)"
+        required: false
+        type: choice
+        options:
+          - ''
+          - grammar
+          - vocab
+          - fact
+          - tip
 
 jobs:
   post:
@@ -26,9 +42,10 @@ jobs:
       - name: Kutubxonalarni o'rnatish
         run: pip install -r requirements.txt
 
-      - name: Darsni generatsiya qilib yuborish
+      - name: Postni generatsiya qilib yuborish
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          POST_CATEGORY: ${{ github.event.inputs.category }}
         run: python post_lesson.py
