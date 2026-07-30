@@ -65,7 +65,11 @@ def generate_lesson() -> str:
     )
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"temperature": 0.9, "maxOutputTokens": 500},
+        "generationConfig": {
+            "temperature": 0.9,
+            "maxOutputTokens": 1024,
+            "thinkingConfig": {"thinkingBudget": 0},
+        },
     }
 
     resp = requests.post(url, json=payload, timeout=30)
@@ -73,7 +77,11 @@ def generate_lesson() -> str:
     data = resp.json()
 
     try:
-        return data["candidates"][0]["content"]["parts"][0]["text"].strip()
+        candidate = data["candidates"][0]
+        finish_reason = candidate.get("finishReason")
+        if finish_reason and finish_reason not in ("STOP",):
+            print(f"Ogohlantirish: finishReason={finish_reason} (matn to'liq bo'lmasligi mumkin)")
+        return candidate["content"]["parts"][0]["text"].strip()
     except (KeyError, IndexError) as e:
         raise RuntimeError(f"Gemini javobi kutilmagan formatda: {data}") from e
 
