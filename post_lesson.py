@@ -497,8 +497,8 @@ def build_html_message(raw_text: str) -> str:
     sanitized_rest = sanitize_telegram_html(rest)
 
     body = f"<b>{sanitized_title}</b>\n\n{sanitized_rest}"
-    body += "\n\n<i>🤖 AI tomonidan tayyorlandi</i>"
-    body += "\n\n📢 Ulashing: @djami_teacher"
+    body += "\n\n<i> Ai </i>"
+    body += "\n\n Ulashing: @djami_teacher"
     return body
 
 
