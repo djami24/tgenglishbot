@@ -1,5 +1,5 @@
 {
-  "category_index": 12,
+  "category_index": 0,
   "topics": {
     "grammar": [
       "ingliz tilida shart gaplar (conditionals)"
@@ -36,6 +36,9 @@
     ],
     "grammar_tests": [
       "Past Simple bo'yicha test"
+    ],
+    "topic_vocab": [
+      "tabiat va atrof-muhit mavzusidagi lug'at"
     ]
   }
 }
