@@ -1,5 +1,5 @@
 {
-  "category_index": 10,
+  "category_index": 11,
   "topics": {
     "grammar": [
       "ingliz tilida shart gaplar (conditionals)"
@@ -30,6 +30,9 @@
     ],
     "cefr_tips": [
       "B1 darajani mustahkamlash yo'llari"
+    ],
+    "motivational_quotes": [
+      "til o'rganishda intizom va izchillik"
     ]
   }
 }
