@@ -1,5 +1,5 @@
 {
-  "category_index": 11,
+  "category_index": 12,
   "topics": {
     "grammar": [
       "ingliz tilida shart gaplar (conditionals)"
@@ -33,6 +33,9 @@
     ],
     "motivational_quotes": [
       "til o'rganishda intizom va izchillik"
+    ],
+    "grammar_tests": [
+      "Past Simple bo'yicha test"
     ]
   }
 }
