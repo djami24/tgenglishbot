@@ -3,9 +3,11 @@ name: Ingliz tili postini Telegramga yuborish
 on:
   schedule:
     # Vaqtlar UTC bo'yicha. Toshkent = UTC+5 (DST yo'q).
-    # Har kuni 09:00 dan 18:30 gacha (Toshkent), har YARIM SOATDA 1 marta,
-    # jami 20 marta (04:00-13:30 UTC oralig'ida, har :00 va :30 daqiqada).
-    - cron: '0,30 4-13 * * *'
+    # Har kuni 09:00 dan 22:00 gacha (Toshkent), har YARIM SOATDA 1 marta,
+    # jami 27 marta (04:00-16:30 UTC oralig'ida har :00/:30 daqiqada,
+    # so'ngra 17:00 UTC = 22:00 Toshkentda oxirgi post).
+    - cron: '0,30 4-16 * * *'
+    - cron: '0 17 * * *'
   workflow_dispatch:
     inputs:
       category:
