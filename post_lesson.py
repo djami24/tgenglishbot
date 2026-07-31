@@ -2,8 +2,8 @@
 Ingliz tili (General English / IELTS General) postini Google Gemini orqali
 generatsiya qilib, Telegram kanaliga avtomatik yuboradi.
 
-Har kuni 09:00 dan 18:00 gacha (Toshkent vaqti), har soatda 1 marta,
-jami 10 marta post yuboradi. Turkumlar CATEGORY_ORDER ro'yxatidagi tartibda
+Har kuni 09:00 dan 22:00 gacha (Toshkent vaqti), har YARIM SOATDA 1 marta,
+jami 27 marta post yuboradi. Turkumlar CATEGORY_ORDER ro'yxatidagi tartibda
 ketma-ket aylanib turadi (kunlar chegarasiga bog'liq emas, doim davom etadi):
 
   1) Grammar              8)  Listening tips
@@ -396,14 +396,24 @@ to'plami. Format:
 }
 
 PROMPT_TEMPLATE = """Sen tajribali ingliz tili o'qituvchisisan. Telegram kanali uchun
-qisqa va foydali post tayyorla. Mavzu: {topic}.
+chiroyli, tartibli va o'qishga oson post tayyorla. Mavzu: {topic}.
 
-MUHIM: Javobda HECH QANDAY HTML yoki Markdown belgisi ishlatma (masalan <b>, <i>, **, __, #
-kabi belgilar butunlay taqiqlangan). Faqat oddiy matn, emoji va qator ko'chirish (enter)
-dan foydalan.
+FORMATLASH QOIDALARI (Telegram HTML):
+- Faqat quyidagi ikkita tegdan foydalanishga ruxsat bor: <b>...</b> (qalin) va
+  <i>...</i> (kursiv). Boshqa HECH QANDAY HTML yoki Markdown belgisi ishlatma
+  (masalan <u>, <code>, <ul>, **, __, # kabi belgilar butunlay taqiqlangan).
+- Har bir asosiy qism/band boshida mazmuniga mos 1 ta emoji qo'y (masalan 📌, 💡,
+  ✅, 📖, 🔤, ❗, 🗣️, 📝), lekin haddan tashqari ko'p ishlatma - qatorda bittadan
+  yetarli va o'rinli bo'lsin.
+- Yangi lug'at so'zi, grammatik qoida nomi, muhim ibora yoki misol jumlaning
+  kalit qismini <b>qalin</b> qilib ajratib ko'rsat. Butun paragrafni yoki uzun
+  jumlani qalin qilib yubormang - faqat aynan muhim so'z/ibora qalin bo'lsin.
+- Matn tartibli va bo'sh joylar bilan nafas oladigan bo'lsin: har bir band yoki
+  fikr orasida bo'sh qator qoldir, ro'yxat elementlari alohida qatorlarda bo'lsin.
 
-MUHIM: Javobning birinchi qatori albatta postning SARLAVHASI bo'lsin (emoji bilan),
-ikkinchi qatordan boshlab qolgan matn kelsin.
+MUHIM: Javobning birinchi qatori albatta postning SARLAVHASI bo'lsin (boshida mos
+emoji bilan, kerak bo'lsa sarlavhaning kalit so'zini <b>qalin</b> qilib), ikkinchi
+qatordan boshlab bo'sh qator va qolgan matn kelsin.
 
 {instruction}
 
@@ -448,21 +458,47 @@ def generate_post() -> tuple[str, dict]:
     return text, state
 
 
+ALLOWED_TAGS = ("b", "i")
+
+
+def sanitize_telegram_html(text: str) -> str:
+    """Matndagi HAMMA HTML belgilarini avval escape qiladi (xavfsizlik uchun),
+    so'ng FAQAT ruxsat etilgan <b> va <i> teglarini asl holiga qaytaradi.
+    Shu tariqa model tasodifan boshqa/singan teg yozib qo'ysa ham (yoki < > kabi
+    oddiy belgi chiqsa ham), Telegram API xatolik bermaydi va faqat qalin/kursiv
+    formatlash ishlaydi."""
+    escaped = html.escape(text)
+    for tag in ALLOWED_TAGS:
+        escaped = escaped.replace(f"&lt;{tag}&gt;", f"<{tag}>")
+        escaped = escaped.replace(f"&lt;/{tag}&gt;", f"</{tag}>")
+    return escaped
+
+
+def strip_allowed_tags(text: str) -> str:
+    """Ruxsat etilgan teglarni matndan olib tashlaydi (masalan sarlavhani
+    yagona <b>...</b> bilan o'rash uchun, model o'zi allaqachon qalin
+    qilgan bo'lsa ham ikki marta ichma-ich bo'lib qolmasligi uchun)."""
+    for tag in ALLOWED_TAGS:
+        text = text.replace(f"<{tag}>", "").replace(f"</{tag}>", "")
+    return text
+
+
 def build_html_message(raw_text: str) -> str:
-    """Sarlavhani (birinchi qator) qalin qilib, qolgan matnni xavfsiz
-    HTML formatga o'giradi. Model matnida tasodifan < yoki > belgisi
-    chiqib qolsa ham, html.escape orqali bu Telegram teglariga
-    aralashib ketmaydi."""
+    """Sarlavhani (birinchi qator) yagona <b>...</b> bilan qalin qilib,
+    qolgan matndagi model qo'ygan <b>/<i> formatlashni saqlab qoladi.
+    Boshqa har qanday HTML/belgi xavfsiz tarzda escape qilinadi, shuning
+    uchun Telegram API "can't parse entities" xatosi bermaydi."""
     lines = raw_text.split("\n", 1)
     title = lines[0].strip()
-    rest = lines[1] if len(lines) > 1 else ""
+    rest = lines[1].strip("\n") if len(lines) > 1 else ""
 
-    escaped_title = html.escape(title)
-    escaped_rest = html.escape(rest)
+    clean_title = strip_allowed_tags(title)
+    sanitized_title = html.escape(clean_title)
+    sanitized_rest = sanitize_telegram_html(rest)
 
-    body = f"<b>{escaped_title}</b>\n{escaped_rest}"
-    body += "\n\n<i>AI</i>"
-    body += "\n\nShare\n@djami_teacher"
+    body = f"<b>{sanitized_title}</b>\n\n{sanitized_rest}"
+    body += "\n\n<i>🤖 AI tomonidan tayyorlandi</i>"
+    body += "\n\n📢 Ulashing: @djami_teacher"
     return body
 
 
