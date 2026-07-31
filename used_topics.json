@@ -1,5 +1,5 @@
 {
-  "category_index": 8,
+  "category_index": 9,
   "topics": {
     "grammar": [
       "ingliz tilida shart gaplar (conditionals)"
@@ -24,6 +24,9 @@
     ],
     "listening_tips": [
       "native speaker nutqini tushunish mashqi"
+    ],
+    "reading_tips": [
+      "True / False / Not Given savollariga strategiya"
     ]
   }
 }
