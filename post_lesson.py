@@ -411,6 +411,9 @@ FORMATLASH QOIDALARI (Telegram HTML):
 - Matn tartibli va bo'sh joylar bilan nafas oladigan bo'lsin: har bir band yoki
   fikr orasida bo'sh qator qoldir, ro'yxat elementlari alohida qatorlarda bo'lsin.
 
+MUHIM: Standart adabiy o'zbek tilida, IMLO VA GRAMMATIK XATOLARSIZ yoz. So'zlarni
+yarim qoldirma, gaplarni oxirigacha tugalla, bir xil fikrni ikki marta takrorlama.
+
 MUHIM: Javobning birinchi qatori albatta postning SARLAVHASI bo'lsin (boshida mos
 emoji bilan, kerak bo'lsa sarlavhaning kalit so'zini <b>qalin</b> qilib), ikkinchi
 qatordan boshlab bo'sh qator va qolgan matn kelsin.
@@ -418,7 +421,38 @@ qatordan boshlab bo'sh qator va qolgan matn kelsin.
 {instruction}
 
 Javobni FAQAT tayyor post matni sifatida qaytar, boshqa hech qanday izoh qo'shma.
-Umumiy uzunlik 600-1000 belgidan oshmasin."""
+Umumiy uzunlik 600-1000 belgidan oshmasin va javob albatta to'liq gap bilan tugasin."""
+
+
+def _call_gemini(prompt: str, max_output_tokens: int = 2048) -> tuple[str, str | None]:
+    """Gemini'ga so'rov yuboradi va (matn, finish_reason) qaytaradi."""
+    url = (
+        f"https://generativelanguage.googleapis.com/v1beta/models/"
+        f"{GEMINI_MODEL}:generateContent?key={GEMINI_API_KEY}"
+    )
+    payload = {
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {
+            # Pastroq temperatura - imlo/grammatikada tasodifiy xatolar
+            # va chalkash so'zlarni kamaytiradi, shu bilan birga matn
+            # hamon xilma-xil va qiziqarli chiqadi.
+            "temperature": 0.6,
+            "maxOutputTokens": max_output_tokens,
+        },
+    }
+
+    resp = requests.post(url, json=payload, timeout=30)
+    resp.raise_for_status()
+    data = resp.json()
+
+    try:
+        candidate = data["candidates"][0]
+        finish_reason = candidate.get("finishReason")
+        text = candidate["content"]["parts"][0]["text"].strip()
+    except (KeyError, IndexError) as e:
+        raise RuntimeError(f"Gemini javobi kutilmagan formatda: {data}") from e
+
+    return text, finish_reason
 
 
 def generate_post() -> tuple[str, dict]:
@@ -430,30 +464,18 @@ def generate_post() -> tuple[str, dict]:
 
     prompt = PROMPT_TEMPLATE.format(topic=topic, instruction=info["instruction"])
 
-    url = (
-        f"https://generativelanguage.googleapis.com/v1beta/models/"
-        f"{GEMINI_MODEL}:generateContent?key={GEMINI_API_KEY}"
-    )
-    payload = {
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {
-            "temperature": 0.9,
-            "maxOutputTokens": 2048,
-        },
-    }
+    # Javob token limitiga yetib o'rtada kesilib qolsa (masalan so'z yarim
+    # qoldirilsa), buni "MAX_TOKENS" finishReason orqali aniqlaymiz va
+    # kattaroq token limiti bilan qayta so'raymiz - shunda kesilgan/yarim
+    # so'zli post Telegramga yuborilmaydi.
+    text, finish_reason = _call_gemini(prompt, max_output_tokens=2048)
+    attempts = 1
+    while finish_reason == "MAX_TOKENS" and attempts < 3:
+        attempts += 1
+        text, finish_reason = _call_gemini(prompt, max_output_tokens=2048 + 1024 * (attempts - 1))
 
-    resp = requests.post(url, json=payload, timeout=30)
-    resp.raise_for_status()
-    data = resp.json()
-
-    try:
-        candidate = data["candidates"][0]
-        finish_reason = candidate.get("finishReason")
-        if finish_reason and finish_reason not in ("STOP",):
-            print(f"Ogohlantirish: finishReason={finish_reason} (matn to'liq bo'lmasligi mumkin)")
-        text = candidate["content"]["parts"][0]["text"].strip()
-    except (KeyError, IndexError) as e:
-        raise RuntimeError(f"Gemini javobi kutilmagan formatda: {data}") from e
+    if finish_reason and finish_reason not in ("STOP",):
+        print(f"Ogohlantirish: finishReason={finish_reason} (matn to'liq bo'lmasligi mumkin)")
 
     return text, state
 
@@ -497,8 +519,8 @@ def build_html_message(raw_text: str) -> str:
     sanitized_rest = sanitize_telegram_html(rest)
 
     body = f"<b>{sanitized_title}</b>\n\n{sanitized_rest}"
-    body += "\n\n<i> Ai </i>"
-    body += "\n\n Ulashing: @djami_teacher"
+    body += "\n\n<i>🤖 AI tomonidan tayyorlandi</i>"
+    body += "\n\n📢 Ulashing: @djami_teacher"
     return body
 
 
