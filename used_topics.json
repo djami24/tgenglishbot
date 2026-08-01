@@ -1,5 +1,5 @@
 {
-  "category_index": 11,
+  "category_index": 12,
   "topics": {
     "grammar": [
       "ingliz tilida shart gaplar (conditionals)",
@@ -46,7 +46,8 @@
       "ingliz tilini o'rganishda motivatsiyani yo'qotmaslik"
     ],
     "grammar_tests": [
-      "Past Simple bo'yicha test"
+      "Past Simple bo'yicha test",
+      "modal fe'llar bo'yicha test"
     ],
     "topic_vocab": [
       "tabiat va atrof-muhit mavzusidagi lug'at"
