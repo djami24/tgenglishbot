@@ -1,4 +1,13 @@
 {
-  "topics": {},
-  "grammar_daily": {}
+  "topics": {
+    "grammar_daily_topic": [
+      "Passive reporting structures (It is said that..., He is known to...)"
+    ]
+  },
+  "grammar_daily": {
+    "date": "2026-08-03",
+    "topic": "Passive reporting structures (It is said that..., He is known to...)",
+    "part": 1,
+    "video_url": "https://www.youtube.com/watch?v=MpsrdpUKOTA"
+  }
 }
