@@ -1,4 +1,13 @@
 {
-  "topics": {},
-  "grammar_daily": {}
+  "topics": {
+    "grammar_daily_topic": [
+      "Reported speech - buyruq, iltimos va savollarni ko'chirish"
+    ]
+  },
+  "grammar_daily": {
+    "date": "2026-08-03",
+    "topic": "Reported speech - buyruq, iltimos va savollarni ko'chirish",
+    "part": 1,
+    "video_url": "https://www.youtube.com/watch?v=eplQBhE0-Hg"
+  }
 }
