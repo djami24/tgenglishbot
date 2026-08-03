@@ -4,19 +4,14 @@ on:
   schedule:
     # Barcha vaqtlar UTC bo'yicha. Toshkent = UTC+5 (DST yo'q).
 
-    # 1) UMUMIY AYLANMA (grammar, vocab, fact, ielts_tips, beginner_grammar,
-    #    synonyms, listening_tips, reading_tips, cefr_tips,
-    #    motivational_quotes, grammar_tests) - har 30 daqiqada, 48 post/kun.
-    - cron: '0,30 * * * *'
-
-    # 2) MAVZUGA OID LUG'AT (topic_vocab) - kuniga 2 marta: 09:00 va 19:00
-    #    Toshkent vaqti (= 04:00 va 14:00 UTC).
+    # MAVZUGA OID LUG'AT (topic_vocab) - kuniga 2 marta: 09:00 va 19:00
+    # Toshkent vaqti (= 04:00 va 14:00 UTC).
     - cron: '0 4 * * *'
     - cron: '0 14 * * *'
 
-    # 3) KUNLIK GRAMMAR SERIYASI (advanced_grammar) - kuniga 5 marta:
-    #    08:00, 11:00, 14:00, 17:00, 20:00 Toshkent vaqti
-    #    (= 03:00, 06:00, 09:00, 12:00, 15:00 UTC).
+    # KUNLIK GRAMMAR SERIYASI (grammar) - kuniga 5 marta:
+    # 08:00, 11:00, 14:00, 17:00, 20:00 Toshkent vaqti
+    # (= 03:00, 06:00, 09:00, 12:00, 15:00 UTC).
     - cron: '0 3 * * *'
     - cron: '0 6 * * *'
     - cron: '0 9 * * *'
@@ -25,23 +20,12 @@ on:
   workflow_dispatch:
     inputs:
       category:
-        description: "Majburiy turkum (bo'sh qoldirsangiz navbat bo'yicha avtomatik tanlanadi)"
+        description: "Majburiy turkum (bo'sh qoldirsangiz grammar deb olinadi)"
         required: false
         type: choice
         options:
           - ''
           - grammar
-          - vocab
-          - fact
-          - advanced_grammar
-          - ielts_tips
-          - beginner_grammar
-          - synonyms
-          - listening_tips
-          - reading_tips
-          - cefr_tips
-          - motivational_quotes
-          - grammar_tests
           - topic_vocab
 
 permissions:
@@ -69,13 +53,12 @@ jobs:
             "0 4 * * *"|"0 14 * * *")
               echo "value=topic_vocab" >> "$GITHUB_OUTPUT" ;;
             "0 3 * * *"|"0 6 * * *"|"0 9 * * *"|"0 12 * * *"|"0 15 * * *")
-              echo "value=advanced_grammar" >> "$GITHUB_OUTPUT" ;;
+              echo "value=grammar" >> "$GITHUB_OUTPUT" ;;
             *)
-              # Umumiy aylanma (30 daqiqalik cron) yoki qo'lda ishga
-              # tushirilgan run - agar workflow_dispatch orqali turkum
-              # tanlangan bo'lsa o'shani, aks holda navbat bo'yicha
-              # avtomatik tanlanadi (POST_CATEGORY bo'sh qoladi).
-              echo "value=${{ github.event.inputs.category }}" >> "$GITHUB_OUTPUT" ;;
+              # Qo'lda ishga tushirilgan run (workflow_dispatch) - agar
+              # turkum tanlangan bo'lsa o'shani, aks holda "grammar".
+              cat="${{ github.event.inputs.category }}"
+              echo "value=${cat:-grammar}" >> "$GITHUB_OUTPUT" ;;
           esac
 
       - name: Postni generatsiya qilib yuborish
