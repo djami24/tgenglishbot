@@ -1,26 +1,26 @@
 """
-Ingliz tili (General English / IELTS General) postini Google Gemini orqali
-generatsiya qilib, Telegram kanaliga avtomatik yuboradi.
+Ingliz tili (IELTS Speaking Vocabulary + Grammar) postini Google Gemini
+orqali generatsiya qilib, Telegram kanaliga avtomatik yuboradi.
 
-Postlar workflow (.github/workflows/post_lesson.yml) da belgilangan cron
-jadvali bo'yicha yuboriladi, uchta qatlamdan iborat:
+Bot FAQAT ikkita turkumda post qiladi:
 
-  1) MAVZUGA OID LUG'AT (topic_vocab) - kuniga 2 marta, har safar 50 ta IELTS
-     Speaking mavzusidan (TOPIC_VOCAB_TOPICS) navbatdagi mavzu bo'yicha 10 ta
-     so'z post qilinadi. 50 tasi tugamaguncha bironta mavzu takrorlanmaydi.
-  2) KUNLIK GRAMMAR SERIYASI (advanced_grammar) - kuniga 5 marta. Har kuni
+  1) MAVZUGA OID LUG'AT (topic_vocab) - kuniga 2 marta, har safar 50 ta
+     IELTS Speaking mavzusidan (TOPIC_VOCAB_TOPICS) navbatdagi mavzu
+     bo'yicha 10 ta so'z post qilinadi. 50 tasi tugamaguncha bironta mavzu
+     takrorlanmaydi, tugagach qaytadan boshidan aylanadi.
+  2) KUNLIK GRAMMAR SERIYASI (grammar) - kuniga 5 marta. Har kuni
      GRAMMAR_DAILY_TOPICS ro'yxatidan BITTA yangi mavzu tanlanadi va o'sha
      kun davomida 5 ta postga bo'linadi: umumiy tushuncha -> darak gap ->
      inkor gap -> so'roq gap -> amaliyot/xato tahlili. Ertasi kuni yangi
      mavzuga o'tiladi, 21 tasi tugamaguncha takrorlanmaydi.
-  3) QOLGAN TURKUMLAR (CATEGORY_ORDER) - tezroq aylanma orqali (har 30
-     daqiqada) ketma-ket almashib turadi: grammar, vocab, fact, ielts_tips,
-     beginner_grammar, synonyms, listening_tips, reading_tips, cefr_tips,
-     motivational_quotes, grammar_tests.
 
-Joriy holat (navbat, kunlik grammar mavzusi/qismi va har turkumda qaysi
-mavzular ishlatilgani) used_topics.json faylida saqlanadi. Workflow har
-run'dan keyin bu faylni repoga commit qiladi, shuning uchun tartib va
+Qaysi run qaysi turkumni post qilishini .github/workflows/post_lesson.yml
+dagi cron jadvali (va shu jadvalga mos POST_CATEGORY muhit o'zgaruvchisi)
+belgilaydi.
+
+Joriy holat (kunlik grammar mavzusi/qismi va har turkumda qaysi mavzular
+ishlatilgani) used_topics.json faylida saqlanadi. Workflow har run'dan
+keyin bu faylni repoga commit qiladi, shuning uchun tartib va
 takrorlanmaslik run'lar orasida buzilmaydi.
 
 Kerakli muhit o'zgaruvchilari (GitHub Secrets orqali beriladi):
@@ -45,6 +45,7 @@ TASHKENT_TZ = timezone(timedelta(hours=5))
 def _tashkent_today() -> str:
     return datetime.now(TASHKENT_TZ).date().isoformat()
 
+
 GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
 TELEGRAM_BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 TELEGRAM_CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
@@ -53,9 +54,9 @@ GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.6-flash")
 CHANNEL_LINK = "https://t.me/djami_teacher"
 
 # ---------------------------------------------------------------------------
-# Holatni saqlash: qaysi turkum navbati (category_index) va har bir turkumda
-# qaysi mavzular allaqachon ishlatilgani (topics). Workflow bu faylni har
-# run'dan keyin repoga commit qiladi.
+# Holatni saqlash: kunlik grammar mavzusi/qismi va har turkumda qaysi
+# mavzular allaqachon ishlatilgani (topics). Workflow bu faylni har run'dan
+# keyin repoga commit qiladi.
 # ---------------------------------------------------------------------------
 STATE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "used_topics.json")
 
@@ -66,57 +67,14 @@ def _load_state() -> dict:
             data = json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
         data = {}
-    data.setdefault("category_index", 0)
     data.setdefault("topics", {})
+    data.setdefault("grammar_daily", {})
     return data
 
 
 def _save_state(state: dict) -> None:
     with open(STATE_FILE, "w", encoding="utf-8") as f:
         json.dump(state, f, ensure_ascii=False, indent=2)
-
-
-# ---------------------------------------------------------------------------
-# Turkumlar tartibi - foydalanuvchi belgilagan ketma-ketlik. Har run'da
-# navbatdagi turkum tanlanadi va ro'yxat oxiriga yetgach boshidan davom etadi.
-# ---------------------------------------------------------------------------
-CATEGORY_ORDER = [
-    "grammar",
-    "vocab",
-    "fact",
-    "ielts_tips",
-    "beginner_grammar",
-    "synonyms",
-    "listening_tips",
-    "reading_tips",
-    "cefr_tips",
-    "motivational_quotes",
-    "grammar_tests",
-]
-
-# ---------------------------------------------------------------------------
-# "advanced_grammar" va "topic_vocab" endi yuqoridagi umumiy aylanmada emas -
-# ular workflow'dagi alohida cron vaqtlarida ishga tushadi:
-#   - advanced_grammar: kuniga 5 marta (bitta mavzuni 5 qismga bo'lib)
-#   - topic_vocab:       kuniga 2 marta (har safar yangi mavzudan 10 so'z)
-# Bu ularni tasodifiy aylanma ichida "yo'qolib qolishidan" himoya qiladi va
-# aynan foydalanuvchi so'ragan chastotada (kuniga aniq son marta) ishlashini
-# kafolatlaydi.
-# ---------------------------------------------------------------------------
-
-
-def pick_category(state: dict) -> str:
-    override = os.environ.get("POST_CATEGORY")
-    if override:
-        return override
-    idx = state["category_index"] % len(CATEGORY_ORDER)
-    return CATEGORY_ORDER[idx]
-
-
-def advance_category_index(state: dict) -> None:
-    # Qo'lda POST_CATEGORY berilganda ham navbat davom etaversin (ketma-ketlik
-    # buzilmasin), shuning uchun override bo'lsa ham indexni oshiramiz.
-    state["category_index"] = (state["category_index"] + 1) % len(CATEGORY_ORDER)
 
 
 def choose_topic(state: dict, category: str, topics: list) -> str:
@@ -138,51 +96,14 @@ def choose_topic(state: dict, category: str, topics: list) -> str:
     return topic
 
 
-GRAMMAR_TOPICS = [
-    "foydali frazaviy fe'llar (phrasal verbs)",
-    "Present Simple va Present Continuous farqi",
-    "o'tgan zamon (Past Simple) qoidalari",
-    "kelasi zamon shakllari (will / going to)",
-    "modal fe'llar (can, could, must, should)",
-    "ingliz tilida taqqoslash darajalari (comparatives/superlatives)",
-    "kundalik hayotda ishlatiladigan qisqartmalar (contractions)",
-    "prepozitsiyalar (in, on, at) qo'llanilishi",
-    "ingliz tilida savol berish qoidalari",
-    "Present Perfect va Past Simple farqi",
-    "artikllar (a, an, the) qo'llanilishi",
-    "ingliz tilida shart gaplar (conditionals)",
-]
-
-VOCAB_TOPICS = [
-    "kundalik muloqotda ishlatiladigan idiomalar",
-    "sinonim so'zlar va ularning farqi",
-    "biznes ingliz tilida foydali iboralar",
-    "sayohat paytida kerak bo'ladigan iboralar",
-    "ish joyida ishlatiladigan so'zlar",
-    "his-tuyg'ularni ifodalovchi so'zlar",
-    "restoran va ovqatlanish bilan bog'liq lug'at",
-    "sog'liqni saqlash bilan bog'liq lug'at",
-    "texnologiya va internet bilan bog'liq so'zlar",
-    "kundalik hayotdagi phrasal verb'lar",
-]
-
-FACT_TOPICS = [
-    "ingliz tili tarixi haqida qiziqarli fakt",
-    "ingliz tilidagi eng qiziq so'zlar yoki iboralar",
-    "IELTS General Training imtihoni haqida foydali fakt",
-    "ingliz tilidagi eng qisqa yoki eng uzun so'zlar",
-    "ingliz tilida ko'p ma'noli so'zlar haqida qiziqarli fakt",
-    "IELTS Writing Task 1 (letter) haqida qiziqarli fakt",
-    "IELTS Speaking qismi haqida qiziqarli fakt",
-    "ingliz tili va boshqa tillar orasidagi qiziq o'xshashlik yoki farq",
-]
-
-# Har kuni shundan BITTA mavzu tanlanadi va o'sha kun davomida 5 ta postga
-# bo'lib beriladi (umumiy tushuncha / darak / inkor / so'roq / amaliyot).
-# Mavzu tugab, hammasi bir marta ishlatilgach, ro'yxat qaytadan boshidan
-# aylanadi (lekin darhol oldingi mavzu bilan bir xil bo'lmaydi).
+# ---------------------------------------------------------------------------
+# 1) KUNLIK GRAMMAR SERIYASI - har kuni shundan BITTA mavzu tanlanadi va
+#    o'sha kun davomida 5 ta postga bo'lib beriladi (umumiy tushuncha /
+#    darak / inkor / so'roq / amaliyot). Mavzu tugab, hammasi bir marta
+#    ishlatilgach, ro'yxat qaytadan boshidan aylanadi.
+# ---------------------------------------------------------------------------
 GRAMMAR_DAILY_TOPICS = [
-    "Present Perfect Continuous (hozirgача davom etayotgan harakatning davomiyligini ta'kidlash)",
+    "Present Perfect Continuous (hozirgacha davom etayotgan harakatning davomiyligini ta'kidlash)",
     "Past Perfect Continuous (o'tmishdagi boshqa harakatdan oldingi davomiylikni ta'kidlash)",
     "Future Continuous (kelajakda davom etayotgan harakatlar)",
     "Future Perfect (kelajakdagi ma'lum vaqtga qadar tugallanadigan harakatlar)",
@@ -250,91 +171,33 @@ bo'yicha AMALIYOT posti. Format:
    ko'rsating""",
 }
 
-IELTS_TIPS_TOPICS = [
-    "IELTS General Training haqida umumiy strategiya",
-    "IELTS imtihoniga ruhiy tayyorgarlik",
-    "IELTS Writing Task 2 uchun maslahat",
-    "IELTS Speaking Part 2 uchun maslahat",
-    "IELTS imtihonida vaqtni to'g'ri boshqarish",
-    "IELTS band ballarini oshirish uchun umumiy maslahat",
-    "IELTS imtihonida ko'p uchraydigan xatolar",
-    "IELTS Writing uchun linking words'dan foydalanish",
-]
 
-BEGINNER_GRAMMAR_TOPICS = [
-    "to be fe'li (am / is / are)",
-    "shaxs olmoshlari (I, you, he, she...)",
-    "ko'plik son qoidalari",
-    "oddiy hozirgi zamon (Present Simple) asoslari",
-    "there is / there are qurilmasi",
-    "oddiy savol va inkor gaplar tuzish",
-    "sonlar: sanoq son va tartib son",
-    "boshlang'ich daraja uchun asosiy prepozitsiyalar",
-]
+def _next_grammar_daily_part(state: dict) -> tuple[str, int]:
+    """Bugungi kun uchun grammar-of-the-day mavzusini va navbatdagi (1-5)
+    qismni aniqlaydi. Kun almashganda (yoki hali hech narsa tanlanmagan
+    bo'lsa) yangi mavzu tanlaydi va 1-qismdan boshlaydi; aks holda shu kunning
+    davomida navbatdagi qismga o'tadi. Agar bir kunda 5 martadan ortiq run
+    bo'lib qolsa (masalan workflow qayta ishga tushirilsa), 5-qism
+    (amaliyot posti) qaytaveradi - xato bermaydi."""
+    today = _tashkent_today()
+    gd = state.setdefault("grammar_daily", {})
 
-SYNONYMS_TOPICS = [
-    "\"good\" so'ziga sinonimlar",
-    "\"bad\" so'ziga sinonimlar",
-    "\"happy\" so'ziga sinonimlar",
-    "\"sad\" so'ziga sinonimlar",
-    "\"big\" so'ziga sinonimlar",
-    "\"small\" so'ziga sinonimlar",
-    "\"beautiful\" so'ziga sinonimlar",
-    "\"important\" so'ziga sinonimlar",
-    "\"difficult\" so'ziga sinonimlar",
-    "\"say\" fe'liga sinonimlar",
-    "\"look\" fe'liga sinonimlar",
-    "\"smart\" so'ziga sinonimlar",
-]
+    if gd.get("date") != today or "topic" not in gd:
+        topic = choose_topic(state, "grammar_daily_topic", GRAMMAR_DAILY_TOPICS)
+        gd["date"] = today
+        gd["topic"] = topic
+        gd["part"] = 1
+    else:
+        gd["part"] = min(gd.get("part", 0) + 1, 5)
 
-LISTENING_TIPS_TOPICS = [
-    "IELTS Listening'da raqamlarni to'g'ri yozib olish",
-    "listening paytida kalit so'zlarni aniqlash",
-    "listening qismida distractorlarga aldanmaslik",
-    "native speaker nutqini tushunish mashqi",
-    "listening ko'nikmasi uchun kundalik mashq rejasi",
-    "podkastlar orqali listening'ni oshirish",
-]
+    return gd["topic"], gd["part"]
 
-READING_TIPS_TOPICS = [
-    "skimming va scanning texnikalari",
-    "IELTS Reading'da vaqtni to'g'ri taqsimlash",
-    "noma'lum so'zlarni kontekstdan topish",
-    "True / False / Not Given savollariga strategiya",
-    "matnni tez va to'g'ri tushunish usullari",
-]
 
-CEFR_TIPS_TOPICS = [
-    "A1 darajadan A2 ga o'tish uchun maslahat",
-    "B1 darajani mustahkamlash yo'llari",
-    "B2 darajaga yetish uchun strategiya",
-    "C1 darajasida erkin gapirish maslahati",
-    "o'z CEFR darajangizni aniqlash usullari",
-    "har bir CEFR darajasida qaysi ko'nikmalarga e'tibor berish kerak",
-]
-
-MOTIVATIONAL_TOPICS = [
-    "ingliz tilini o'rganishda motivatsiyani yo'qotmaslik",
-    "kichik qadamlar bilan katta natijalarga erishish",
-    "til o'rganishda intizom va izchillik",
-    "xato qilishdan qo'rqmaslik kerakligi",
-    "har kungi kichik harakatlarning kuchi",
-    "o'z-o'zini rag'batlantirish usullari",
-]
-
-GRAMMAR_TESTS_TOPICS = [
-    "Present Simple va Present Continuous bo'yicha test",
-    "Past Simple bo'yicha test",
-    "modal fe'llar bo'yicha test",
-    "prepozitsiyalar bo'yicha test",
-    "artikllar (a, an, the) bo'yicha test",
-    "comparatives/superlatives bo'yicha test",
-    "Present Perfect bo'yicha test",
-]
-
-# IELTS Speaking uchun 50 ta mavzu - kuniga 2 marta, har safar navbatdagi
-# mavzudan 10 ta so'z post qilinadi. Barcha 50 tasi bir marta ishlatilmaguncha
-# takrorlanmaydi (choose_topic funksiyasi orqali).
+# ---------------------------------------------------------------------------
+# 2) IELTS SPEAKING LUG'ATI - kuniga 2 marta, har safar 50 ta mavzudan
+#    navbatdagi mavzu bo'yicha 10 ta so'z post qilinadi. Barcha 50 tasi bir
+#    marta ishlatilmaguncha takrorlanmaydi.
+# ---------------------------------------------------------------------------
 TOPIC_VOCAB_TOPICS = [
     "Family & Relationships (Oila va munosabatlar)",
     "Friends (Do'stlar)",
@@ -388,113 +251,7 @@ TOPIC_VOCAB_TOPICS = [
     "Future & Technology (Kelajak va texnologiyalar)",
 ]
 
-CATEGORY_INFO = {
-    "grammar": {
-        "topics": GRAMMAR_TOPICS,
-        "instruction": """Bu GRAMMAR (grammatika) darsi. Format:
-1. Qiziqarli sarlavha (emoji bilan)
-2. Qisqacha tushuntirish (o'zbek tilida, 2-4 gap)
-3. Kamida 3 ta misol jumla (ingliz tili + o'zbekcha tarjimasi)
-4. Oxirida qisqa maslahat yoki eslatma""",
-    },
-    "vocab": {
-        "topics": VOCAB_TOPICS,
-        "instruction": """Bu LUG'AT (vocabulary) posti. Format:
-1. Qiziqarli sarlavha (emoji bilan)
-2. Qisqacha kirish (o'zbek tilida, 1-2 gap)
-3. Kamida 5 ta foydali so'z/ibora, har biri uchun: ingliz tilida so'z/ibora,
-   o'zbekcha ma'nosi, va bitta misol jumla
-4. Oxirida qisqa maslahat""",
-    },
-    "fact": {
-        "topics": FACT_TOPICS,
-        "instruction": """Bu ingliz tili yoki IELTS General English haqida QIZIQARLI FAKT
-posti (mavzu boshqa umumiy bilimlarga emas, faqat ingliz tili/IELTS'ga oid bo'lsin). Format:
-1. Qiziqarli sarlavha (emoji bilan)
-2. Faktning o'zi (o'zbek tilida, 3-5 gap, qiziqarli va tushunarli qilib yoz)
-3. Agar mos bo'lsa, faktga bog'liq 1-2 ta ingliz tilidagi misol/so'z
-4. Oxirida qisqa xulosa yoki qiziqarli savol""",
-    },
-    "ielts_tips": {
-        "topics": IELTS_TIPS_TOPICS,
-        "instruction": """Bu umumiy IELTS TIPS (IELTS bo'yicha maslahat) posti. Format:
-1. Qiziqarli sarlavha (emoji bilan)
-2. Maslahatning o'zi (o'zbek tilida, 3-5 gap, amaliy va tushunarli qilib yoz)
-3. Kamida bitta amaliy misol yoki qadam
-4. Oxirida qisqa rag'batlantiruvchi jumla""",
-    },
-    "beginner_grammar": {
-        "topics": BEGINNER_GRAMMAR_TOPICS,
-        "instruction": """Bu GRAMMAR FOR BEGINNERS (boshlang'ich daraja, A1-A2) darsi.
-Format:
-1. Qiziqarli va sodda sarlavha (emoji bilan)
-2. Juda sodda va tushunarli tushuntirish (o'zbek tilida, 2-3 gap, murakkab
-   grammatik atamalardan qochib, sodda tilda tushuntir)
-3. Kamida 3 ta oddiy misol jumla (ingliz tili + o'zbekcha tarjimasi)
-4. Oxirida qisqa va rag'batlantiruvchi maslahat""",
-    },
-    "synonyms": {
-        "topics": SYNONYMS_TOPICS,
-        "instruction": """Bu "10 SYNONYMS" posti - berilgan so'zga 10 ta sinonim taqdim et.
-Format:
-1. Qiziqarli sarlavha (emoji bilan), asosiy so'zni ko'rsating
-2. Qisqacha kirish (o'zbek tilida, 1 gap)
-3. Aynan 10 ta sinonim so'z/ibora ro'yxati, har biri uchun qisqa o'zbekcha
-   ma'no farqi (nuance) va agar zarur bo'lsa qaysi holatda ishlatilishi
-4. Oxirida 1-2 ta sinonimdan foydalangan misol jumla""",
-    },
-    "listening_tips": {
-        "topics": LISTENING_TIPS_TOPICS,
-        "instruction": """Bu LISTENING TIPS (tinglab tushunish bo'yicha maslahat) posti.
-Format:
-1. Qiziqarli sarlavha (emoji bilan)
-2. Maslahatning o'zi (o'zbek tilida, 3-5 gap, amaliy va tushunarli)
-3. Kamida bitta aniq mashq yoki amaliy qadam
-4. Oxirida qisqa rag'batlantiruvchi jumla""",
-    },
-    "reading_tips": {
-        "topics": READING_TIPS_TOPICS,
-        "instruction": """Bu READING TIPS (o'qib tushunish bo'yicha maslahat) posti. Format:
-1. Qiziqarli sarlavha (emoji bilan)
-2. Maslahatning o'zi (o'zbek tilida, 3-5 gap, amaliy va tushunarli)
-3. Kamida bitta aniq mashq yoki amaliy qadam
-4. Oxirida qisqa rag'batlantiruvchi jumla""",
-    },
-    "cefr_tips": {
-        "topics": CEFR_TIPS_TOPICS,
-        "instruction": """Bu CEFR TIPS (CEFR darajalari - A1/A2/B1/B2/C1/C2 - bo'yicha
-maslahat) posti. Format:
-1. Qiziqarli sarlavha (emoji bilan), kerak bo'lsa daraja belgisini kiriting
-2. Maslahatning o'zi (o'zbek tilida, 3-5 gap)
-3. Ushbu darajada e'tibor berish kerak bo'lgan 2-3 ta aniq ko'nikma yoki
-   qadam
-4. Oxirida qisqa rag'batlantiruvchi jumla""",
-    },
-    "motivational_quotes": {
-        "topics": MOTIVATIONAL_TOPICS,
-        "instruction": """Bu MOTIVATIONAL QUOTE (rag'batlantiruvchi original iqtibos) posti.
-Haqiqiy odamlarga tegishli mashhur iqtiboslarni AYNAN keltirma - buning
-o'rniga o'zing original, qisqa va ta'sirchan ingliz tilidagi jumla (quote
-uslubida) yoz. Format:
-1. Qiziqarli sarlavha (emoji bilan)
-2. Original ingliz tilidagi qisqa motivatsion jumla (tirnoq ichida)
-3. Uning o'zbekcha tarjimasi
-4. Jumla ma'nosi haqida qisqa izoh (o'zbek tilida, 2-3 gap) va ingliz tili
-   o'rganishga qanday tatbiq etilishi""",
-    },
-    "grammar_tests": {
-        "topics": GRAMMAR_TESTS_TOPICS,
-        "instruction": """Bu GRAMMAR TEST (kichik test/viktorina) posti. Format:
-1. Qiziqarli sarlavha (emoji bilan)
-2. Qisqa kirish (o'zbek tilida, 1 gap)
-3. Aynan 5 ta ko'p tanlovli savol (har birida A, B, C variantlar), ingliz
-   tilidagi jumlalarda bo'sh joy to'ldirish yoki xato topish uslubida
-4. Oxirida "Javoblar:" deb nomlangan qism - barcha to'g'ri javoblarni
-   qisqacha ko'rsating (masalan: 1-B, 2-A, 3-C...)""",
-    },
-    "topic_vocab": {
-        "topics": TOPIC_VOCAB_TOPICS,
-        "instruction": """Bu IELTS SPEAKING uchun MAVZUGA OID LUG'AT posti - berilgan mavzu
+TOPIC_VOCAB_INSTRUCTION = """Bu IELTS SPEAKING uchun MAVZUGA OID LUG'AT posti - berilgan mavzu
 IELTS Speaking (Part 1/2/3) intervyusida ishlatilishi mumkin bo'lgan so'zlar
 to'plami. Format:
 1. Qiziqarli sarlavha (emoji bilan), mavzu nomini ko'rsating
@@ -505,9 +262,8 @@ to'plami. Format:
    har biri uchun: ingliz tilida so'z/ibora, o'zbekcha ma'nosi, va IELTS
    Speaking javobida ishlatsa bo'ladigan bitta qisqa misol jumla
 4. Oxirida ushbu so'zlarni Speaking javobida qanday qo'llash haqida qisqa
-   maslahat""",
-    },
-}
+   maslahat"""
+
 
 PROMPT_TEMPLATE = """Sen tajribali ingliz tili o'qituvchisisan. Telegram kanali uchun
 chiroyli, tartibli va o'qishga oson post tayyorla. Mavzu: {topic}.
@@ -536,7 +292,7 @@ qatordan boshlab bo'sh qator va qolgan matn kelsin.
 
 Javobni FAQAT tayyor post matni sifatida qaytar, boshqa hech qanday izoh qo'shma.
 Odatda umumiy uzunlik 600-1000 belgi atrofida bo'lsin; lekin agar yuqoridagi
-formatda aniq sonli band (masalan 10 ta so'z yoki 5 ta test savoli) talab
+formatda aniq sonli band (masalan 10 ta so'z yoki mashq savollari) talab
 qilingan bo'lsa, hammasini to'liq kiritish uchun 1600 belgigacha borishga
 ruxsat bor - biroq bundan ortiq cho'zma. Javob albatta to'liq gap bilan
 tugasin, hech qanday band yarim qoldirilmasin."""
@@ -573,46 +329,20 @@ def _call_gemini(prompt: str, max_output_tokens: int = 2048) -> tuple[str, str |
     return text, finish_reason
 
 
-def _next_grammar_daily_part(state: dict) -> tuple[str, int]:
-    """Bugungi kun uchun grammar-of-the-day mavzusini va navbatdagi (1-5)
-    qismni aniqlaydi. Kun almashganda (yoki hali hech narsa tanlanmagan
-    bo'lsa) yangi mavzu tanlaydi va 1-qismdan boshlaydi; aks holda shu kunning
-    davomida navbatdagi qismga o'tadi. Agar bir kunda 5 martadan ortiq run
-    bo'lib qolsa (masalan workflow qayta ishga tushirilsa), 5-qism
-    (amaliyot posti) qaytaveradi - xato bermaydi."""
-    today = _tashkent_today()
-    gd = state.setdefault("grammar_daily", {})
-
-    if gd.get("date") != today or "topic" not in gd:
-        topic = choose_topic(state, "grammar_daily_topic", GRAMMAR_DAILY_TOPICS)
-        gd["date"] = today
-        gd["topic"] = topic
-        gd["part"] = 1
-    else:
-        gd["part"] = min(gd.get("part", 0) + 1, 5)
-
-    return gd["topic"], gd["part"]
-
-
 def generate_post() -> tuple[str, dict]:
     state = _load_state()
-    category = pick_category(state)
+    category = os.environ.get("POST_CATEGORY") or "grammar"
 
-    if category == "advanced_grammar":
+    if category == "topic_vocab":
+        topic = choose_topic(state, "topic_vocab", TOPIC_VOCAB_TOPICS)
+        prompt = PROMPT_TEMPLATE.format(topic=topic, instruction=TOPIC_VOCAB_INSTRUCTION)
+    else:
+        # Default/"grammar" - kunlik grammar seriyasi.
         topic, part = _next_grammar_daily_part(state)
         instruction = GRAMMAR_DAILY_PARTS[part].format(topic=topic)
         prompt = PROMPT_TEMPLATE.format(
             topic=f"{topic} ({part}/5-qism)", instruction=instruction
         )
-    elif category == "topic_vocab":
-        info = CATEGORY_INFO["topic_vocab"]
-        topic = choose_topic(state, "topic_vocab", info["topics"])
-        prompt = PROMPT_TEMPLATE.format(topic=topic, instruction=info["instruction"])
-    else:
-        info = CATEGORY_INFO[category]
-        topic = choose_topic(state, category, info["topics"])
-        advance_category_index(state)
-        prompt = PROMPT_TEMPLATE.format(topic=topic, instruction=info["instruction"])
 
     # Javob token limitiga yetib o'rtada kesilib qolsa (masalan so'z yarim
     # qoldirilsa), buni "MAX_TOKENS" finishReason orqali aniqlaymiz va

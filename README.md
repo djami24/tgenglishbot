@@ -1,18 +1,18 @@
 # Ingliz tili darslarini Telegram kanaliga avtomatik yuborish
 
-Bu loyiha GitHub Actions yordamida Google Gemini orqali qisqa ingliz tili darsini
-generatsiya qilib, Telegram kanalingizga avtomatik yuboradi. **Butunlay bepul** ishlaydi.
+Bu loyiha GitHub Actions yordamida Google Gemini orqali IELTS Speaking lug'ati va
+kunlik grammar seriyasini generatsiya qilib, Telegram kanalingizga avtomatik
+yuboradi. **Butunlay bepul** ishlaydi.
 
-Joriy jadval (Toshkent vaqti bo'yicha):
+Bot FAQAT ikkita turkumda post qiladi (Toshkent vaqti bo'yicha):
 
-- **Umumiy aylanma** — har 30 daqiqada (grammar, vocab, fact, ielts_tips,
-  beginner_grammar, synonyms, listening_tips, reading_tips, cefr_tips,
-  motivational_quotes, grammar_tests navbat bilan).
 - **IELTS Speaking lug'ati** — kuniga 2 marta (09:00 va 19:00), 50 ta
-  mavzudan navbatdagi mavzu bo'yicha 10 ta so'z.
+  mavzudan navbatdagi mavzu bo'yicha 10 ta so'z. 50 tasi tugamaguncha
+  bironta mavzu takrorlanmaydi.
 - **Kunlik grammar seriyasi** — kuniga 5 marta (08:00, 11:00, 14:00, 17:00,
-  20:00), bitta mavzuni umumiy tushuncha → darak → inkor → so'roq →
-  amaliyot tartibida 5 postga bo'lib beradi.
+  20:00). Har kuni bitta yangi mavzu tanlanadi va shu kun davomida
+  umumiy tushuncha → darak gap → inkor gap → so'roq gap → amaliyot
+  tartibida 5 postga bo'linadi. 21 mavzu tugamaguncha takrorlanmaydi.
 
 ## 1-qadam: Telegram bot yaratish
 
@@ -34,10 +34,8 @@ Joriy jadval (Toshkent vaqti bo'yicha):
 2. Google hisobingiz bilan kiring va **"Create API key"** tugmasini bosing.
 3. Chiqqan kalitni nusxalab oling.
 
-> Bepul tarifda kunlik so'rovlar soni cheklangan. Joriy jadvalda kuniga ~55 ta post
-> yuboriladi (48 aylanma + 5 grammar + 2 lug'at); agar Gemini limitiga urilib
-> qolsangiz, `.github/workflows/post_lesson.yml` dagi `cron` qatorlarini
-> kamaytiring.
+> Bepul tarifda kunlik so'rovlar soni cheklangan. Joriy jadvalda kuniga 7 ta post
+> yuboriladi (5 grammar + 2 lug'at) — bu bepul limitga bemalol sig'adi.
 
 ## 4-qadam: Loyihani GitHub'ga yuklash
 
@@ -60,21 +58,20 @@ Quyidagi 3 ta secret'ni qo'shing:
 ## 6-qadam: Tekshirish
 
 1. Repo'ning **Actions** bo'limiga o'ting.
-2. Chap tomondan workflow'ni tanlang ("Ingliz tili darsini Telegramga yuborish").
-3. **"Run workflow"** tugmasini bosib, qo'lda bir marta ishga tushiring.
-4. Bir necha soniyadan so'ng kanalingizga dars posti kelishi kerak.
+2. Chap tomondan workflow'ni tanlang ("Ingliz tili postini Telegramga yuborish").
+3. **"Run workflow"** tugmasini bosib, qo'lda bir marta ishga tushiring (kerak bo'lsa `category`
+   maydonida `grammar` yoki `topic_vocab` ni tanlang).
+4. Bir necha soniyadan so'ng kanalingizga post kelishi kerak.
 
 Shundan keyin u avtomatik ravishda yuqoridagi jadval bo'yicha ishlaydi — hech narsa qilish shart emas.
 
 ## Vaqtni yoki mavzularni o'zgartirish
 
 - Vaqtni o'zgartirish: `.github/workflows/post_lesson.yml` faylidagi `cron` qatorlarini tahrirlang
-  (vaqtlar UTC bo'yicha, Toshkent = UTC+5). Lug'at/grammar cron vaqtlarini o'zgartirsangiz, shu
-  fayldagi "Turkumni cron vaqtiga qarab aniqlash" qadamidagi `case` bloklarini ham mos ravishda
-  yangilang.
-- Mavzular ro'yxati: `post_lesson.py` faylida har turkum uchun alohida ro'yxat bor —
-  `TOPIC_VOCAB_TOPICS` (IELTS Speaking 50 mavzu), `GRAMMAR_DAILY_TOPICS` (kunlik grammar
-  seriyasi, 21 mavzu), va boshqa turkumlar uchun `*_TOPICS` ro'yxatlari. Istalganiga yangi
+  (vaqtlar UTC bo'yicha, Toshkent = UTC+5). Vaqtlarni o'zgartirsangiz, shu fayldagi
+  "Turkumni cron vaqtiga qarab aniqlash" qadamidagi `case` blokini ham mos ravishda yangilang.
+- Mavzular ro'yxati: `post_lesson.py` faylida `TOPIC_VOCAB_TOPICS` (IELTS Speaking, 50 mavzu) va
+  `GRAMMAR_DAILY_TOPICS` (kunlik grammar seriyasi, 21 mavzu) ro'yxatlari bor — istalganiga yangi
   qator qo'shishingiz mumkin.
 
 ## Eslatma
@@ -84,8 +81,7 @@ Shundan keyin u avtomatik ravishda yuqoridagi jadval bo'yicha ishlaydi — hech 
 - Agar workflow ishlamay qolsa, Actions bo'limidagi loglarni tekshiring — odatda xato sababi
   (noto'g'ri token, kanal ID yoki API kalit) shu yerda aniq ko'rinadi.
 - **Muhim:** GitHub Actions'ning `schedule` (cron) trigger'i "eng yaxshi urinish" (best-effort)
-  asosida ishlaydi — yuklama yuqori bo'lgan paytlarda run bir necha daqiqa (kamdan-kam holda
-  ko'proq) kechikishi yoki juda kam holatlarda o'tkazib yuborilishi mumkin; bu GitHub'ning o'zi,
-  kod emas. Shuningdek, agar repo 60 kun davomida umuman commit qilinmasa, GitHub scheduled
-  workflow'larni avtomatik **to'xtatib qo'yadi** — shunda Actions bo'limiga kirib workflow'ni
-  qayta yoqish (re-enable) kerak bo'ladi.
+  asosida ishlaydi — yuklama yuqori bo'lgan paytlarda run bir necha daqiqa kechikishi yoki juda
+  kam holatlarda o'tkazib yuborilishi mumkin; bu GitHub'ning o'zi, kod emas. Shuningdek, agar repo
+  60 kun davomida umuman commit qilinmasa, GitHub scheduled workflow'larni avtomatik
+  **to'xtatib qo'yadi** — shunda Actions bo'limiga kirib workflow'ni qayta yoqish kerak bo'ladi.
