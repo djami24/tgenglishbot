@@ -13,6 +13,9 @@ Bot FAQAT ikkita turkumda post qiladi (Toshkent vaqti bo'yicha):
   20:00). Har kuni bitta yangi mavzu tanlanadi va shu kun davomida
   umumiy tushuncha → darak gap → inkor gap → so'roq gap → amaliyot
   tartibida 5 postga bo'linadi. 21 mavzu tugamaguncha takrorlanmaydi.
+  Ixtiyoriy `YOUTUBE_API_KEY` berilsa, har kungi mavzuga mos YouTube video
+  havolasi ham shu kunning barcha 5 ta postiga qo'shib yuboriladi
+  (link kuniga faqat 1 marta qidiriladi va kun davomida takror ishlatiladi).
 
 ## 1-qadam: Telegram bot yaratish
 
@@ -37,25 +40,40 @@ Bot FAQAT ikkita turkumda post qiladi (Toshkent vaqti bo'yicha):
 > Bepul tarifda kunlik so'rovlar soni cheklangan. Joriy jadvalda kuniga 7 ta post
 > yuboriladi (5 grammar + 2 lug'at) — bu bepul limitga bemalol sig'adi.
 
-## 4-qadam: Loyihani GitHub'ga yuklash
+## 4-qadam (ixtiyoriy): YouTube API kalitini olish
+
+Har kungi grammar mavzusiga mos video linki qo'shilishini istasangiz:
+
+1. https://console.cloud.google.com/apis/library/youtube.googleapis.com manziliga o'ting
+   (Google hisobingiz bilan kiring, kerak bo'lsa yangi loyiha yarating).
+2. **"Enable"** tugmasini bosib, "YouTube Data API v3" ni yoqing.
+3. Chap menyudan **"Credentials" → "Create Credentials" → "API key"** ni tanlang.
+4. Chiqqan kalitni nusxalab oling.
+
+> Bu ham bepul: bepul kvota kuniga 10 000 birlik, har bir qidiruv atigi 100 birlik
+> sarflaydi va kunlik grammar mavzusi uchun faqat 1 marta qidiriladi — bemalol yetadi.
+> Bu qadamni o'tkazib yuborsangiz ham bot ishlayveradi, faqat video linksiz.
+
+## 5-qadam: Loyihani GitHub'ga yuklash
 
 1. GitHub'da yangi **repository** yarating (public yoki private — farqi yo'q).
 2. Shu papkadagi barcha fayllarni ("post_lesson.py", "requirements.txt", ".github/" papkasi) o'sha repo'ga yuklang
    (GitHub saytida "Add file → Upload files" orqali ham qilsa bo'ladi).
 
-## 5-qadam: Maxfiy kalitlarni (Secrets) qo'shish
+## 6-qadam: Maxfiy kalitlarni (Secrets) qo'shish
 
 Repo ichida: **Settings → Secrets and variables → Actions → New repository secret**
 
-Quyidagi 3 ta secret'ni qo'shing:
+Quyidagi secret'larni qo'shing:
 
 | Nomi | Qiymati |
 |---|---|
 | `GEMINI_API_KEY` | 3-qadamda olingan Gemini kaliti |
 | `TELEGRAM_BOT_TOKEN` | 1-qadamda olingan bot tokeni |
 | `TELEGRAM_CHAT_ID` | 2-qadamda topilgan kanal ID/username |
+| `YOUTUBE_API_KEY` | *(ixtiyoriy)* 4-qadamda olingan YouTube API kaliti |
 
-## 6-qadam: Tekshirish
+## 7-qadam: Tekshirish
 
 1. Repo'ning **Actions** bo'limiga o'ting.
 2. Chap tomondan workflow'ni tanlang ("Ingliz tili postini Telegramga yuborish").

@@ -53,6 +53,11 @@ TELEGRAM_CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.6-flash")
 CHANNEL_LINK = "https://t.me/djami_teacher"
 
+# YouTube Data API v3 kaliti (ixtiyoriy). Berilgan bo'lsa, har kungi grammar
+# mavzusiga mos video avtomatik qidirilib, o'sha kunning 5 ta grammar
+# postiga ham qo'shib yuboriladi. Berilmasa, video linksiz davom etadi.
+YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY")
+
 # ---------------------------------------------------------------------------
 # Holatni saqlash: kunlik grammar mavzusi/qismi va har turkumda qaysi
 # mavzular allaqachon ishlatilgani (topics). Workflow bu faylni har run'dan
@@ -172,7 +177,50 @@ bo'yicha AMALIYOT posti. Format:
 }
 
 
-def _next_grammar_daily_part(state: dict) -> tuple[str, int]:
+def _grammar_topic_search_query(topic: str) -> str:
+    """Mavzu nomidagi qavs ichidagi o'zbekcha izohni olib tashlab, YouTube
+    qidiruvi uchun toza inglizcha grammatik nom qaytaradi."""
+    return topic.split("(")[0].strip()
+
+
+def _find_youtube_video(topic: str) -> str | None:
+    """Berilgan grammar mavzusiga mos eng mos YouTube videoni qidiradi va
+    uning to'g'ridan-to'g'ri havolasini qaytaradi. YOUTUBE_API_KEY
+    berilmagan yoki so'rov muvaffaqiyatsiz bo'lsa None qaytaradi (bu holda
+    post video linksiz yuboriladi, xatolik bermaydi)."""
+    if not YOUTUBE_API_KEY:
+        return None
+
+    query = f"{_grammar_topic_search_query(topic)} grammar explained"
+    url = "https://www.googleapis.com/youtube/v3/search"
+    params = {
+        "part": "snippet",
+        "q": query,
+        "type": "video",
+        "maxResults": 1,
+        "relevanceLanguage": "en",
+        "safeSearch": "strict",
+        "videoEmbeddable": "true",
+        "key": YOUTUBE_API_KEY,
+    }
+    try:
+        resp = requests.get(url, params=params, timeout=15)
+        resp.raise_for_status()
+        items = resp.json().get("items", [])
+        if not items:
+            return None
+        video_id = items[0]["id"].get("videoId")
+        if not video_id:
+            return None
+        return f"https://www.youtube.com/watch?v={video_id}"
+    except Exception as e:
+        # Video topilmasa ham asosiy post yuborilishi kerak - shu sababli
+        # bu yerda xatolikni faqat log qilamiz, dasturni to'xtatmaymiz.
+        print(f"Ogohlantirish: YouTube qidiruvda xato: {e}")
+        return None
+
+
+def _next_grammar_daily_part(state: dict) -> tuple[str, int, str | None]:
     """Bugungi kun uchun grammar-of-the-day mavzusini va navbatdagi (1-5)
     qismni aniqlaydi. Kun almashganda (yoki hali hech narsa tanlanmagan
     bo'lsa) yangi mavzu tanlaydi va 1-qismdan boshlaydi; aks holda shu kunning
@@ -187,10 +235,14 @@ def _next_grammar_daily_part(state: dict) -> tuple[str, int]:
         gd["date"] = today
         gd["topic"] = topic
         gd["part"] = 1
+        # Kunning mavzusi uchun videoni faqat bir marta qidiramiz va
+        # natijani state'da saqlaymiz - shu kunning qolgan 4 ta postida
+        # qayta qidirilmasdan, xuddi shu link ishlatiladi.
+        gd["video_url"] = _find_youtube_video(topic)
     else:
         gd["part"] = min(gd.get("part", 0) + 1, 5)
 
-    return gd["topic"], gd["part"]
+    return gd["topic"], gd["part"], gd.get("video_url")
 
 
 # ---------------------------------------------------------------------------
@@ -329,16 +381,17 @@ def _call_gemini(prompt: str, max_output_tokens: int = 2048) -> tuple[str, str |
     return text, finish_reason
 
 
-def generate_post() -> tuple[str, dict]:
+def generate_post() -> tuple[str, dict, str | None]:
     state = _load_state()
     category = os.environ.get("POST_CATEGORY") or "grammar"
+    video_url = None
 
     if category == "topic_vocab":
         topic = choose_topic(state, "topic_vocab", TOPIC_VOCAB_TOPICS)
         prompt = PROMPT_TEMPLATE.format(topic=topic, instruction=TOPIC_VOCAB_INSTRUCTION)
     else:
         # Default/"grammar" - kunlik grammar seriyasi.
-        topic, part = _next_grammar_daily_part(state)
+        topic, part, video_url = _next_grammar_daily_part(state)
         instruction = GRAMMAR_DAILY_PARTS[part].format(topic=topic)
         prompt = PROMPT_TEMPLATE.format(
             topic=f"{topic} ({part}/5-qism)", instruction=instruction
@@ -357,7 +410,7 @@ def generate_post() -> tuple[str, dict]:
     if finish_reason and finish_reason not in ("STOP",):
         print(f"Ogohlantirish: finishReason={finish_reason} (matn to'liq bo'lmasligi mumkin)")
 
-    return text, state
+    return text, state, video_url
 
 
 ALLOWED_TAGS = ("b", "i")
@@ -385,11 +438,14 @@ def strip_allowed_tags(text: str) -> str:
     return text
 
 
-def build_html_message(raw_text: str) -> str:
+def build_html_message(raw_text: str, video_url: str | None = None) -> str:
     """Sarlavhani (birinchi qator) yagona <b>...</b> bilan qalin qilib,
     qolgan matndagi model qo'ygan <b>/<i> formatlashni saqlab qoladi.
     Boshqa har qanday HTML/belgi xavfsiz tarzda escape qilinadi, shuning
-    uchun Telegram API "can't parse entities" xatosi bermaydi."""
+    uchun Telegram API "can't parse entities" xatosi bermaydi.
+
+    video_url berilgan bo'lsa (faqat grammar postlari uchun), mavzuga mos
+    YouTube video havolasi postning oxiriga qo'shiladi."""
     lines = raw_text.split("\n", 1)
     title = lines[0].strip()
     rest = lines[1].strip("\n") if len(lines) > 1 else ""
@@ -399,13 +455,17 @@ def build_html_message(raw_text: str) -> str:
     sanitized_rest = sanitize_telegram_html(rest)
 
     body = f"<b>{sanitized_title}</b>\n\n{sanitized_rest}"
+    if video_url:
+        # URL bizning o'zimiz YouTube API'dan olgan qiymat (model matni
+        # emas), shuning uchun uni qo'shimcha escape qilishning hojati yo'q.
+        body += f"\n\n🎥 <b>Video dars:</b> {video_url}"
     body += "\n\n<i>🤖 AI tomonidan tayyorlandi</i>"
     body += "\n\n📢 Ulashing: @djami_teacher"
     return body
 
 
-def send_to_telegram(text: str) -> None:
-    message = build_html_message(text)
+def send_to_telegram(text: str, video_url: str | None = None) -> None:
+    message = build_html_message(text, video_url)
 
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
     payload = {
@@ -422,9 +482,11 @@ def send_to_telegram(text: str) -> None:
 
 def main():
     try:
-        post, state = generate_post()
+        post, state, video_url = generate_post()
         print("Yaratilgan post:\n", post)
-        send_to_telegram(post)
+        if video_url:
+            print("Qo'shilgan video:", video_url)
+        send_to_telegram(post, video_url)
         _save_state(state)
         print("Muvaffaqiyatli yuborildi!")
     except Exception as e:
