@@ -2,23 +2,25 @@
 Ingliz tili (General English / IELTS General) postini Google Gemini orqali
 generatsiya qilib, Telegram kanaliga avtomatik yuboradi.
 
-Har kuni 09:00 dan 22:00 gacha (Toshkent vaqti), har YARIM SOATDA 1 marta,
-jami 27 marta post yuboradi. Turkumlar CATEGORY_ORDER ro'yxatidagi tartibda
-ketma-ket aylanib turadi (kunlar chegarasiga bog'liq emas, doim davom etadi):
+Postlar workflow (.github/workflows/post_lesson.yml) da belgilangan cron
+jadvali bo'yicha yuboriladi, uchta qatlamdan iborat:
 
-  1) Grammar              8)  Listening tips
-  2) Lug'at (Vocabulary)  9)  Reading tips
-  3) Ingliz tiliga oid    10) CEFR tips
-     fakt                 11) Motivational quotes
-  4) Advanced grammar     12) Grammar tests
-  5) IELTS tips           13) Mavzuga oid lug'atlar
-  6) Grammar for
-     beginners
-  7) 10 synonyms
+  1) MAVZUGA OID LUG'AT (topic_vocab) - kuniga 2 marta, har safar 50 ta IELTS
+     Speaking mavzusidan (TOPIC_VOCAB_TOPICS) navbatdagi mavzu bo'yicha 10 ta
+     so'z post qilinadi. 50 tasi tugamaguncha bironta mavzu takrorlanmaydi.
+  2) KUNLIK GRAMMAR SERIYASI (advanced_grammar) - kuniga 5 marta. Har kuni
+     GRAMMAR_DAILY_TOPICS ro'yxatidan BITTA yangi mavzu tanlanadi va o'sha
+     kun davomida 5 ta postga bo'linadi: umumiy tushuncha -> darak gap ->
+     inkor gap -> so'roq gap -> amaliyot/xato tahlili. Ertasi kuni yangi
+     mavzuga o'tiladi, 21 tasi tugamaguncha takrorlanmaydi.
+  3) QOLGAN TURKUMLAR (CATEGORY_ORDER) - tezroq aylanma orqali (har 30
+     daqiqada) ketma-ket almashib turadi: grammar, vocab, fact, ielts_tips,
+     beginner_grammar, synonyms, listening_tips, reading_tips, cefr_tips,
+     motivational_quotes, grammar_tests.
 
-Joriy holat (qaysi turkum navbati va har turkumda qaysi mavzular
-ishlatilgani) used_topics.json faylida saqlanadi. Workflow har run'dan
-keyin bu faylni repoga commit qiladi, shuning uchun tartib va
+Joriy holat (navbat, kunlik grammar mavzusi/qismi va har turkumda qaysi
+mavzular ishlatilgani) used_topics.json faylida saqlanadi. Workflow har
+run'dan keyin bu faylni repoga commit qiladi, shuning uchun tartib va
 takrorlanmaslik run'lar orasida buzilmaydi.
 
 Kerakli muhit o'zgaruvchilari (GitHub Secrets orqali beriladi):
@@ -32,8 +34,16 @@ import json
 import os
 import sys
 import random
+from datetime import datetime, timedelta, timezone
 
 import requests
+
+# Toshkent DST bilmaydi (doim UTC+5), shuning uchun sodda fixed-offset yetarli.
+TASHKENT_TZ = timezone(timedelta(hours=5))
+
+
+def _tashkent_today() -> str:
+    return datetime.now(TASHKENT_TZ).date().isoformat()
 
 GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
 TELEGRAM_BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
@@ -74,7 +84,6 @@ CATEGORY_ORDER = [
     "grammar",
     "vocab",
     "fact",
-    "advanced_grammar",
     "ielts_tips",
     "beginner_grammar",
     "synonyms",
@@ -83,8 +92,17 @@ CATEGORY_ORDER = [
     "cefr_tips",
     "motivational_quotes",
     "grammar_tests",
-    "topic_vocab",
 ]
+
+# ---------------------------------------------------------------------------
+# "advanced_grammar" va "topic_vocab" endi yuqoridagi umumiy aylanmada emas -
+# ular workflow'dagi alohida cron vaqtlarida ishga tushadi:
+#   - advanced_grammar: kuniga 5 marta (bitta mavzuni 5 qismga bo'lib)
+#   - topic_vocab:       kuniga 2 marta (har safar yangi mavzudan 10 so'z)
+# Bu ularni tasodifiy aylanma ichida "yo'qolib qolishidan" himoya qiladi va
+# aynan foydalanuvchi so'ragan chastotada (kuniga aniq son marta) ishlashini
+# kafolatlaydi.
+# ---------------------------------------------------------------------------
 
 
 def pick_category(state: dict) -> str:
@@ -159,19 +177,78 @@ FACT_TOPICS = [
     "ingliz tili va boshqa tillar orasidagi qiziq o'xshashlik yoki farq",
 ]
 
-ADVANCED_GRAMMAR_TOPICS = [
-    "shart gaplarning aralash turlari (mixed conditionals)",
-    "subjunctive mood (istak va taklif gaplari)",
-    "inversion (urg'u uchun teskari so'z tartibi)",
-    "cleft sentences (it is / what... urg'u qurilmalari)",
-    "passive voice'ning murakkab holatlari",
-    "reported speech (ko'chirma nutqni o'zgartirish)",
-    "participle clauses (ing/ed qo'shimchali qisqartirilgan gaplar)",
-    "modal fe'llarning o'tgan zamon shakllari (could have, should have, must have)",
-    "relative clauses (defining va non-defining)",
-    "future perfect va future continuous farqi",
-    "causative constructions (have/get something done)",
+# Har kuni shundan BITTA mavzu tanlanadi va o'sha kun davomida 5 ta postga
+# bo'lib beriladi (umumiy tushuncha / darak / inkor / so'roq / amaliyot).
+# Mavzu tugab, hammasi bir marta ishlatilgach, ro'yxat qaytadan boshidan
+# aylanadi (lekin darhol oldingi mavzu bilan bir xil bo'lmaydi).
+GRAMMAR_DAILY_TOPICS = [
+    "Present Perfect Continuous (hozirgача davom etayotgan harakatning davomiyligini ta'kidlash)",
+    "Past Perfect Continuous (o'tmishdagi boshqa harakatdan oldingi davomiylikni ta'kidlash)",
+    "Future Continuous (kelajakda davom etayotgan harakatlar)",
+    "Future Perfect (kelajakdagi ma'lum vaqtga qadar tugallanadigan harakatlar)",
+    "Future Perfect Continuous (kelajakdagi ma'lum vaqtga qadar davom etadigan harakat davomiyligi)",
+    "Modals for deduction and speculation (must have, might have, could have)",
+    "Modals for past advice, obligation and necessity (should have, could have, would have)",
+    "Third Conditional (o'tmishdagi xayoliy vaziyatlar)",
+    "Mixed Conditionals (turli vaqtlardagi shart va natijalarni birlashtirish)",
+    "Passive voice - turli zamonlardagi murakkab qurilmalar",
+    "Passive reporting structures (It is said that..., He is known to...)",
+    "Reported speech - fe'l zamoni, olmosh va vaqt ifodalarining o'zgarishi",
+    "Reported speech - buyruq, iltimos va savollarni ko'chirish",
+    "Reduced relative clauses (nisbiy olmoshni tushirib qoldirish)",
+    "Whose, where, when so'zlarining yuqori darajadagi qo'llanilishi",
+    "Wish / If only - hozirgi vaqtdagi afsus va xayoliy istaklar",
+    "Wish / If only - o'tmishdagi afsuslanishlarni ifodalash",
+    "Linking adverbials - sabab, natija, qo'shimcha va qarama-qarshilik (therefore, however, moreover, consequently)",
+    "Cleft sentences va inversion - urg'u berish uchun (It was John who..., Hardly had I...)",
+    "Quantifiers va intensifiers - miqdor va urg'u ifodalari (a great deal of, plenty of, such, so, quite, rather)",
+    "Subjunctive mood - zarurat va muhimlikni ifodalovchi that-clause'lar (It's essential that he be informed.)",
 ]
+
+# Har kuni tanlangan mavzu shu 5 ta qismga bo'lib post qilinadi.
+GRAMMAR_DAILY_PARTS = {
+    1: """Bu kunlik GRAMMAR seriyasining 1/5-QISMI - "{topic}" mavzusi bo'yicha
+UMUMIY TUSHUNCHA posti. Format:
+1. Qiziqarli sarlavha (emoji bilan), sarlavhada "1/5" belgisini ko'rsating
+2. Ushbu qoida nima uchun va qachon ishlatilishi (o'zbek tilida, 3-5 gap,
+   tushunarli va aniq tushuntirish)
+3. Kamida 2 ta oddiy misol jumla (ingliz tili + o'zbekcha tarjimasi)
+4. Oxirida bugungi seriyaning keyingi qismlarida darak, inkor va so'roq gap
+   tuzilishi ko'rib chiqilishi haqida qisqa eslatma""",
+    2: """Bu kunlik GRAMMAR seriyasining 2/5-QISMI - "{topic}" mavzusi bo'yicha
+DARAK GAP (affirmative) tuzilishi posti. Format:
+1. Qiziqarli sarlavha (emoji bilan), sarlavhada "2/5" belgisini ko'rsating
+2. Darak gap tuzilish formulasi aniq va <b>qalin</b> qilib ko'rsatilsin
+   (masalan: Subject + have/has + been + V-ing)
+3. Kamida 4 ta darak gap ko'rinishidagi misol jumla (ingliz tili +
+   o'zbekcha tarjimasi)
+4. Oxirida qisqa eslatma yoki tez-tez uchraydigan xato haqida ogohlantirish""",
+    3: """Bu kunlik GRAMMAR seriyasining 3/5-QISMI - "{topic}" mavzusi bo'yicha
+INKOR GAP (negative) tuzilishi posti. Format:
+1. Qiziqarli sarlavha (emoji bilan), sarlavhada "3/5" belgisini ko'rsating
+2. Inkor gap tuzilish formulasi aniq va <b>qalin</b> qilib ko'rsatilsin
+   (masalan: Subject + haven't/hasn't + been + V-ing)
+3. Kamida 4 ta inkor gap ko'rinishidagi misol jumla (ingliz tili +
+   o'zbekcha tarjimasi)
+4. Oxirida qisqa eslatma yoki tez-tez uchraydigan xato haqida ogohlantirish""",
+    4: """Bu kunlik GRAMMAR seriyasining 4/5-QISMI - "{topic}" mavzusi bo'yicha
+SO'ROQ GAP (question) tuzilishi posti. Format:
+1. Qiziqarli sarlavha (emoji bilan), sarlavhada "4/5" belgisini ko'rsating
+2. Umumiy (yes/no) va maxsus (wh-) so'roq gap tuzilish formulalari aniq va
+   <b>qalin</b> qilib ko'rsatilsin
+3. Kamida 4 ta so'roq gap ko'rinishidagi misol jumla (ingliz tili +
+   o'zbekcha tarjimasi, kamida bittasi wh-so'roq bo'lsin)
+4. Oxirida qisqa eslatma""",
+    5: """Bu kunlik GRAMMAR seriyasining 5/5 - YAKUNIY QISMI - "{topic}" mavzusi
+bo'yicha AMALIYOT posti. Format:
+1. Qiziqarli sarlavha (emoji bilan), sarlavhada "5/5" belgisini ko'rsating
+2. Ushbu mavzuda o'quvchilar ko'p qiladigan 1-2 ta xato haqida qisqa
+   ogohlantirish (o'zbek tilida)
+3. Aynan 4 ta bo'sh joy to'ldirish uslubidagi mashq jumlasi (ingliz tilida,
+   bo'sh joy ___ bilan ko'rsatilsin)
+4. Oxirida "Javoblar:" deb nomlangan qismda to'g'ri javoblarni qisqacha
+   ko'rsating""",
+}
 
 IELTS_TIPS_TOPICS = [
     "IELTS General Training haqida umumiy strategiya",
@@ -255,17 +332,60 @@ GRAMMAR_TESTS_TOPICS = [
     "Present Perfect bo'yicha test",
 ]
 
+# IELTS Speaking uchun 50 ta mavzu - kuniga 2 marta, har safar navbatdagi
+# mavzudan 10 ta so'z post qilinadi. Barcha 50 tasi bir marta ishlatilmaguncha
+# takrorlanmaydi (choose_topic funksiyasi orqali).
 TOPIC_VOCAB_TOPICS = [
-    "oila va qarindoshlar mavzusidagi lug'at",
-    "ob-havo mavzusidagi lug'at",
-    "sport mavzusidagi lug'at",
-    "transport mavzusidagi lug'at",
-    "kiyim-kechak mavzusidagi lug'at",
-    "uy va mebel mavzusidagi lug'at",
-    "tabiat va atrof-muhit mavzusidagi lug'at",
-    "bank va moliya mavzusidagi lug'at",
-    "ta'lim mavzusidagi lug'at",
-    "sog'liqni saqlash mavzusidagi lug'at",
+    "Family & Relationships (Oila va munosabatlar)",
+    "Friends (Do'stlar)",
+    "Education (Ta'lim)",
+    "School Life (Maktab hayoti)",
+    "University (Universitet)",
+    "Work & Career (Ish va karyera)",
+    "Jobs (Kasblar)",
+    "Hobbies (Qiziqishlar)",
+    "Free Time (Bo'sh vaqt)",
+    "Sports & Exercise (Sport va mashqlar)",
+    "Health & Lifestyle (Sog'liq va hayot tarzi)",
+    "Food & Cooking (Ovqat va pishirish)",
+    "Restaurants & Cafes (Restoran va kafelar)",
+    "Travel & Holidays (Sayohat va ta'til)",
+    "Tourism (Turizm)",
+    "Transport (Transport)",
+    "Cities (Shaharlar)",
+    "The Countryside (Qishloq hududi)",
+    "Home & Accommodation (Uy va yashash joyi)",
+    "Neighborhood (Mahalla / yashash hududi)",
+    "Technology (Texnologiya)",
+    "The Internet (Internet)",
+    "Social Media (Ijtimoiy tarmoqlar)",
+    "Mobile Phones (Mobil telefonlar)",
+    "Artificial Intelligence (Sun'iy intellekt)",
+    "Shopping (Xarid qilish)",
+    "Clothes & Fashion (Kiyim va moda)",
+    "Money & Saving (Pul va jamg'arma)",
+    "Environment (Atrof-muhit)",
+    "Climate & Weather (Iqlim va ob-havo)",
+    "Animals & Pets (Hayvonlar va uy hayvonlari)",
+    "Nature (Tabiat)",
+    "Books & Reading (Kitoblar va o'qish)",
+    "Films & Cinema (Filmlar va kino)",
+    "Music (Musiqa)",
+    "Art & Creativity (San'at va ijodkorlik)",
+    "Television (Televizor)",
+    "News & Media (Yangiliklar va media)",
+    "Photography (Fotografiya)",
+    "Festivals & Celebrations (Bayramlar va tantanalar)",
+    "Culture & Traditions (Madaniyat va an'analar)",
+    "Languages (Tillar)",
+    "Learning English (Ingliz tilini o'rganish)",
+    "Goals & Ambitions (Maqsadlar va orzular)",
+    "Success & Failure (Muvaffaqiyat va muvaffaqiyatsizlik)",
+    "Memories & Childhood (Xotiralar va bolalik)",
+    "People & Personality (Insonlar va xarakter)",
+    "Communication (Muloqot)",
+    "Society & Community (Jamiyat va hamjamiyat)",
+    "Future & Technology (Kelajak va texnologiyalar)",
 ]
 
 CATEGORY_INFO = {
@@ -294,17 +414,6 @@ posti (mavzu boshqa umumiy bilimlarga emas, faqat ingliz tili/IELTS'ga oid bo'ls
 2. Faktning o'zi (o'zbek tilida, 3-5 gap, qiziqarli va tushunarli qilib yoz)
 3. Agar mos bo'lsa, faktga bog'liq 1-2 ta ingliz tilidagi misol/so'z
 4. Oxirida qisqa xulosa yoki qiziqarli savol""",
-    },
-    "advanced_grammar": {
-        "topics": ADVANCED_GRAMMAR_TOPICS,
-        "instruction": """Bu ADVANCED GRAMMAR (yuqori daraja grammatikasi, B2-C1) darsi.
-Format:
-1. Qiziqarli sarlavha (emoji bilan), sarlavhada "Advanced" so'zi yoki B2/C1
-   belgisi bo'lishi mumkin
-2. Qisqacha tushuntirish (o'zbek tilida, 3-5 gap), yuqori darajaga mos
-   chuqurroq tushuntirish
-3. Kamida 3 ta murakkab misol jumla (ingliz tili + o'zbekcha tarjimasi)
-4. Oxirida ushbu qoidada ko'p uchraydigan xato haqida ogohlantirish""",
     },
     "ielts_tips": {
         "topics": IELTS_TIPS_TOPICS,
@@ -385,13 +494,18 @@ uslubida) yoz. Format:
     },
     "topic_vocab": {
         "topics": TOPIC_VOCAB_TOPICS,
-        "instruction": """Bu MAVZUGA OID LUG'AT posti - berilgan mavzu bo'yicha so'zlar
+        "instruction": """Bu IELTS SPEAKING uchun MAVZUGA OID LUG'AT posti - berilgan mavzu
+IELTS Speaking (Part 1/2/3) intervyusida ishlatilishi mumkin bo'lgan so'zlar
 to'plami. Format:
-1. Qiziqarli sarlavha (emoji bilan)
-2. Qisqacha kirish (o'zbek tilida, 1-2 gap)
-3. Kamida 8 ta ushbu mavzuga oid so'z/ibora, har biri uchun: ingliz tilida
-   so'z, o'zbekcha ma'nosi, va bitta qisqa misol jumla
-4. Oxirida qisqa maslahat""",
+1. Qiziqarli sarlavha (emoji bilan), mavzu nomini ko'rsating
+2. Qisqacha kirish (o'zbek tilida, 1-2 gap) - bu so'zlar IELTS Speaking'da
+   qanday foydali ekani haqida
+3. AYNAN 10 ta ushbu mavzuga oid so'z yoki ibora (oddiy so'zlardan tashqari,
+   IELTS'da band ballini oshiradigan collocation/idioma ham bo'lishi mumkin),
+   har biri uchun: ingliz tilida so'z/ibora, o'zbekcha ma'nosi, va IELTS
+   Speaking javobida ishlatsa bo'ladigan bitta qisqa misol jumla
+4. Oxirida ushbu so'zlarni Speaking javobida qanday qo'llash haqida qisqa
+   maslahat""",
     },
 }
 
@@ -421,7 +535,11 @@ qatordan boshlab bo'sh qator va qolgan matn kelsin.
 {instruction}
 
 Javobni FAQAT tayyor post matni sifatida qaytar, boshqa hech qanday izoh qo'shma.
-Umumiy uzunlik 600-1000 belgidan oshmasin va javob albatta to'liq gap bilan tugasin."""
+Odatda umumiy uzunlik 600-1000 belgi atrofida bo'lsin; lekin agar yuqoridagi
+formatda aniq sonli band (masalan 10 ta so'z yoki 5 ta test savoli) talab
+qilingan bo'lsa, hammasini to'liq kiritish uchun 1600 belgigacha borishga
+ruxsat bor - biroq bundan ortiq cho'zma. Javob albatta to'liq gap bilan
+tugasin, hech qanday band yarim qoldirilmasin."""
 
 
 def _call_gemini(prompt: str, max_output_tokens: int = 2048) -> tuple[str, str | None]:
@@ -455,14 +573,46 @@ def _call_gemini(prompt: str, max_output_tokens: int = 2048) -> tuple[str, str |
     return text, finish_reason
 
 
+def _next_grammar_daily_part(state: dict) -> tuple[str, int]:
+    """Bugungi kun uchun grammar-of-the-day mavzusini va navbatdagi (1-5)
+    qismni aniqlaydi. Kun almashganda (yoki hali hech narsa tanlanmagan
+    bo'lsa) yangi mavzu tanlaydi va 1-qismdan boshlaydi; aks holda shu kunning
+    davomida navbatdagi qismga o'tadi. Agar bir kunda 5 martadan ortiq run
+    bo'lib qolsa (masalan workflow qayta ishga tushirilsa), 5-qism
+    (amaliyot posti) qaytaveradi - xato bermaydi."""
+    today = _tashkent_today()
+    gd = state.setdefault("grammar_daily", {})
+
+    if gd.get("date") != today or "topic" not in gd:
+        topic = choose_topic(state, "grammar_daily_topic", GRAMMAR_DAILY_TOPICS)
+        gd["date"] = today
+        gd["topic"] = topic
+        gd["part"] = 1
+    else:
+        gd["part"] = min(gd.get("part", 0) + 1, 5)
+
+    return gd["topic"], gd["part"]
+
+
 def generate_post() -> tuple[str, dict]:
     state = _load_state()
     category = pick_category(state)
-    info = CATEGORY_INFO[category]
-    topic = choose_topic(state, category, info["topics"])
-    advance_category_index(state)
 
-    prompt = PROMPT_TEMPLATE.format(topic=topic, instruction=info["instruction"])
+    if category == "advanced_grammar":
+        topic, part = _next_grammar_daily_part(state)
+        instruction = GRAMMAR_DAILY_PARTS[part].format(topic=topic)
+        prompt = PROMPT_TEMPLATE.format(
+            topic=f"{topic} ({part}/5-qism)", instruction=instruction
+        )
+    elif category == "topic_vocab":
+        info = CATEGORY_INFO["topic_vocab"]
+        topic = choose_topic(state, "topic_vocab", info["topics"])
+        prompt = PROMPT_TEMPLATE.format(topic=topic, instruction=info["instruction"])
+    else:
+        info = CATEGORY_INFO[category]
+        topic = choose_topic(state, category, info["topics"])
+        advance_category_index(state)
+        prompt = PROMPT_TEMPLATE.format(topic=topic, instruction=info["instruction"])
 
     # Javob token limitiga yetib o'rtada kesilib qolsa (masalan so'z yarim
     # qoldirilsa), buni "MAX_TOKENS" finishReason orqali aniqlaymiz va
