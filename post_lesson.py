@@ -38,6 +38,8 @@ from datetime import datetime, timedelta, timezone
 
 import requests
 
+from title_card import generate_title_card
+
 # Toshkent DST bilmaydi (doim UTC+5), shuning uchun sodda fixed-offset yetarli.
 TASHKENT_TZ = timezone(timedelta(hours=5))
 
@@ -381,7 +383,7 @@ def _call_gemini(prompt: str, max_output_tokens: int = 2048) -> tuple[str, str |
     return text, finish_reason
 
 
-def generate_post() -> tuple[str, dict, str | None]:
+def generate_post() -> tuple[str, dict, str | None, dict]:
     state = _load_state()
     category = os.environ.get("POST_CATEGORY") or "grammar"
     video_url = None
@@ -389,6 +391,7 @@ def generate_post() -> tuple[str, dict, str | None]:
     if category == "topic_vocab":
         topic = choose_topic(state, "topic_vocab", TOPIC_VOCAB_TOPICS)
         prompt = PROMPT_TEMPLATE.format(topic=topic, instruction=TOPIC_VOCAB_INSTRUCTION)
+        card_info = {"topic": topic, "category": "topic_vocab", "part": None}
     else:
         # Default/"grammar" - kunlik grammar seriyasi.
         topic, part, video_url = _next_grammar_daily_part(state)
@@ -396,6 +399,7 @@ def generate_post() -> tuple[str, dict, str | None]:
         prompt = PROMPT_TEMPLATE.format(
             topic=f"{topic} ({part}/5-qism)", instruction=instruction
         )
+        card_info = {"topic": topic, "category": "grammar", "part": part}
 
     # Javob token limitiga yetib o'rtada kesilib qolsa (masalan so'z yarim
     # qoldirilsa), buni "MAX_TOKENS" finishReason orqali aniqlaymiz va
@@ -410,7 +414,7 @@ def generate_post() -> tuple[str, dict, str | None]:
     if finish_reason and finish_reason not in ("STOP",):
         print(f"Ogohlantirish: finishReason={finish_reason} (matn to'liq bo'lmasligi mumkin)")
 
-    return text, state, video_url
+    return text, state, video_url, card_info
 
 
 ALLOWED_TAGS = ("b", "i")
@@ -464,6 +468,20 @@ def build_html_message(raw_text: str, video_url: str | None = None) -> str:
     return body
 
 
+def send_photo_to_telegram(image_bytes: bytes) -> None:
+    """Sarlavha-karta rasmini alohida post sifatida Telegramga yuboradi
+    (matndan oldin). Rasm generatsiyasi yoki yuborilishida xato bo'lsa,
+    chaqiruvchi joyda try/except bilan ushlanadi - shu sababli asosiy
+    matnli post har doim yuborilishi kafolatlanadi."""
+    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendPhoto"
+    files = {"photo": ("card.png", image_bytes, "image/png")}
+    data = {"chat_id": TELEGRAM_CHAT_ID}
+    resp = requests.post(url, data=data, files=files, timeout=30)
+    result = resp.json()
+    if not result.get("ok"):
+        raise RuntimeError(f"Telegramga rasm yuborishda xato: {result}")
+
+
 def send_to_telegram(text: str, video_url: str | None = None) -> None:
     message = build_html_message(text, video_url)
 
@@ -482,10 +500,22 @@ def send_to_telegram(text: str, video_url: str | None = None) -> None:
 
 def main():
     try:
-        post, state, video_url = generate_post()
+        post, state, video_url, card_info = generate_post()
         print("Yaratilgan post:\n", post)
         if video_url:
             print("Qo'shilgan video:", video_url)
+
+        # Karta-rasmni yaratish/yuborish - agar biror sababdan (masalan
+        # shrift topilmasa) muvaffaqiyatsiz bo'lsa, faqat ogohlantirish
+        # chiqarib, asosiy matnli postni baribir yuboramiz.
+        try:
+            image_bytes = generate_title_card(
+                card_info["topic"], card_info["category"], card_info.get("part")
+            )
+            send_photo_to_telegram(image_bytes)
+        except Exception as e:
+            print(f"Ogohlantirish: karta-rasm yuborilmadi: {e}")
+
         send_to_telegram(post, video_url)
         _save_state(state)
         print("Muvaffaqiyatli yuborildi!")

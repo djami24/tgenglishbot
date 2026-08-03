@@ -2,7 +2,8 @@
 
 Bu loyiha GitHub Actions yordamida Google Gemini orqali IELTS Speaking lug'ati va
 kunlik grammar seriyasini generatsiya qilib, Telegram kanalingizga avtomatik
-yuboradi. **Butunlay bepul** ishlaydi.
+yuboradi. Har bir post oldidan mavzu nomi yozilgan chiroyli sarlavha-karta
+rasmi ham avtomatik yaratilib yuboriladi. **Butunlay bepul** ishlaydi.
 
 Bot FAQAT ikkita turkumda post qiladi (Toshkent vaqti bo'yicha):
 
@@ -16,6 +17,11 @@ Bot FAQAT ikkita turkumda post qiladi (Toshkent vaqti bo'yicha):
   Ixtiyoriy `YOUTUBE_API_KEY` berilsa, har kungi mavzuga mos YouTube video
   havolasi ham shu kunning barcha 5 ta postiga qo'shib yuboriladi
   (link kuniga faqat 1 marta qidiriladi va kun davomida takror ishlatiladi).
+
+Har bir post (grammar ham, lug'at ham) yuborilishidan oldin, o'sha mavzu nomi
+yozilgan gradient fonli sarlavha-rasm alohida post sifatida avtomatik
+yuboriladi. Bu rasm to'liq mahalliy ravishda (Pillow bilan) yaratiladi -
+uchun hech qanday qo'shimcha API kalit yoki internet ulanishi shart emas.
 
 ## 1-qadam: Telegram bot yaratish
 
