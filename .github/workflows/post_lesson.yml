@@ -2,9 +2,26 @@ name: Ingliz tili postini Telegramga yuborish
 
 on:
   schedule:
-    # Vaqtlar UTC bo'yicha. Toshkent = UTC+5 (DST yo'q).
-    # Har 30 daqiqada, 24 soat davomida (48 post/kun).
+    # Barcha vaqtlar UTC bo'yicha. Toshkent = UTC+5 (DST yo'q).
+
+    # 1) UMUMIY AYLANMA (grammar, vocab, fact, ielts_tips, beginner_grammar,
+    #    synonyms, listening_tips, reading_tips, cefr_tips,
+    #    motivational_quotes, grammar_tests) - har 30 daqiqada, 48 post/kun.
     - cron: '0,30 * * * *'
+
+    # 2) MAVZUGA OID LUG'AT (topic_vocab) - kuniga 2 marta: 09:00 va 19:00
+    #    Toshkent vaqti (= 04:00 va 14:00 UTC).
+    - cron: '0 4 * * *'
+    - cron: '0 14 * * *'
+
+    # 3) KUNLIK GRAMMAR SERIYASI (advanced_grammar) - kuniga 5 marta:
+    #    08:00, 11:00, 14:00, 17:00, 20:00 Toshkent vaqti
+    #    (= 03:00, 06:00, 09:00, 12:00, 15:00 UTC).
+    - cron: '0 3 * * *'
+    - cron: '0 6 * * *'
+    - cron: '0 9 * * *'
+    - cron: '0 12 * * *'
+    - cron: '0 15 * * *'
   workflow_dispatch:
     inputs:
       category:
@@ -45,12 +62,28 @@ jobs:
       - name: Kutubxonalarni o'rnatish
         run: pip install -r requirements.txt
 
+      - name: Turkumni cron vaqtiga qarab aniqlash
+        id: category
+        run: |
+          case "${{ github.event.schedule }}" in
+            "0 4 * * *"|"0 14 * * *")
+              echo "value=topic_vocab" >> "$GITHUB_OUTPUT" ;;
+            "0 3 * * *"|"0 6 * * *"|"0 9 * * *"|"0 12 * * *"|"0 15 * * *")
+              echo "value=advanced_grammar" >> "$GITHUB_OUTPUT" ;;
+            *)
+              # Umumiy aylanma (30 daqiqalik cron) yoki qo'lda ishga
+              # tushirilgan run - agar workflow_dispatch orqali turkum
+              # tanlangan bo'lsa o'shani, aks holda navbat bo'yicha
+              # avtomatik tanlanadi (POST_CATEGORY bo'sh qoladi).
+              echo "value=${{ github.event.inputs.category }}" >> "$GITHUB_OUTPUT" ;;
+          esac
+
       - name: Postni generatsiya qilib yuborish
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          POST_CATEGORY: ${{ github.event.inputs.category }}
+          POST_CATEGORY: ${{ steps.category.outputs.value }}
         run: python post_lesson.py
 
       - name: Ishlatilgan mavzular ro'yxatini saqlash (used_topics.json)
