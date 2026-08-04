@@ -35,6 +35,12 @@ _COLOR_SCHEMES = {
         "accent": (250, 204, 21),
         "label": "IELTS SPEAKING VOCABULARY",
     },
+    "fun_fact": {
+        "top": (217, 119, 6),      # amber
+        "bottom": (194, 65, 12),   # burnt orange
+        "accent": (255, 255, 255),
+        "label": "BILASIZMI?",
+    },
 }
 
 

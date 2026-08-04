@@ -39,6 +39,10 @@ from datetime import datetime, timedelta, timezone
 import requests
 
 from title_card import generate_title_card
+from quiz import send_daily_quiz
+from audio import extract_key_terms, build_pronunciation_audio
+from pdf_report import build_grammar_compendium_pdf
+from notify import notify_admin_on_error
 
 # Toshkent DST bilmaydi (doim UTC+5), shuning uchun sodda fixed-offset yetarli.
 TASHKENT_TZ = timezone(timedelta(hours=5))
@@ -76,6 +80,7 @@ def _load_state() -> dict:
         data = {}
     data.setdefault("topics", {})
     data.setdefault("grammar_daily", {})
+    data.setdefault("grammar_archive", [])
     return data
 
 
@@ -222,13 +227,18 @@ def _find_youtube_video(topic: str) -> str | None:
         return None
 
 
-def _next_grammar_daily_part(state: dict) -> tuple[str, int, str | None]:
+def _next_grammar_daily_part(state: dict) -> tuple[str, int, str | None, bool]:
     """Bugungi kun uchun grammar-of-the-day mavzusini va navbatdagi (1-5)
     qismni aniqlaydi. Kun almashganda (yoki hali hech narsa tanlanmagan
     bo'lsa) yangi mavzu tanlaydi va 1-qismdan boshlaydi; aks holda shu kunning
     davomida navbatdagi qismga o'tadi. Agar bir kunda 5 martadan ortiq run
     bo'lib qolsa (masalan workflow qayta ishga tushirilsa), 5-qism
-    (amaliyot posti) qaytaveradi - xato bermaydi."""
+    (amaliyot posti) qaytaveradi - xato bermaydi.
+
+    To'rtinchi qaytariladigan qiymat (cycle_complete) - bugun tanlangan
+    mavzu shu 21 talik aylanishning OXIRGI (hammasi kamida bir marta
+    ishlatilgan) mavzusi ekanini bildiradi. Shu bayroq true bo'lsa, kun
+    yakunida (5/5-qism) to'liq qo'llanma PDF ham yuboriladi."""
     today = _tashkent_today()
     gd = state.setdefault("grammar_daily", {})
 
@@ -241,10 +251,12 @@ def _next_grammar_daily_part(state: dict) -> tuple[str, int, str | None]:
         # natijani state'da saqlaymiz - shu kunning qolgan 4 ta postida
         # qayta qidirilmasdan, xuddi shu link ishlatiladi.
         gd["video_url"] = _find_youtube_video(topic)
+        used = state["topics"].get("grammar_daily_topic", [])
+        gd["cycle_complete_today"] = len(used) == len(GRAMMAR_DAILY_TOPICS)
     else:
         gd["part"] = min(gd.get("part", 0) + 1, 5)
 
-    return gd["topic"], gd["part"], gd.get("video_url")
+    return gd["topic"], gd["part"], gd.get("video_url"), gd.get("cycle_complete_today", False)
 
 
 # ---------------------------------------------------------------------------
@@ -317,6 +329,26 @@ to'plami. Format:
    Speaking javobida ishlatsa bo'ladigan bitta qisqa misol jumla
 4. Oxirida ushbu so'zlarni Speaking javobida qanday qo'llash haqida qisqa
    maslahat"""
+
+
+# ---------------------------------------------------------------------------
+# 3) "BILASIZMI?" - kuniga 1 marta, ingliz tili yoki til o'rganish haqida
+#    qiziqarli fakt yoki motivatsion fikr posti.
+# ---------------------------------------------------------------------------
+FUN_FACT_INSTRUCTION = """Bu "BILASIZMI?" turkumidagi post - ingliz tili yoki til
+o'rganish jarayoni haqida qiziqarli, o'quvchini hayratda qoldiradigan fakt
+yoki motivatsion fikr. Format:
+1. Qiziqarli sarlavha ("Bilasizmi?" yoki shunga o'xshash uslubda, emoji bilan)
+2. 3-5 gapdan iborat qiziqarli fakt (masalan bironta so'zning kelib chiqishi,
+   ingliz tilidagi g'alati/qiziq qoida, statistik fakt til o'rganish haqida)
+   YOKI til o'rganishni davom ettirishga undovchi motivatsion fikr
+3. Oxirida o'quvchini bugun ham ingliz tilida biror narsa qilishga
+   (masalan yangi so'z yozib olish, qisqa video ko'rish) chorlaydigan 1 gap
+
+QAT'IY TAQIQ: hech qanday real mavjud yoki tarixiy odamning ismini
+tilga olma va unga tegishli iqtibos/gap keltirma (na to'g'ridan-to'g'ri, na
+o'z so'zlaring bilan aytib berish shaklida). Faqat tilning o'zi haqidagi
+faktlar yoki muallifsiz umumiy motivatsion fikrlar yoz."""
 
 
 PROMPT_TEMPLATE = """Sen tajribali ingliz tili o'qituvchisisan. Telegram kanali uchun
@@ -392,14 +424,24 @@ def generate_post() -> tuple[str, dict, str | None, dict]:
         topic = choose_topic(state, "topic_vocab", TOPIC_VOCAB_TOPICS)
         prompt = PROMPT_TEMPLATE.format(topic=topic, instruction=TOPIC_VOCAB_INSTRUCTION)
         card_info = {"topic": topic, "category": "topic_vocab", "part": None}
+    elif category == "fun_fact":
+        prompt = PROMPT_TEMPLATE.format(
+            topic="Ingliz tili haqida qiziqarli fakt", instruction=FUN_FACT_INSTRUCTION
+        )
+        card_info = {"topic": "Bilasizmi?", "category": "fun_fact", "part": None}
     else:
         # Default/"grammar" - kunlik grammar seriyasi.
-        topic, part, video_url = _next_grammar_daily_part(state)
+        topic, part, video_url, cycle_complete = _next_grammar_daily_part(state)
         instruction = GRAMMAR_DAILY_PARTS[part].format(topic=topic)
         prompt = PROMPT_TEMPLATE.format(
             topic=f"{topic} ({part}/5-qism)", instruction=instruction
         )
-        card_info = {"topic": topic, "category": "grammar", "part": part}
+        card_info = {
+            "topic": topic,
+            "category": "grammar",
+            "part": part,
+            "cycle_complete": cycle_complete,
+        }
 
     # Javob token limitiga yetib o'rtada kesilib qolsa (masalan so'z yarim
     # qoldirilsa), buni "MAX_TOKENS" finishReason orqali aniqlaymiz va
@@ -413,6 +455,20 @@ def generate_post() -> tuple[str, dict, str | None, dict]:
 
     if finish_reason and finish_reason not in ("STOP",):
         print(f"Ogohlantirish: finishReason={finish_reason} (matn to'liq bo'lmasligi mumkin)")
+
+    if card_info["category"] == "grammar":
+        # Bugungi kunning shu qismini kelgusi PDF qo'llanma uchun arxivga
+        # yozib qo'yamiz (21 talik aylanish tugaganda ishlatiladi).
+        archive = state.setdefault("grammar_archive", [])
+        today = _tashkent_today()
+        entry = next(
+            (e for e in archive if e.get("date") == today and e.get("topic") == card_info["topic"]),
+            None,
+        )
+        if entry is None:
+            entry = {"date": today, "topic": card_info["topic"], "parts": {}}
+            archive.append(entry)
+        entry["parts"][str(card_info["part"])] = text
 
     return text, state, video_url, card_info
 
@@ -482,6 +538,28 @@ def send_photo_to_telegram(image_bytes: bytes) -> None:
         raise RuntimeError(f"Telegramga rasm yuborishda xato: {result}")
 
 
+def send_audio_to_telegram(audio_bytes: bytes, title: str) -> None:
+    """Talaffuz audiosini alohida post sifatida yuboradi (matndan keyin)."""
+    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendAudio"
+    files = {"audio": ("talaffuz.mp3", audio_bytes, "audio/mpeg")}
+    data = {"chat_id": TELEGRAM_CHAT_ID, "title": title[:60], "performer": "@djami_teacher"}
+    resp = requests.post(url, data=data, files=files, timeout=60)
+    result = resp.json()
+    if not result.get("ok"):
+        raise RuntimeError(f"Telegramga audio yuborishda xato: {result}")
+
+
+def send_document_to_telegram(doc_bytes: bytes, filename: str, caption: str) -> None:
+    """PDF (yoki boshqa) hujjatni alohida post sifatida yuboradi."""
+    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendDocument"
+    files = {"document": (filename, doc_bytes, "application/pdf")}
+    data = {"chat_id": TELEGRAM_CHAT_ID, "caption": caption[:1024], "parse_mode": "HTML"}
+    resp = requests.post(url, data=data, files=files, timeout=60)
+    result = resp.json()
+    if not result.get("ok"):
+        raise RuntimeError(f"Telegramga hujjat yuborishda xato: {result}")
+
+
 def send_to_telegram(text: str, video_url: str | None = None) -> None:
     message = build_html_message(text, video_url)
 
@@ -517,10 +595,53 @@ def main():
             print(f"Ogohlantirish: karta-rasm yuborilmadi: {e}")
 
         send_to_telegram(post, video_url)
+
+        # Lug'at postiga so'zlarning talaffuz audiosini qo'shish.
+        if card_info["category"] == "topic_vocab":
+            try:
+                words = extract_key_terms(post)
+                if words:
+                    audio_bytes = build_pronunciation_audio(words)
+                    send_audio_to_telegram(audio_bytes, title=card_info["topic"])
+                    print(f"Talaffuz audiosi yuborildi ({len(words)} ta so'z).")
+                else:
+                    print("Ogohlantirish: postdan qalin so'zlar topilmadi, audio o'tkazib yuborildi.")
+            except Exception as e:
+                print(f"Ogohlantirish: audio yuborilmadi: {e}")
+
+        # Kunlik grammar seriyasi 5/5-qismga yetganda: shu mavzu bo'yicha
+        # 5 ta interaktiv quiz yuboriladi, va agar bugun 21 talik aylanish
+        # ham tugagan bo'lsa - to'liq qo'llanma PDF ham qo'shiladi.
+        if card_info["category"] == "grammar" and card_info.get("part") == 5:
+            try:
+                sent = send_daily_quiz(
+                    TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, card_info["topic"], _call_gemini
+                )
+                print(f"Quiz savollari yuborildi: {sent}/5")
+            except Exception as e:
+                print(f"Ogohlantirish: quiz yuborilmadi: {e}")
+
+            if card_info.get("cycle_complete"):
+                try:
+                    archive = state.get("grammar_archive", [])
+                    pdf_bytes = build_grammar_compendium_pdf(archive)
+                    send_document_to_telegram(
+                        pdf_bytes,
+                        "grammar_qollanma.pdf",
+                        "📚 <b>21 kunlik Grammar seriyasi yakunlandi!</b>\n\n"
+                        "Shu davrda o'rgangan barcha mavzularning to'liq "
+                        "qo'llanmasini yuklab oling.",
+                    )
+                    state["grammar_archive"] = []  # keyingi aylanish uchun tozalaymiz
+                    print("To'liq qo'llanma PDF yuborildi.")
+                except Exception as e:
+                    print(f"Ogohlantirish: PDF qo'llanma yuborilmadi: {e}")
+
         _save_state(state)
         print("Muvaffaqiyatli yuborildi!")
     except Exception as e:
         print(f"XATOLIK: {e}", file=sys.stderr)
+        notify_admin_on_error(str(e))
         sys.exit(1)
 
 
