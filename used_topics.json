@@ -1,5 +1,23 @@
 {
-  "topics": {},
-  "grammar_daily": {},
-  "grammar_archive": []
+  "topics": {
+    "grammar_daily_topic": [
+      "Future Continuous (kelajakda davom etayotgan harakatlar)"
+    ]
+  },
+  "grammar_daily": {
+    "date": "2026-08-04",
+    "topic": "Future Continuous (kelajakda davom etayotgan harakatlar)",
+    "part": 1,
+    "video_url": "https://www.youtube.com/watch?v=H5UD03yKfVI",
+    "cycle_complete_today": false
+  },
+  "grammar_archive": [
+    {
+      "date": "2026-08-04",
+      "topic": "Future Continuous (kelajakda davom etayotgan harakatlar)",
+      "parts": {
+        "1": "📌 <b>Future Continuous</b> zamoni: Kelajakdagi davomli harakatlar (1/5-qism)\n\n💡 <b>Future Continuous</b> zamoni kelajakdagi ma'lum bir vaqtda davom etayotgan bo'ladigan harakatlarni ifodalash uchun ishlatiladi. Bu zamon yordamida biz kelajakdagi aniq bir fursatda aynan nima ish bilan mashg'ul bo'lishimizni tasvirlaymiz. O'zbek tiliga bu shakl ko'pincha <i>qilayotgan bo'laman</i> yoki <i>bajarayotgan bo'ladi</i> deb tarjima qilinadi. Bunda asosiy e'tibor harakatning shunchaki sodir bo'lishiga emas, balki aynan o'sha vaqtdagi <b>davomiyligiga</b> qaratiladi.\n\n📖 Misollarga e'tibor bering:\n\n• Tomorrow at 5 PM, I <b>will be playing</b> football. (Ertaga soat 5 da men futbol <b>o'ynayotgan bo'laman</b>.)\n\n• At this time next week, we <b>will be flying</b> to London. (Keyingi hafta xuddi shu vaqtda biz Londonga <b>uchayotgan bo'lamiz</b>.)\n\n📝 Seriyamizning keyingi qismlarida ushbu zamonda darak, inkor va so'roq gaplarni to'g'ri tuzish qoidalarini birma-bir ko'rib chiqamiz. Kanalni kuzatib boring!"
+      }
+    }
+  ]
 }
