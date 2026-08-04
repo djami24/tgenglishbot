@@ -17,6 +17,10 @@ on:
     - cron: '0 9 * * *'
     - cron: '0 12 * * *'
     - cron: '0 15 * * *'
+
+    # "BILASIZMI?" (fun_fact) - kuniga 1 marta: 10:00 Toshkent vaqti
+    # (= 05:00 UTC).
+    - cron: '0 5 * * *'
   workflow_dispatch:
     inputs:
       category:
@@ -27,6 +31,7 @@ on:
           - ''
           - grammar
           - topic_vocab
+          - fun_fact
 
 permissions:
   contents: write
@@ -54,6 +59,8 @@ jobs:
               echo "value=topic_vocab" >> "$GITHUB_OUTPUT" ;;
             "0 3 * * *"|"0 6 * * *"|"0 9 * * *"|"0 12 * * *"|"0 15 * * *")
               echo "value=grammar" >> "$GITHUB_OUTPUT" ;;
+            "0 5 * * *")
+              echo "value=fun_fact" >> "$GITHUB_OUTPUT" ;;
             *)
               # Qo'lda ishga tushirilgan run (workflow_dispatch) - agar
               # turkum tanlangan bo'lsa o'shani, aks holda "grammar".
@@ -67,6 +74,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          TELEGRAM_ADMIN_CHAT_ID: ${{ secrets.TELEGRAM_ADMIN_CHAT_ID }}
           POST_CATEGORY: ${{ steps.category.outputs.value }}
         run: python post_lesson.py
 
