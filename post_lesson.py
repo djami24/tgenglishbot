@@ -43,6 +43,7 @@ from quiz import send_daily_quiz
 from audio import extract_key_terms, build_pronunciation_audio
 from pdf_report import build_grammar_compendium_pdf
 from notify import notify_admin_on_error
+from speaking import generate_speaking_questions, build_speaking_post_text, build_speaking_audio
 
 # Toshkent DST bilmaydi (doim UTC+5), shuning uchun sodda fixed-offset yetarli.
 TASHKENT_TZ = timezone(timedelta(hours=5))
@@ -429,6 +430,20 @@ def generate_post() -> tuple[str, dict, str | None, dict]:
             topic="Ingliz tili haqida qiziqarli fakt", instruction=FUN_FACT_INSTRUCTION
         )
         card_info = {"topic": "Bilasizmi?", "category": "fun_fact", "part": None}
+    elif category == "speaking_part1":
+        # Mavzu tanlash uchun mavjud 50 talik lug'at mavzular ro'yxatidan
+        # foydalanamiz (alohida "speaking_part1_topic" kaliti bilan
+        # kuzatiladi, shuning uchun topic_vocab bilan aralashib ketmaydi).
+        topic = choose_topic(state, "speaking_part1_topic", TOPIC_VOCAB_TOPICS)
+        questions = generate_speaking_questions(topic, _call_gemini)
+        text = build_speaking_post_text(topic, questions)
+        card_info = {
+            "topic": topic,
+            "category": "speaking_part1",
+            "part": None,
+            "speaking_questions": questions,
+        }
+        return text, state, video_url, card_info
     else:
         # Default/"grammar" - kunlik grammar seriyasi.
         topic, part, video_url, cycle_complete = _next_grammar_daily_part(state)
@@ -608,6 +623,15 @@ def main():
                     print("Ogohlantirish: postdan qalin so'zlar topilmadi, audio o'tkazib yuborildi.")
             except Exception as e:
                 print(f"Ogohlantirish: audio yuborilmadi: {e}")
+
+        # Speaking Part 1 mashqi uchun - savol/pauza audiosini qo'shish.
+        if card_info["category"] == "speaking_part1":
+            try:
+                audio_bytes = build_speaking_audio(card_info["speaking_questions"])
+                send_audio_to_telegram(audio_bytes, title=f"Speaking Part 1 - {card_info['topic']}")
+                print("Speaking Part 1 mashq audiosi yuborildi.")
+            except Exception as e:
+                print(f"Ogohlantirish: speaking audiosi yuborilmadi: {e}")
 
         # Kunlik grammar seriyasi 5/5-qismga yetganda: shu mavzu bo'yicha
         # 5 ta interaktiv quiz yuboriladi, va agar bugun 21 talik aylanish

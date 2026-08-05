@@ -41,6 +41,12 @@ _COLOR_SCHEMES = {
         "accent": (255, 255, 255),
         "label": "BILASIZMI?",
     },
+    "speaking_part1": {
+        "top": (219, 39, 119),     # rose
+        "bottom": (147, 51, 234),  # purple
+        "accent": (250, 204, 21),
+        "label": "SPEAKING PART 1",
+    },
 }
 
 

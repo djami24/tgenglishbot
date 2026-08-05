@@ -4,7 +4,7 @@ Bu loyiha GitHub Actions yordamida Google Gemini orqali IELTS Speaking lug'ati,
 kunlik grammar seriyasi va motivatsion postlarni generatsiya qilib, Telegram
 kanalingizga avtomatik yuboradi. **Butunlay bepul** ishlaydi.
 
-Bot UCH turkumda post qiladi (Toshkent vaqti bo'yicha):
+Bot TO'RT turkumda post qiladi (Toshkent vaqti bo'yicha):
 
 - **IELTS Speaking lug'ati** — kuniga 2 marta (09:00 va 19:00), 50 ta
   mavzudan navbatdagi mavzu bo'yicha 10 ta so'z. 50 tasi tugamaguncha
@@ -24,6 +24,12 @@ Bot UCH turkumda post qiladi (Toshkent vaqti bo'yicha):
   qo'shimcha post qilinadi.
 - **"Bilasizmi?"** — kuniga 1 marta (10:00), ingliz tili yoki til o'rganish
   haqida qiziqarli fakt yoki motivatsion fikr.
+- **Speaking Part 1 mashqi** — kuniga 1 marta (18:00), bitta mavzu bo'yicha
+  3 ta IELTS Speaking Part 1 uslubidagi savol yozma shaklda post qilinadi.
+  Shu bilan birga, savollarni **2 martadan o'qiydigan va har savoldan
+  keyin 30 soniya jim turadigan** maxsus "mashq audiosi" ham qo'shib
+  yuboriladi — talaba tinglab, o'sha 30 soniya ichida ovoz chiqarib javob
+  berishi mumkin (haqiqiy imtihon holatiga o'xshash mashq).
 
 Har bir post yuborilishidan oldin, o'sha mavzu nomi yozilgan gradient fonli
 sarlavha-rasm alohida post sifatida avtomatik yuboriladi (Pillow bilan
@@ -52,10 +58,10 @@ Telegram xabari ham kelishi mumkin (pastda 5-qadamga qarang).
 3. Chiqqan kalitni nusxalab oling.
 
 > Bepul tarifda kunlik so'rovlar soni cheklangan (odatda 1500+/kun `gemini-3.6-flash`
-> uchun). Joriy jadvalda kuniga taxminan 8-9 ta asosiy post (5 grammar + 2 lug'at +
-> 1 fun_fact) va grammar seriyasi tugagan kunlarda qo'shimcha 1 ta so'rov (5 ta quiz
-> savoli birgalikda) hamda 21 kunda 1 marta PDF uchun 1 ta so'rov ketadi — bu bepul
-> limitga bemalol sig'adi.
+> uchun). Joriy jadvalda kuniga taxminan 9-10 ta asosiy post (5 grammar + 2 lug'at +
+> 1 fun_fact + 1 speaking_part1) va grammar seriyasi tugagan kunlarda qo'shimcha 1 ta
+> so'rov (5 ta quiz savoli birgalikda) hamda 21 kunda 1 marta PDF uchun 1 ta so'rov
+> ketadi — bu bepul limitga bemalol sig'adi.
 
 ## 4-qadam (ixtiyoriy): YouTube API kalitini olish
 
@@ -90,10 +96,10 @@ xohlasangiz:
 
 1. GitHub'da yangi **repository** yarating (public yoki private — farqi yo'q).
 2. Shu papkadagi **barcha fayl va papkalarni** ("post_lesson.py", "title_card.py",
-   "quiz.py", "audio.py", "pdf_report.py", "notify.py", "requirements.txt",
-   "assets/" va ".github/" papkalari) o'sha repo'ga yuklang (GitHub saytida
-   "Add file → Upload files" orqali ham qilsa bo'ladi — papkalarni sudrab
-   tashlasangiz, ichidagi fayllar bilan birga yuklanadi).
+   "quiz.py", "audio.py", "speaking.py", "pdf_report.py", "notify.py",
+   "requirements.txt", "assets/" va ".github/" papkalari) o'sha repo'ga yuklang
+   (GitHub saytida "Add file → Upload files" orqali ham qilsa bo'ladi — papkalarni
+   sudrab tashlasangiz, ichidagi fayllar bilan birga yuklanadi).
 
 ## 7-qadam: Maxfiy kalitlarni (Secrets) qo'shish
 
@@ -114,7 +120,7 @@ Quyidagi secret'larni qo'shing:
 1. Repo'ning **Actions** bo'limiga o'ting.
 2. Chap tomondan workflow'ni tanlang ("Ingliz tili postini Telegramga yuborish").
 3. **"Run workflow"** tugmasini bosib, qo'lda bir marta ishga tushiring (kerak bo'lsa `category`
-   maydonida `grammar`, `topic_vocab` yoki `fun_fact` ni tanlang).
+   maydonida `grammar`, `topic_vocab`, `fun_fact` yoki `speaking_part1` ni tanlang).
 4. Bir necha soniyadan so'ng kanalingizga post kelishi kerak.
 
 Shundan keyin u avtomatik ravishda yuqoridagi jadval bo'yicha ishlaydi — hech narsa qilish shart emas.
