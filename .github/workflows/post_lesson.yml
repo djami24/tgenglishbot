@@ -21,6 +21,10 @@ on:
     # "BILASIZMI?" (fun_fact) - kuniga 1 marta: 10:00 Toshkent vaqti
     # (= 05:00 UTC).
     - cron: '0 5 * * *'
+
+    # SPEAKING PART 1 mashqi (speaking_part1) - kuniga 1 marta: 18:00
+    # Toshkent vaqti (= 13:00 UTC).
+    - cron: '0 13 * * *'
   workflow_dispatch:
     inputs:
       category:
@@ -32,6 +36,7 @@ on:
           - grammar
           - topic_vocab
           - fun_fact
+          - speaking_part1
 
 permissions:
   contents: write
@@ -51,6 +56,13 @@ jobs:
       - name: Kutubxonalarni o'rnatish
         run: pip install -r requirements.txt
 
+      - name: ffmpeg mavjudligini tekshirish (Speaking Part 1 audiosi uchun)
+        run: |
+          if ! which ffmpeg > /dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq ffmpeg
+          fi
+
       - name: Turkumni cron vaqtiga qarab aniqlash
         id: category
         run: |
@@ -61,6 +73,8 @@ jobs:
               echo "value=grammar" >> "$GITHUB_OUTPUT" ;;
             "0 5 * * *")
               echo "value=fun_fact" >> "$GITHUB_OUTPUT" ;;
+            "0 13 * * *")
+              echo "value=speaking_part1" >> "$GITHUB_OUTPUT" ;;
             *)
               # Qo'lda ishga tushirilgan run (workflow_dispatch) - agar
               # turkum tanlangan bo'lsa o'shani, aks holda "grammar".
