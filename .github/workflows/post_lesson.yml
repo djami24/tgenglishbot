@@ -22,9 +22,9 @@ on:
     # (= 05:00 UTC).
     - cron: '0 5 * * *'
 
-    # SPEAKING PART 1 mashqi (speaking_part1) - kuniga 1 marta: 18:00
-    # Toshkent vaqti (= 13:00 UTC).
-    - cron: '0 13 * * *'
+    # SPEAKING PART 1 mashqi (speaking_part1) - kuniga 1 marta: 12:05
+    # Toshkent vaqti (= 07:05 UTC).
+    - cron: '5 7 * * *'
   workflow_dispatch:
     inputs:
       category:
@@ -73,7 +73,7 @@ jobs:
               echo "value=grammar" >> "$GITHUB_OUTPUT" ;;
             "0 5 * * *")
               echo "value=fun_fact" >> "$GITHUB_OUTPUT" ;;
-            "0 13 * * *")
+            "5 7 * * *")
               echo "value=speaking_part1" >> "$GITHUB_OUTPUT" ;;
             *)
               # Qo'lda ishga tushirilgan run (workflow_dispatch) - agar
