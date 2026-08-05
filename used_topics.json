@@ -1,5 +1,23 @@
 {
-  "topics": {},
-  "grammar_daily": {},
-  "grammar_archive": []
+  "topics": {
+    "grammar_daily_topic": [
+      "Past Perfect Continuous (o'tmishdagi boshqa harakatdan oldingi davomiylikni ta'kidlash)"
+    ]
+  },
+  "grammar_daily": {
+    "date": "2026-08-05",
+    "topic": "Past Perfect Continuous (o'tmishdagi boshqa harakatdan oldingi davomiylikni ta'kidlash)",
+    "part": 1,
+    "video_url": "https://www.youtube.com/watch?v=NJ5MtHkcEJE",
+    "cycle_complete_today": false
+  },
+  "grammar_archive": [
+    {
+      "date": "2026-08-05",
+      "topic": "Past Perfect Continuous (o'tmishdagi boshqa harakatdan oldingi davomiylikni ta'kidlash)",
+      "parts": {
+        "1": "⏳ <b>Past Perfect Continuous</b> zamoni: Umumiy tushuncha (1/5)\n\n📌 <b>Past Perfect Continuous</b> (O'tmish tugallangan davomli zamon) o'tmishda sodir bo'lgan boshqa bir harakatdan oldin ma'lum bir vaqt davomida uzluksiz davom etgan jarayonni ifodalash uchun ishlatiladi. Bu zamonda asosiy diqqat-e'tibor harakatning qancha vaqt <b>davom etganligiga</b> va uning davomiyligini ta'kidlashga qaratiladi. Ya'ni o'tmishdagi ikkinchi harakat ro'y berguniga qadar birinchi harakat muayyan muddat davom etgan bo'ladi. Ushbu grammatik qoida o'zbek tiliga ko'pincha \"...-ayotgan edi\" yoki \"...-ib kelayotgan edi\" shaklida tarjima qilinadi.\n\n💡 Misollar:\n\n• They <b>had been waiting</b> for two hours before the bus arrived.\n(Avtobus kelguniga qadar ular ikki soat davomida <i>kutishayotgan edi</i>.)\n\n• She <b>had been studying</b> English for three years before she moved to London.\n(U Londonga ko'chib o'tishidan oldin uch yil davomida ingliz tilini <i>o'rganib kelayotgan edi</i>.)\n\n📝 Keyingi qismlarda ushbu zamonning darak, inkor va so'roq gap tuzilishlarini batafsil ko'rib chiqamiz. Bizni kuzatishda davom eting!"
+      }
+    }
+  ]
 }
