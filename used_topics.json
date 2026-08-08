@@ -3,7 +3,8 @@
     "grammar_daily_topic": [
       "Past Perfect Continuous (o'tmishdagi boshqa harakatdan oldingi davomiylikni ta'kidlash)",
       "Passive reporting structures (It is said that..., He is known to...)",
-      "Future Continuous (kelajakda davom etayotgan harakatlar)"
+      "Future Continuous (kelajakda davom etayotgan harakatlar)",
+      "Subjunctive mood - zarurat va muhimlikni ifodalovchi that-clause'lar (It's essential that he be informed.)"
     ],
     "topic_vocab": [
       "The Internet (Internet)",
@@ -13,10 +14,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-08-07",
-    "topic": "Future Continuous (kelajakda davom etayotgan harakatlar)",
-    "part": 4,
-    "video_url": "https://www.youtube.com/watch?v=H5UD03yKfVI",
+    "date": "2026-08-08",
+    "topic": "Subjunctive mood - zarurat va muhimlikni ifodalovchi that-clause'lar (It's essential that he be informed.)",
+    "part": 1,
+    "video_url": null,
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -50,6 +51,13 @@
         "2": "📌 <b>Future Continuous: Darak gaplar</b> (2/5-qism)\n\n💡 Bugun <b>Future Continuous</b> zamonida darak gaplar qanday tuzilishini ko'rib chiqamiz. Bu zamon kelajakdagi belgilangan biror vaqtda <b>davom etayotgan</b> harakatni ifodalaydi.\n\n📐 <b>Darak gap formulasi:</b>\n<b>Subject + will be + Verb-ing</b>\n\n🗣️ <b>Misollar:</b>\n\n🔹 <b>I will be studying</b> at 8 PM tomorrow.\n(Ertaga soat 8 da men <i>dars qilayotgan bo'laman</i>.)\n\n🔹 <b>They will be playing</b> football at this time next Sunday.\n(Kelasi yakshanba shu vaqtda ular futbol <i>o'ynayotgan bo'lishadi</i>.)\n\n🔹 <b>She will be working</b> all day tomorrow.\n(U ertaga kun bo'yi <i>ishlayotgan bo'ladi</i>.)\n\n🔹 <b>We will be traveling</b> to Samarkand at 5 o'clock.\n(Soat 5 da biz Samarqandga <i>ketayotgan bo'lamiz</i>.)\n\n❗ <b>Tez-tez uchraydigan xato:</b>\nBoshlovchilar ba'zan <b>will be</b> o'rniga egaga qarab <i>will am/is/are</i> ishlatib qo'yishadi. Har qanday ega (I, he, she, they) uchun faqat <b>will be</b> birikmasi ishlatiladi.",
         "3": "📌 <b>Future Continuous: Inkor gaplar</b> (3/5-qism)\n\n💡 Bugun kelajakda ma'lum bir vaqtda <b>davom etmayotgan</b> harakatlarni ifodalash uchun inkor shaklini o'rganamiz.\n\n📖 <b>Inkor gap formulasi:</b>\n<b>Subject + will not (won't) + be + Verb-ing</b>\n\n🗣️ <b>Misollar:</b>\n\n🔹 I <b>won't be sleeping</b> at 10 PM tonight.\n(Bugun tunda soat 22:00 da men <i>uxlamayotgan</i> bo'laman.)\n\n🔹 She <b>won't be working</b> this Sunday afternoon.\n(Bu yakshanba tushdan keyin u <i>ishlamayotgan</i> bo'ladi.)\n\n🔹 We <b>won't be playing</b> football at 5 o'clock.\n(Soat 5 da biz futbol <i>o'ynamayotgan</i> bo'lamiz.)\n\n🔹 They <b>won't be traveling</b> next week.\n(Kelasi hafta ular <i>sayohat qilmayotgan</i> bo'lishadi.)\n\n❗ <b>Tez-tez uchraydigan xato:</b>\nInkor yuklamasi <b>not</b> har doim <b>will</b> va <b>be</b> so'zlari orasiga qo'yiladi. Uni <b>be</b> fe'lidan keyinga o'tkazib yubormang!\n\n❌ Noto'g'ri: He will be not cooking.\n✅ To'g'ri: He <b>won't be cooking</b>.",
         "4": "❓ <b>Future Continuous</b>: So'roq gap tuzilishi (4/5-qism)\n\n📌 <b>So'roq gaplar qanday tuziladi?</b>\n\nFuture Continuous zamonida so'roq gap hosil qilish uchun <b>will</b> yordamchi fe'li egadan oldinga o'tkaziladi.\n\n<b>1. Umumiy so'roq (Yes/No questions):</b>\n<b>Will</b> + ega + <b>be</b> + <b>V-ing</b>...?\n\n<b>2. Maxsus so'roq (Wh- questions):</b>\n<b>Wh-word</b> + <b>will</b> + ega + <b>be</b> + <b>V-ing</b>...?\n\n📝 <b>Misollar:</b>\n\n❓ <b>Will you be working</b> at 8 p.m. tonight?\n<i>(Bugun kechki soat 8 da ishlayotgan bo'lasanmi?)</i>\n\n❓ <b>Will they be waiting</b> for us at the station?\n<i>(Ular vokzalda bizni kutayotgan bo'lishadimi?)</i>\n\n❓ <b>What will you be doing</b> at this time tomorrow?\n<i>(Ertaga shu vaqtda nima qilayotgan bo'lasan?)</i>\n\n❓ <b>Where will she be studying</b> next year?\n<i>(U kelasi yili qayerda tahsil olayotgan bo'ladi?)</i>\n\n💡 <b>Eslatma:</b>\nE'tibor bering, so'roq gapda faqat <b>will</b> yordamchi fe'li egadan oldinga o'tadi, <b>be</b> esa o'z joyida — asosiy fe'l (<b>V-ing</b>) oldida qoladi."
+      }
+    },
+    {
+      "date": "2026-08-08",
+      "topic": "Subjunctive mood - zarurat va muhimlikni ifodalovchi that-clause'lar (It's essential that he be informed.)",
+      "parts": {
+        "1": "📌 <b>Subjunctive Mood</b>: Zarurat va muhimlikni ifodalash (1/5)\n\n💡 Ingliz tilida biror harakatning qanchalik <b>muhim</b>, <b>zarur</b> yoki <b>shart</b> ekanligini ta'kidlash uchun maxsus grammatik qurilma — <b>Subjunctive Mood</b> ishlatiladi. Bu tuzilma rasmiy nutq hamda yozishmalarda taklif, maslahat yoki talablarni ifodalash uchun qo'llaniladi. Uning asosiy xususiyati shundaki, <b>that-clause</b> tarkibidagi fe'l zamon va shaxsga bog'liq bo'lmagan holda dastlabki shaklda, ya'ni <b>bare infinitive</b> holatida qoladi. Uchinchi shaxs birlikda ham fe'lga <i>-s</i> qo'shimchasi qo'shilmaydi.\n\n📖 Misollar:\n\n✅ It is essential that he <b>be</b> informed.\n(Uning xabardor qilinishi <i>juda zarur</i>.)\n\n✅ The doctor recommended that she <b>take</b> a rest.\n(Shifokor unga dam olishni <i>tavsiya etdi</i>.)\n\n📝 Ushbu seriyamizning keyingi qismlarida <b>Subjunctive Mood</b>ning darak, inkor va so'roq gaplarda qanday hosil qilinishini batafsil ko'rib chiqamiz. Kanalni kuzatib boring!"
       }
     }
   ]
