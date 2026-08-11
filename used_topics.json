@@ -6,7 +6,8 @@
       "Future Continuous (kelajakda davom etayotgan harakatlar)",
       "Subjunctive mood - zarurat va muhimlikni ifodalovchi that-clause'lar (It's essential that he be informed.)",
       "Quantifiers va intensifiers - miqdor va urg'u ifodalari (a great deal of, plenty of, such, so, quite, rather)",
-      "Modals for deduction and speculation (must have, might have, could have)"
+      "Modals for deduction and speculation (must have, might have, could have)",
+      "Passive voice - turli zamonlardagi murakkab qurilmalar"
     ],
     "topic_vocab": [
       "The Internet (Internet)",
@@ -20,10 +21,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-08-10",
-    "topic": "Modals for deduction and speculation (must have, might have, could have)",
-    "part": 5,
-    "video_url": "https://www.youtube.com/watch?v=GTIGz9UFEEQ",
+    "date": "2026-08-11",
+    "topic": "Passive voice - turli zamonlardagi murakkab qurilmalar",
+    "part": 1,
+    "video_url": null,
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -86,6 +87,13 @@
         "3": "📌 <b>Grammar Time: Past Deduction (3/5)</b> — <b>Inkor shakli</b>\n\n💡 O'tgan zamonga oid taxminlarning <b>inkor shaklini</b> (Negative) hosil qilish uchun quyidagi formulalardan foydalanamiz:\n\n👉 Mantiqan mutlaqo imkonsiz holatlar uchun:\n<b>Subject + can't / couldn't + have + V3</b>\n\n👉 Ehtimol sodir bo'lmagan hodisalar uchun:\n<b>Subject + might not / may not + have + V3</b>\n\n📝 <b>Misollar:</b>\n\n🔹 <i>He <b>can't have seen</b> me because I was hiding.</i>\n(U meni <b>ko'rgan bo me'yoriy jihatdan mumkin emas</b>, chunki men yashiringan edim.)\n\n🔹 <i>She <b>couldn't have stolen</b> the money; she wasn't at work.</i>\n(U pulni <b>o'g'irlagan bo'lishi imkonsiz</b>, u ishda yo'q edi.)\n\n🔹 <i>They <b>might not have received</b> our email yet.</i>\n(Ular hali bizning xatimizni <b>olmagan bo'lishlari mumkin</b>.)\n\n🔹 <i>Sarah <b>may not have noticed</b> the mistake in the document.</i>\n(Sara hujjatdagi xatoni <b>payqamagan bo'lishi ehtimoldan xoli emas</b>.)\n\n❗ <b>Muhim eslatma:</b>\nO'tgan zamondagi mantiqiy imkonsizlikni ifodalashda <b>must not have</b> birikmasi o'rniga har doim <b>can't have</b> yoki <b>couldn't have</b> iborasini ishlatish to'g'ri bo'ladi.",
         "4": "📌 <b>O'tgan zamondagi taxminlar: So'roq gaplar</b> (4/5-qism)\n\n💡 O'tgan zamonda sodir bo'lgan voqealar haqida taxminiy so'rov berish uchun modal fe'llardan so'roq shaklida foydalanamiz.\n\n📖 <b>Umumiy so'roq gaplar formulasi (Yes/No questions):</b>\n<b>Modal fe'l (Could/Might)</b> + <b>Ega</b> + <b>have</b> + <b>V3 (Past Participle)</b> ...?\n\n🔤 <b>Maxsus so'roq gaplar formulasi (Wh- questions):</b>\n<b>So'roq so'zi (Wh-)</b> + <b>modal fe'l</b> + <b>Ega</b> + <b>have</b> + <b>V3</b> ...?\n\n🗣️ <b>Misollar:</b>\n\n1. <b>Could he have forgotten</b> about our important meeting?\n<i>U muhim uchrashuvimiz haqida unutgan bo'lishi mumkinmi?</i>\n\n2. <b>Might they have missed</b> the last bus yesterday?\n<i>Ular kecha oxirgi avtobusga kechikkan bo'lishlari mumkinmi?</i>\n\n3. <b>Where could she have hidden</b> the keys?\n<i>U kalitlarni qayerga yashirgan bo'lishi mumkin?</i>\n\n4. <b>Why might he have left</b> the party so early?\n<i>U nega ziyofatni bunday barvaqt tark etgan bo'lishi mumkin?</i>\n\n❗ <b>Muhim eslatma:</b> O'tgan zamondagi taxminiy so'roq gaplarda asosan <b>could have</b> va <b>might have</b> iboralari ishlatiladi. Qat'iy taxminni bildiruvchi <b>must have</b> birikmasi esa so'roq shaklida deyarli qo'llanilmaydi.",
         "5": "🎯 <b>Grammar Series: Modals for Deduction (5/5)</b>\n\n⚠️ <b>Ko'p qilinadigan xatolar:</b>\n\n1. O'tgan zamondagi taxminlar uchun modaldan so'ng fe'lning oddiy shaklini ishlatish xatodir. Masalan, <i>he must be there yesterday</i> emas, <b>he must have been there yesterday</b> bo'lishi kerak.\n2. O'tmishdagi imkonsiz hodisani inkor qilishda <i>mustn't have</i> emas, balki <b>can't have</b> yoki <b>couldn't have</b> iborasi ishlatiladi.\n\n📝 <b>Bo'sh joylarni to'g'ri modal fe'llar bilan to'ldiring:</b>\n\n1. The grass is wet. It <b>___</b> (rain) last night.\n2. She didn't answer my call. She <b>___</b> (be) busy, but I am not sure.\n3. He <b>___</b> (commit) the crime because he was in another country at that time.\n4. Wow, she got 100% on the test! She <b>___</b> (study) very hard.\n\n✅ <b>Javoblar:</b>\n\n1. <b>must have rained</b> (Aniq dalilga asoslangan kuchli xulosa)\n2. <b>might have been / could have been</b> (Noaniq, ehtimoliy taxmin)\n3. <b>can't have committed / couldn't have committed</b> (Mantiqan imkonsiz holat)\n4. <b>must have studied</b> (Yuqori natijadan kelib chiqqan ishonchli taxmin)"
+      }
+    },
+    {
+      "date": "2026-08-11",
+      "topic": "Passive voice - turli zamonlardagi murakkab qurilmalar",
+      "parts": {
+        "1": "📌 <b>Passive Voice</b>: Turli zamonlardagi murakkab qurilmalar (1/5-qism)\n\n💡 Ingliz tilida harakat bajaruvchisidan ko'ra harakatning o'zi yoki uning natijasi muhimroq bo'lganda <b>Passive Voice</b> (Majhul nisbat) ishlatiladi. Murakkab zamonlarda ushbu qurilma nutqimizni yanada aniqroq, boyroq va professionalroq ko'rsatishga xizmat qiladi. Ko'pincha ilmiy maqolalar, yangiliklar va rasmiy muloqotda turli zamonlardagi majhul nisbat shakllaridan keng foydalaniladi. Ushbu seriyamiz orqali siz murakkab zamonlardagi majhul nisbat iboralarini muloqotda to'g'ri qo'llashni o'rganasiz.\n\n📖 Keling, dastlabki misollarni ko'rib chiqamiz:\n\n🔹 <i>The new bridge <b>is being built</b> right now.</i>\n(Yangi ko'prik ayni damda <b>qurilmoqda</b>.)\n\n🔹 <i>The report <b>had been finished</b> before the meeting started.</i>\n(Majlis boshlanishidan oldin hisobot <b>tugatib bo'lingan edi</b>.)\n\n📝 Keyingi qismlarda ushbu murakkab qurilmalarning darak, inkor va so'roq gap shakllarini turli zamonlar misolida batafsil ko'rib chiqamiz. Bizni kuzatib boring!"
       }
     }
   ]
