@@ -7,7 +7,8 @@
       "Subjunctive mood - zarurat va muhimlikni ifodalovchi that-clause'lar (It's essential that he be informed.)",
       "Quantifiers va intensifiers - miqdor va urg'u ifodalari (a great deal of, plenty of, such, so, quite, rather)",
       "Modals for deduction and speculation (must have, might have, could have)",
-      "Passive voice - turli zamonlardagi murakkab qurilmalar"
+      "Passive voice - turli zamonlardagi murakkab qurilmalar",
+      "Present Perfect Continuous (hozirgacha davom etayotgan harakatning davomiyligini ta'kidlash)"
     ],
     "topic_vocab": [
       "The Internet (Internet)",
@@ -22,10 +23,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-08-11",
-    "topic": "Passive voice - turli zamonlardagi murakkab qurilmalar",
-    "part": 4,
-    "video_url": null,
+    "date": "2026-08-12",
+    "topic": "Present Perfect Continuous (hozirgacha davom etayotgan harakatning davomiyligini ta'kidlash)",
+    "part": 1,
+    "video_url": "https://www.youtube.com/watch?v=Ttr7DowBUBk",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -98,6 +99,13 @@
         "2": "📌 <b>Passive Voice</b>: Turli zamonlardagi murakkab qurilmalar (2/5)\n\n💡 Murakkab zamonlarda <b>Majhul nisbat</b> (Passive Voice) darak gaplarini yasash uchun tegishli yordamchi fe'llar hamda asosiy fe'lning <b>V3 (Past Participle)</b> shakli ishlatiladi.\n\n📝 Asosiy formulalar:\n• Continuous zamonlar: <b>Subject + be (am/is/are/was/were) + being + V3</b>\n• Perfect zamonlar: <b>Subject + have/has/had + been + V3</b>\n• Modal fe'llar: <b>Subject + modal verb + be / have been + V3</b>\n\n🗣️ Misollar:\n\n1. The new document <b>is being prepared</b> right now.\n<i>Yangi hujjat ayni damda tayyorlanmoqda.</i>\n\n2. All the tickets <b>have already been sold</b> out.\n<i>Barcha chiptalar allaqachon sotib bo'lingan.</i>\n\n3. The bridge <b>had been built</b> before the winter started.\n<i>Qish boshlanishidan oldin ko'prik qurib bitkazilgan edi.</i>\n\n4. This problem <b>should have been solved</b> earlier.\n<i>Bu muammo ertaroq hal qilinishi kerak edi.</i>\n\n❗ Muhim eslatma:\nAksariyat o'quvchilar <b>being</b> va <b>been</b> so'zlarini almashtirib qo me'yorini buzishadi. Davomli jarayonda har doim <b>being</b>, tugallangan natijada esa <b>been</b> ishlatilishini yodda tuting.",
         "3": "📌 <b>Passive Voice: Murakkab inkor shakllari</b> (3/5-qism)\n\n💡 Majhul nisbatning murakkab zamon va modal birikmalaridagi inkor shaklini yasashda <b>not</b> yuklamasi har doim birinchi yordamchi fe'ldan so'ng qo'shiladi.\n\n📖 Asosiy formulalar:\n• Perfect Passive: <b>Subject + haven't / hasn't / hadn't + been + V3</b>\n• Modal Perfect Passive: <b>Subject + modal + not + have + been + V3</b>\n\n📝 Misollar:\n\n🗣️ The project <b>hasn't been approved</b> by the committee yet.\n<i>Loyiha hali qo'mita tomonidan tasdiqlangani yo'q.</i>\n\n🗣️ The mistakes <b>hadn't been noticed</b> before the publication.\n<i>Xatolar nashrdan oldin payqalmagan edi.</i>\n\n🗣️ The message <b>shouldn't have been sent</b> without permission.\n<i>Xabar ruxsatsiz yuborilmasligi kerak edi.</i>\n\n🗣️ The building <b>won't have been finished</b> by the end of this year.\n<i>Bino bu yilning oxirigacha qurib bitkazilmagan bo'ladi.</i>\n\n❗ <b>Tez-tez uchraydigan xato:</b>\nInkor yuklamasini ikkinchi yoki uchinchi yordamchi fe'ldan keyin qo'ymang. Masalan, \"should have <b>not</b> been\" shakli xato, to'g'ri variant: \"should <b>not</b> have been\".",
         "4": "📌 <b>Passive Voice</b>: Murakkab qurilmalarda so'roq gaplar (4/5-qism)\n\n💬 Bugungi darsimizda <b>Passive Voice</b> nisbatining murakkab zamonlar va modal fe'llar bilan kelgan <b>so'roq gap</b> shakllarini o'rganamiz.\n\n⚙️ <b>Umumiy so'roq (Yes/No questions) formulasi:</b>\n<b>Yordamchi fe'l</b> + <b>Ega</b> + <b>being/been/be</b> + <b>V3</b>?\n\n❓ <b>Maxsus so'roq (Wh- questions) formulasi:</b>\n<b>Wh-so'z</b> + <b>Yordamchi fe'l</b> + <b>Ega</b> + <b>being/been/be</b> + <b>V3</b>?\n\n📝 <b>Misollar:</b>\n\n🔹 <b>Is</b> the report <b>being prepared</b> at the moment?\n<i>(Ayni damda hisobot tayyorlanyaptimi?)</i>\n\n🔹 <b>Has</b> the problem <b>been solved</b> yet?\n<i>(Muammo hal qilindimi?)</i>\n\n🔹 <b>Why has</b> the decision <b>been delayed</b> for so long?\n<i>(Nega qaror bunchalik uzoq vaqtga kechiktirildi?)</i>\n\n🔹 <b>Can</b> this task <b>be completed</b> by tomorrow?\n<i>(Bu topshiriq ertagacha bajarilishi mumkinmi?)</i>\n\n💡 <b>Eslatma:</b> So'roq shaklida faqatgina <b>birinchi yordamchi fe'l</b> (masalan: <i>is, has, can</i>) egadan oldinga o'tadi. Boshqa elementlar (<i>being, been, be</i>) esa har doim egadan keyin qoladi."
+      }
+    },
+    {
+      "date": "2026-08-12",
+      "topic": "Present Perfect Continuous (hozirgacha davom etayotgan harakatning davomiyligini ta'kidlash)",
+      "parts": {
+        "1": "📌 <b>Present Perfect Continuous</b>: Hozirgacha davom etayotgan harakat (1/5)\n\n💡 Bu zamon o'tmishda boshlangan va hozirgi paytgacha to'xtovsiz davom etib kelayotgan harakatlarni ifodalash uchun ishlatiladi. Uning asosiy vazifasi harakatning natijasini emas, balki aynan u <b>qancha vaqt davom etgani</b>ni ta'kidlashdir. Agar siz biror ish-harakatni ma'lum vaqt oralig'ida uzluksiz qilayotganingizni ko'rsatmoqchi bo'lsangiz, ushbu zamon eng to'g'ri tanlov bo'ladi. O'zbek tiliga ko'pincha <i>\"...dan beri bajarmoqda\"</i> yoki <i>\"...dan buyon qilmoqda\"</i> deb tarjima qilinadi.\n\n📖 Misollar:\n\n🗣️ I <b>have been studying</b> English for three years.\n(Men uch yildan beri ingliz tilini o'rganib kelayapman.)\n\n🗣️ She <b>has been waiting</b> for the bus since 9 o'clock.\n(U soat 9 dan beri avtobus kutyapti.)\n\n📝 Bugun ushbu zamonning umumiy ma'nosini ko'rib chiqdik. Keyingi qismlarda darak, inkor va so'roq gap tuzilmalarini batafsil o'rganamiz. Kanalimizni kuzatib boring!"
       }
     }
   ]
