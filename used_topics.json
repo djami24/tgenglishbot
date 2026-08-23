@@ -18,7 +18,8 @@
       "Cleft sentences va inversion - urg'u berish uchun (It was John who..., Hardly had I...)",
       "Third Conditional (o'tmishdagi xayoliy vaziyatlar)",
       "Reported speech - fe'l zamoni, olmosh va vaqt ifodalarining o'zgarishi",
-      "Future Perfect (kelajakdagi ma'lum vaqtga qadar tugallanadigan harakatlar)"
+      "Future Perfect (kelajakdagi ma'lum vaqtga qadar tugallanadigan harakatlar)",
+      "Reduced relative clauses (nisbiy olmoshni tushirib qoldirish)"
     ],
     "topic_vocab": [
       "The Internet (Internet)",
@@ -45,10 +46,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-08-22",
-    "topic": "Future Perfect (kelajakdagi ma'lum vaqtga qadar tugallanadigan harakatlar)",
-    "part": 4,
-    "video_url": "https://www.youtube.com/watch?v=JBmsega_fgE",
+    "date": "2026-08-23",
+    "topic": "Reduced relative clauses (nisbiy olmoshni tushirib qoldirish)",
+    "part": 1,
+    "video_url": "https://www.youtube.com/watch?v=W-lgmBwBOpE",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -224,6 +225,13 @@
         "2": "⏳ <b>Future Perfect</b> zamoni: Darak gaplar (2/5)\n\n📌 <b>Future Perfect</b> zamonida darak gaplar kelajakdagi ma'lum bir vaqtga qadar tugallanadigan harakat va voqealarni ifodalash uchun ishlatiladi.\n\n📖 <b>Formula:</b>\n<b>Subject + will have + V3 (Past Participle)</b>\n\n💬 <b>Misollar:</b>\n\n🔹 <i>By 5 o'clock, I <b>will have finished</b> my work.</i>\nSoat 5 gacha men ishlarimni <b>bajarib bo'laman</b>.\n\n🔹 <i>She <b>will have cooked</b> dinner by the time you arrive.</i>\nSiz kelguningizcha u kechki ovqatni <b>pishirib qo'yadi</b>.\n\n🔹 <i>They <b>will have built</b> the new house by next year.</i>\nUlar kelasi yilgacha yangi uyni <b>qurib bitkazishadi</b>.\n\n🔹 <i>By the end of this month, we <b>will have completed</b> the course.</i>\nShu oyning oxirigacha biz kursni <b>yakunlaymiz</b>.\n\n💡 <b>Muhim eslatma:</b>\nEga qaysi shaxsda bo'lishidan qat'i nazar (<i>he, she, it, I, you, we, they</i>), har doim <b>will have</b> birikmasi ishlatiladi. Uchinchi shaxs birlik uchun <b>will has</b> shaklini ishlatish juda katta xato hisoblanadi!",
         "3": "📌 <b>Future Perfect</b> zamoni: Inkor gaplar (3/5-qism)\n\n💡 Future Perfect zamonida inkor gap hosil qilish uchun <b>will</b> yordamchi fe me'yoridan so'ng <b>not</b> inkor yuklamasi qo'shiladi. Odatda ularning qisqartirilgan shakli <b>won't</b> ishlatiladi.\n\n⚙️ Inkor gap formulasi: <b>Subject + won't (will not) + have + V3 (Past Participle)</b>\n\n📖 Misollar:\n\n🗣️ I <b>won't have finished</b> the report by 5 PM.\n(Men soat 5 ga qadar hisobotni <i>tugatmagan bo'laman</i>.)\n\n🗣️ She <b>won't have arrived</b> in Tashkent by tomorrow morning.\n(U ertaga ertalabgacha Toshkentga <i>yetib bormagan bo'ladi</i>.)\n\n🗣️ They <b>won't have built</b> the bridge by next year.\n(Ular keyingi yilga qadar ko'prikni <i>qurib bitkazishmagan bo'ladi</i>.)\n\n🗣️ We <b>won't have completed</b> the task before the deadline.\n(Biz belgilangan muddatgacha topshiriqni <i>yakunlamagan bo'lamiz</i>.)\n\n❗ Muhim eslatma: Inkor yuklamasi har doim <b>will</b> fe'lidan keyin keladi. So'z tartibini adashtirib <i>will have not</i> shaklida ishlatish katta grammatik xatodir. Shuningdek, egalik olmoshidan qat'i nazar <b>have</b> fe'li o'zgarmasdan qoladi.",
         "4": "📌 <b>Future Perfect</b>: So'roq gaplar (4/5-qism)\n\n💡 Kelajakdagi ma'lum bir vaqtga qadar biror harakatning tugallanishi yoki tugallanmasligini so'rash uchun <b>Future Perfect</b> zamonining so'roq shaklidan foydalanamiz.\n\n❓ <b>Umumiy so'roq gap formulasi:</b>\n<b>Will</b> + ega + <b>have</b> + <b>V3 (-ed)</b> ...?\n\n🔍 <b>Maxsus so me-so'roq gap (Wh-) formulasi:</b>\n<b>Wh-word</b> + <b>will</b> + ega + <b>have</b> + <b>V3 (-ed)</b> ...?\n\n📖 <b>Misollar bilan tanishamiz:</b>\n\n🗣️ <b>Will you have finished</b> the report by 5 o'clock?\n<i>(Soat 5 gacha hisobotni tugatib bo'lasanmi?)</i>\n\n🗣️ <b>Will she have graduated</b> from university by next year?\n<i>(U keyingi yilgacha universitetni tamomlagan bo'ladimi?)</i>\n\n🗣️ <b>What will you have done</b> by the end of this week?\n<i>(Bu haftaning oxirigacha nima qilib bo'lgan bo'lasan?)</i>\n\n🗣️ <b>How many books will he have read</b> by the end of summer?\n<i>(Yozning oxirigacha u nechta kitob o'qib bo'lgan bo'ladi?)</i>\n\n❗ <b>Eslatma:</b> So'roq gap tuzishda faqat <b>will</b> yordamchi fe'li egadan oldinga o'tadi. <b>Have</b> fe me-va asosiy fe'l esa har doim egadan keyin o'z o'rnida qoladi."
+      }
+    },
+    {
+      "date": "2026-08-23",
+      "topic": "Reduced relative clauses (nisbiy olmoshni tushirib qoldirish)",
+      "parts": {
+        "1": "📌 <b>Reduced Relative Clauses</b>: Nisbiy olmoshlarni qisqartirish (1/5-qism)\n\n💡 <b>Reduced relative clauses</b> (qisqartirilgan nisbiy ergash gaplar) ingliz tilida nutqni yanada ravon va ixcham qilish uchun ishlatiladi. Odatda gapda <b>who</b>, <b>which</b> yoki <b>that</b> kabi nisbiy olmoshlar hamda ulardan keyin keladigan <b>be</b> fe'li tushirib qoldiriladi. Bu usul fikrni ortiqcha so'zlarsiz, londa yetkazishga yordam beradi. Qisqartirish natijasida gapning ma'nosi o'zgarmaydi, lekin uning tuzilishi zamonaviy va professional ko'rinish oladi.\n\n📖 <b>Misollar:</b>\n\n• To'liq shakli: The man <b>who is standing</b> near the door is my teacher.\n• Qisqartirilgan shakli: The man <b>standing</b> near the door is my teacher.\n<i>(Eshik yaqinida turgan odam — mening o'qituvchim.)</i>\n\n• To'liq shakli: The car <b>which was repaired</b> yesterday works well.\n• Qisqartirilgan shakli: The car <b>repaired</b> yesterday works well.\n<i>(Kecha ta'mirlangan mashina yaxshi ishlamoqda.)</i>\n\n📝 <b>Eslatma:</b>\nUshbu grammatik seriyamizning keyingi qismlarida qisqartirilgan nisbiy ergash gaplarning darak, inkor va so'roq shakllarini hamda ularning turli qoidalarini batafsil ko'rib chiqamiz. Bizni kuzatib boring!"
       }
     }
   ]
