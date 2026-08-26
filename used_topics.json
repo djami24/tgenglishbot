@@ -1,27 +1,7 @@
 {
   "topics": {
     "grammar_daily_topic": [
-      "Past Perfect Continuous (o'tmishdagi boshqa harakatdan oldingi davomiylikni ta'kidlash)",
-      "Passive reporting structures (It is said that..., He is known to...)",
-      "Future Continuous (kelajakda davom etayotgan harakatlar)",
-      "Subjunctive mood - zarurat va muhimlikni ifodalovchi that-clause'lar (It's essential that he be informed.)",
-      "Quantifiers va intensifiers - miqdor va urg'u ifodalari (a great deal of, plenty of, such, so, quite, rather)",
-      "Modals for deduction and speculation (must have, might have, could have)",
-      "Passive voice - turli zamonlardagi murakkab qurilmalar",
-      "Present Perfect Continuous (hozirgacha davom etayotgan harakatning davomiyligini ta'kidlash)",
-      "Mixed Conditionals (turli vaqtlardagi shart va natijalarni birlashtirish)",
-      "Whose, where, when so'zlarining yuqori darajadagi qo'llanilishi",
-      "Wish / If only - hozirgi vaqtdagi afsus va xayoliy istaklar",
-      "Future Perfect Continuous (kelajakdagi ma'lum vaqtga qadar davom etadigan harakat davomiyligi)",
-      "Reported speech - buyruq, iltimos va savollarni ko'chirish",
-      "Linking adverbials - sabab, natija, qo'shimcha va qarama-qarshilik (therefore, however, moreover, consequently)",
-      "Cleft sentences va inversion - urg'u berish uchun (It was John who..., Hardly had I...)",
-      "Third Conditional (o'tmishdagi xayoliy vaziyatlar)",
-      "Reported speech - fe'l zamoni, olmosh va vaqt ifodalarining o'zgarishi",
-      "Future Perfect (kelajakdagi ma'lum vaqtga qadar tugallanadigan harakatlar)",
-      "Reduced relative clauses (nisbiy olmoshni tushirib qoldirish)",
-      "Modals for past advice, obligation and necessity (should have, could have, would have)",
-      "Wish / If only - o'tmishdagi afsuslanishlarni ifodalash"
+      "Linking adverbials - sabab, natija, qo'shimcha va qarama-qarshilik (therefore, however, moreover, consequently)"
     ],
     "topic_vocab": [
       "The Internet (Internet)",
@@ -52,11 +32,19 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-08-25",
-    "topic": "Wish / If only - o'tmishdagi afsuslanishlarni ifodalash",
-    "part": 5,
+    "date": "2026-08-26",
+    "topic": "Linking adverbials - sabab, natija, qo'shimcha va qarama-qarshilik (therefore, however, moreover, consequently)",
+    "part": 1,
     "video_url": null,
-    "cycle_complete_today": true
+    "cycle_complete_today": false
   },
-  "grammar_archive": []
+  "grammar_archive": [
+    {
+      "date": "2026-08-26",
+      "topic": "Linking adverbials - sabab, natija, qo'shimcha va qarama-qarshilik (therefore, however, moreover, consequently)",
+      "parts": {
+        "1": "📌 <b>Linking Adverbials</b>: Fikrlarni bog'lash san'ati (1/5-qism)\n\nIngliz tilida gaplarni bir-biriga mantiqan bog'lash va fikrni ravon yetkazish uchun <b>linking adverbials</b> (bog'lovchi ravishlar) qo'llaniladi. Ular yozma va og'zaki nutqda sabab, natija, qo'shimcha fikr hamda qarama-qarshilikni ko'rsatish uchun xizmat qiladi. <b>Therefore</b>, <b>however</b>, <b>moreover</b> va <b>consequently</b> kabi so'zlar nutqimizni yanada boyitadi va fikrni akademik darajada ifodalashga yordam beradi. Ushbu bog'lovchilar yordamida murakkab va mantiqli jumlalar tuzish ancha osonlashadi.\n\n📖 <b>Oddiy misollar:</b>\n\n• She studied hard; <b>therefore</b>, she passed the exam easily.\n(U qattiq o'qidi; <b>shuning uchun</b> u imtihondan oson o'tdi.)\n\n• The weather was cold; <b>however</b>, we went for a walk.\n(Havo sovuq edi; <b>shunga qaramay</b>, biz sayrga chiqdik.)\n\n💡 <b>Eslatma:</b>\nUshbu seriyamizning keyingi qismlarida sabab, natija, qo'shimcha fikr va qarama-qarshilik bog'lovchilarining gapdagi o'rni, darak hamda inkor holatlardagi tuzilishi va tinish belgilari qo'llanilishini alohida ko'rib chiqamiz. Kanallimizni kuzatib boring!"
+      }
+    }
+  ]
 }
