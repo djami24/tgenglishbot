@@ -1,7 +1,8 @@
 {
   "topics": {
     "grammar_daily_topic": [
-      "Linking adverbials - sabab, natija, qo'shimcha va qarama-qarshilik (therefore, however, moreover, consequently)"
+      "Linking adverbials - sabab, natija, qo'shimcha va qarama-qarshilik (therefore, however, moreover, consequently)",
+      "Present Perfect Continuous (hozirgacha davom etayotgan harakatning davomiyligini ta'kidlash)"
     ],
     "topic_vocab": [
       "The Internet (Internet)",
@@ -32,10 +33,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-08-26",
-    "topic": "Linking adverbials - sabab, natija, qo'shimcha va qarama-qarshilik (therefore, however, moreover, consequently)",
-    "part": 4,
-    "video_url": null,
+    "date": "2026-08-27",
+    "topic": "Present Perfect Continuous (hozirgacha davom etayotgan harakatning davomiyligini ta'kidlash)",
+    "part": 1,
+    "video_url": "https://www.youtube.com/watch?v=7NGLHYVmr00",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -47,6 +48,13 @@
         "2": "📌 <b>Grammar Time: Linking Adverbials</b> (2/5)\n\n📖 Bugun fikrlarni mantiqan bog'laydigan <b>linking adverbials</b> (bog'lovchi ravishlar) ning darak gaplardagi qo'llanish tartibini o'rganamiz.\n\n⚡ <b>Darak gap tuzilishi:</b>\n<b>1-mustaqil gap + . / ; + Linking Adverbial + , + 2-mustaqil gap</b>\n\n📝 <b>Misollar:</b>\n\n🔹 <b>However</b> (qarama-qarshilik):\nThe weather was terrible<b>; however,</b> we decided to go hiking.\n(Ob-havo juda yomon edi<b>; shunday bo'lsa-da,</b> biz sayrga chiqishga qaror qildik.)\n\n🔹 <b>Therefore</b> (natija):\nShe studied hard for the exam<b>. Therefore,</b> she got the highest mark.\n(U imtihonga qunt bilan tayyorlandi<b>. Shuning uchun,</b> u eng yuqori ball oldi.)\n\n🔹 <b>Moreover</b> (qo'shimcha):\nThe new laptop is lightweight<b>. Moreover,</b> it has a long battery life.\n(Yangi noutbuk juda yengil<b>. Buning ustiga,</b> uning batareyasi uzoqqa yetadi.)\n\n🔹 <b>Consequently</b> (sabab-natija):\nHe missed the last train<b>. Consequently,</b> he had to take a taxi.\n(U oxirgi poyezdga kechikdi<b>. Natijada,</b> u taksi tutishga majbur bo'ldi.)\n\n💡 <b>Muhim eslatma:</b> Ushbu bog'lovchi ravishlardan so'ng har doim <b>vergul (,)</b> ishlatiladi. Ularni oddiy bog'lovchilar (<i>but</i>, <i>and</i>, <i>so</i>) kabi nuqtasiz yoki nuqtali vergulsiz to'g'ridan-to'g'ri gap o'rtasiga qo'yib bo'lmaydi.",
         "3": "📌 <b>Linking Adverbials:</b> Inkor gaplarda qo'llanishi (3/5-qism)\n\n💡 Bog'lovchi ravishlar (<b>therefore</b>, <b>however</b>, <b>moreover</b>, <b>consequently</b>) inkor gaplar bilan kelganda, sodir bo'lmagan hodisalar yoki salbiy natijalarni bog'lash uchun xizmat qiladi.\n\n✅ <b>Inkor gap formulasi:</b>\n<b>1-gap + [Linking Adverbial] + Subject + auxiliary verb + not + Verb</b>\n\n📖 <b>Misollar:</b>\n\n1. <i>He studied very hard; <b>however</b>, he <b>didn't pass</b> the final exam.</i>\n(U juda qattiq tayyorlandi; <b>biroq</b>, yakuniy imtihondan <b>o'ta olmadi</b>.)\n\n2. <i>The weather was awful; <b>therefore</b>, we <b>could not start</b> our journey.</i>\n(Ob-havo juda yomon edi; <b>shu sababli</b>, biz safarimizni <b>boshlay olmadik</b>.)\n\n3. <i>The company lost money; <b>consequently</b>, they <b>did not hire</b> new staff.</i>\n(Kompaniya zarar ko'rdi; <b>natijada</b>, ular yangi xodimlarni <b>ishga olishmadi</b>.)\n\n4. <i>The car is too old; <b>moreover</b>, it <b>doesn't run</b> smoothly.</i>\n(Mashina juda eski; <b>qolaversa</b>, u yaxshi <b>yurmaydi</b>.)\n\n❗ <b>Tez-tez uchraydigan xato:</b>\nBog'lovchi ravishdan so'ng kelgan inkor gapda yordamchi fe'lni tushirib qoldirmang (masalan, <i>\"however he not came\"</i> emas, <b>\"however, he didn't come\"</b> bo'ladi). Shuningdek, <b>however</b> yoki <b>therefore</b> kabi so mezonli ravishlardan keyin har doim <b>vergul (,)</b> qo'yilishini unutmang.",
         "4": "📖 <b>Linking Adverbials</b>: So'roq gaplarda qo'llanishi (4/5)\n\n📌 <b>Linking Adverbials</b> (therefore, however, moreover, consequently) ko'pincha oldingi fikrga bog'langan holda mantiqiy savol berish uchun ishlatiladi.\n\n💡 <b>Umumiy so'roq gap (Yes/No questions) formulasi:</b>\n[Darak gap]; <b>Linking Adverbial</b> + <b>Yordamchi fe'l</b> + <b>Ega</b> + <b>Asosiy fe'l</b> ...?\n\n💡 <b>Maxsus so'roq gap (Wh- questions) formulasi:</b>\n[Darak gap]; <b>Linking Adverbial</b> + <b>Wh-so'z</b> + <b>Yordamchi fe'l</b> + <b>Ega</b> + <b>Fe'l</b> ...?\n\n📝 <b>Misol jumlalar:</b>\n\n🔹 The weather was terrible; <b>however</b>, did you enjoy your trip?\n(Ob-havo juda yomon edi; <i>shunga qaramay</i>, sayohatingizdan rohatlandingizmi?)\n\n🔹 The sales decreased this month; <b>therefore</b>, should we change our strategy?\n(Bu oy sotuvlar kamaydi; <i>shu sababli</i>, strategiyamizni o'zgartirishimiz kerakmi?)\n\n🔹 The product is very expensive; <b>moreover</b>, why is its quality so poor?\n(Mahsulot juda qimmat; <i>ustiga-akasi</i>, nega uning sifati bunchalik yomon?)\n\n🔹 He missed the final deadline; <b>consequently</b>, what will happen to his project?\n(U yakuniy muddatni o'tkazib yubordi; <i>natijada</i>, uning loyihasi nima bo'ladi?)\n\n❗ <b>Eslatma:</b> Yozma nutqda ushbu bog'lovchi so me'yorida ikki gap o'rtasida nuqtali vergul (<b>;</b>) va o'zidan keyin vergul (<b>,</b>) bilan ajratib yoziladi."
+      }
+    },
+    {
+      "date": "2026-08-27",
+      "topic": "Present Perfect Continuous (hozirgacha davom etayotgan harakatning davomiyligini ta'kidlash)",
+      "parts": {
+        "1": "🇬🇧 <b>Present Perfect Continuous</b> zamoni bilan tanishamiz! (1/5-qism)\n\n📌 Ushbu zamon o'tmishda boshlangan va hozirgi paytgacha to'xtovsiz <b>davom etayotgan</b> harakatlarni ifodalash uchun ishlatiladi. Bu yerda asosiy e'tibor harakatning yakunlanganiga emas, balki uning <b>qancha vaqt davom etganiga</b> qaratiladi. Agar siz biror ishni qanchadan beri qilayotganingizni alohida ta'kidlamoqchi bo'lsangiz, aynan shu grammatik zamondan foydalanasiz. O'zbek tiliga bu zamon ko'pincha <i>\"...dan beri qilmoqdaman\"</i> yoki <i>\"... buyon bajarayapman\"</i> shaklida tarjima qilinadi.\n\n📖 <b>Misollar:</b>\n\n🗣️ I <b>have been studying</b> English for three years.\n<i>(Men uch yildan beri ingliz tilini o'rganmoqdaman.)</i>\n\n🗣️ She <b>has been reading</b> this book since morning.\n<i>(U ertalabdan beri ushbu kitobni o'qiyapti.)</i>\n\n📝 Seriyamizning keyingi qismlarida ushbu zamonning <b>darak</b>, <b>inkor</b> va <b>so'roq</b> gap tuzilishlarini batafsil ko'rib chiqamiz. Bizni kuzatishda davom eting!"
       }
     }
   ]
