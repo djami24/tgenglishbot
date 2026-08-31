@@ -6,7 +6,8 @@
       "Reported speech - fe'l zamoni, olmosh va vaqt ifodalarining o'zgarishi",
       "Reported speech - buyruq, iltimos va savollarni ko'chirish",
       "Cleft sentences va inversion - urg'u berish uchun (It was John who..., Hardly had I...)",
-      "Passive reporting structures (It is said that..., He is known to...)"
+      "Passive reporting structures (It is said that..., He is known to...)",
+      "Modals for past advice, obligation and necessity (should have, could have, would have)"
     ],
     "topic_vocab": [
       "The Internet (Internet)",
@@ -45,10 +46,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-08-31",
-    "topic": "Passive reporting structures (It is said that..., He is known to...)",
-    "part": 3,
-    "video_url": "https://www.youtube.com/watch?v=MpsrdpUKOTA",
+    "date": "2026-09-01",
+    "topic": "Modals for past advice, obligation and necessity (should have, could have, would have)",
+    "part": 1,
+    "video_url": "https://www.youtube.com/watch?v=RrGcwoHTHus",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -105,6 +106,13 @@
         "1": "📢 <b>Passive reporting structures</b> (1/5-qism): Umumiy tushuncha\n\n📌 Ingliz tilida biror ma'lumotni kim aytganini aniq ko'rsatmasdan, <i>\"Aytishlaricha...\"</i> yoki <i>\"Deb hisoblanadi...\"</i> tarzida yetkazish uchun <b>passive reporting structures</b> iboralaridan foydalanamiz. Bu tuzilmalar asosan rasmiy nutqda, yangiliklarda va ilmiy maqolalarda xabarlarni xolis yetkazish uchun juda qo'l keladi. Ularning yordamida gapning aniq muallifini ko'rsatmasdan, ma'lumotning o'ziga ko'proq urg'u beriladi. Ushbu grammatik mavzu asosan <b>It is said that...</b> va <b>He is known to...</b> kabi ikki xil ko'rinishda ishlatiladi.\n\n📖 <b>Misollar:</b>\n\n<b>It is said that</b> the new movie is very interesting.\n(<i>Aytishlaricha, yangi film juda qiziqarli.</i>)\n\n<b>He is known to</b> be a talented artist.\n(<i>Uning iqtidorli rassom ekani hammaga ma'lum.</i>)\n\n💡 Bugungi seriyamizning keyingi qismlarida ushbu tuzilmalarning darak, inkor va so'roq gap shakllarini hosil qilish qoidalarini batafsil ko'rib chiqamiz. Kanalimizni kuzatib boring!",
         "2": "📌 <b>Grammar Time</b>: Passive Reporting Structures (2/5-qism)\n\n🗣️ Bugun majhul nisbatdagi xabar berish iboralarining (<b>Passive reporting structures</b>) darak gap shakllarini ko'rib chiqamiz. Bu tuzilmalar mish-mishlar, umumiy qarashlar va rasmiy xabarlarni yetkazish uchun ishlatiladi.\n\n📖 <b>Darak gap formulalari:</b>\n\n1. <b>It + Passive Verb + that + gap</b>\n2. <b>Ega + Passive Verb + to + Infinitive</b>\n\n✅ <b>Misollar:</b>\n\n• <b>It is said that</b> this mansion was built in 1900.\n(<i>Ushbu hovli 1900-yilda qurilgan deyishadi.</i>)\n\n• <b>He is known to be</b> an expert in computer technology.\n(<i>U kompyuter texnologiyalari bo'yicha mutaxassis sifatida tanilgan.</i>)\n\n• <b>It is believed that</b> regular exercise improves health.\n(<i>Muntazam mashqlar salomatlikni yaxshilaydi deb hisoblanadi.</i>)\n\n• <b>She is reported to live</b> in Paris now.\n(<i>Hozirda u Parijda yashashi haqida xabar berilmoqda.</i>)\n\n💡 <b>Muhim eslatma:</b>\nIkkinchi tuzilmada fe'ldan keyin har doim <b>to + Infinitive</b> ishlatiladi. Agar o'tgan zamondagi harakat nazarda tutilsa, oddiy fe'l o'rniga <b>to have + V3</b> shakli qo'llanadi (masalan: <b>He is thought to have won</b>).",
         "3": "📌 <b>Passive Reporting Structures (3/5)</b>: Inkor shakli\n\n💡 Ma'lumot uzatishda gaplarni <b>inkor shaklda</b> (negative) qo'llash uchun asosiy passiv fe'lga <b>not</b> inkor yuklamasi qo'shiladi.\n\n🔤 <b>Inkor gap formulalari:</b>\n1-tuzilma: <b>It + is/was/are/were + not + V3 + that...</b>\n2-tuzilma: <b>Subject + is/was/are/were + not + V3 + to + infinitive</b>\n\n🗣️ <b>Misollar:</b>\n\n📖 <i>It is <b>not believed that</b> the prices will decrease soon.</i>\n— Narxlarning tez orada tushishiga <b>ishonilmayapti</b>.\n\n📖 <i>He is <b>not expected to</b> arrive on time.</i>\n— Uning o'z vaqtida yetib kelishi <b>kutilmayapti</b>.\n\n📖 <i>It was <b>not reported</b> that anyone was injured in the accident.</i>\n— Hodisada kimdir jarohatlangani haqida <b>xabar berilmadi</b>.\n\n📖 <i>They are <b>not known to</b> live in this city anymore.</i>\n— Ularning endi bu shaharda yashashi <b>ma'lum emas</b>.\n\n❗ <b>Tez-tez uchraydigan xato:</b>\nInkor belgisi bo'lmish <b>not</b> har doim birinchi yordamchi fe'ldan so'ng keladi. <b>He is not thought to come</b> shakli to'g'ri, lekin <b>He is thought not to come</b> deyish grammatik jihatdan boshqa ma'noni beradi."
+      }
+    },
+    {
+      "date": "2026-09-01",
+      "topic": "Modals for past advice, obligation and necessity (should have, could have, would have)",
+      "parts": {
+        "1": "📌 <b>O'tgan zamondagi modal fe'llar</b> | 1/5-qism\n\n💡 <b>Ushbu qoida nima uchun kerak?</b>\nO'tmishda sodir bo'lgan voqea-hodisalarga nisbatan afsuslanish, maslahat berish yoki boy berilgan imkoniyatlarni muhokama qilish uchun maxsus modal qurilmalardan foydalanamiz. Ushbu iboralar, ya'ni <b>should have</b>, <b>could have</b> va <b>would have</b> o'tib ketgan vaziyatlarni qayta tahlil qilishga yordam beradi. Masalan, biron ish bajarilishi kerak bo'lgan bo'lsa-da, lekin bajarilmay qolgan bo'lsa, aynan shu qoidaga murojaat qilamiz. Bu grammatika ingliz tilida erkin va tushunarli muloqot qilish uchun juda muhimdir.\n\n🗣️ <b>Misollar:</b>\n• I <b>should have studied</b> harder for the exam.\n<i>(Men imtihonga yaxshiroq tayyorlanishim kerak edi.)</i>\n\n• She <b>could have won</b> the match, but she was tired.\n<i>(U o'yinda g'alaba qozonishi mumkin edi, lekin charchagan edi.)</i>\n\n📝 <b>Eslatma:</b> Ushbu darslar seriyasining keyingi qismlarida har bir modal fe'lning darak, inkor va so'roq gaplarda ishlatilishini batafsil ko'rib chiqamiz."
       }
     }
   ]
