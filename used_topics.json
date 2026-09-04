@@ -9,7 +9,8 @@
       "Passive reporting structures (It is said that..., He is known to...)",
       "Modals for past advice, obligation and necessity (should have, could have, would have)",
       "Future Continuous (kelajakda davom etayotgan harakatlar)",
-      "Subjunctive mood - zarurat va muhimlikni ifodalovchi that-clause'lar (It's essential that he be informed.)"
+      "Subjunctive mood - zarurat va muhimlikni ifodalovchi that-clause'lar (It's essential that he be informed.)",
+      "Mixed Conditionals (turli vaqtlardagi shart va natijalarni birlashtirish)"
     ],
     "topic_vocab": [
       "The Internet (Internet)",
@@ -48,10 +49,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-09-03",
-    "topic": "Subjunctive mood - zarurat va muhimlikni ifodalovchi that-clause'lar (It's essential that he be informed.)",
+    "date": "2026-09-04",
+    "topic": "Mixed Conditionals (turli vaqtlardagi shart va natijalarni birlashtirish)",
     "part": 1,
-    "video_url": null,
+    "video_url": "https://www.youtube.com/watch?v=FuWk4lTt3UE",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -133,6 +134,13 @@
       "topic": "Subjunctive mood - zarurat va muhimlikni ifodalovchi that-clause'lar (It's essential that he be informed.)",
       "parts": {
         "1": "📌 <b>Subjunctive Mood</b>: Zarurat va muhimlikni ifodalash (1/5-qism)\n\n📖 Ingliz tilida biror harakatning judayam <b>muhim</b>, <b>zarur</b> yoki <b>shart</b> ekanligini ta'kidlash uchun <b>Subjunctive Mood</b> iboralari ishlatiladi. Bu tuzilma ko'pincha rasmiy muloqotda, biznes xatlarida va akademik nutqda keng qo'llaniladi. Unda ma'lum bir shaxsga nisbatan talab, taklif yoki buyruq ma'nosi ifodalanadi. Ushbu qoidaning asosiy xususiyati shundaki, <b>that-clause</b> qismidagi fe'l zamondan va shaxsdan qat'i nazar boshlang'ich (<i>bare infinitive</i>) shaklda ishlatiladi.\n\n✅ <b>Misollar:</b>\n\n• It is <b>essential</b> that he <b>be</b> informed.\n(Uning xabardor qilinishi <b>juda muhim</b>.)\n\n• It is <b>important</b> that she <b>attend</b> the meeting.\n(Uning majlisda qatnashishi <b>muhim</b>.)\n\n📝 Bugun ushbu grammatik mavzu bo'yicha umumiy tushunchaga ega bo'ldik. Seriyamizning keyingi qismlarida darak, inkor va so'roq gap tuzilishlarini hamda eng ko'p ishlatiladigan birikmalarni atroflicha ko'rib chiqamiz."
+      }
+    },
+    {
+      "date": "2026-09-04",
+      "topic": "Mixed Conditionals (turli vaqtlardagi shart va natijalarni birlashtirish)",
+      "parts": {
+        "1": "📌 <b>Mixed Conditionals</b> — Turli vaqtlarni birlashtirish (1/5-qism)\n\n💡 Ingliz tilida standart shart gaplar muayyan bir vaqt doirasiga tegishli bo'ladi. Biroq hayotda o'tmishdagi voqea hozirgi zamonga yoki aksincha, hozirgi vaziyat o'tmishdagi natijaga ta'sir qilishi juda ko'p uchraydi. Aynan shunday holatlarda biz <b>Mixed Conditionals</b> (aralash shart gaplar) iborasidan foydalanamiz. Bu qoida turli vaqtlardagi shart va natijani bitta gapda mantiqan bog'lash imkonini beradi.\n\n📖 <b>Misollar:</b>\n\n🗣️ If I <b>had studied</b> harder at university, I <b>would have</b> a better job now.\n<i>(Agar universitetda yaxshiroq o'qiganimda, hozir yaxshiroq ishda ishlayotgan bo'lardim.)</i>\n\n🗣️ If he <b>were</b> fluent in English, he <b>would have understood</b> the movie yesterday.\n<i>(Agar u ingliz tilida erkin gapira olganida, kechagi kinoni tushungan bo'lardi.)</i>\n\n📝 Keyingi qismlarda ushbu mavzuning barcha turlari hamda darak, inkor va so'roq gap tuzilishlarini bosqichma-bosqich ko'rib chiqamiz."
       }
     }
   ]
