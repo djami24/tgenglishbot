@@ -14,7 +14,8 @@
       "Third Conditional (o'tmishdagi xayoliy vaziyatlar)",
       "Future Perfect (kelajakdagi ma'lum vaqtga qadar tugallanadigan harakatlar)",
       "Past Perfect Continuous (o'tmishdagi boshqa harakatdan oldingi davomiylikni ta'kidlash)",
-      "Wish / If only - o'tmishdagi afsuslanishlarni ifodalash"
+      "Wish / If only - o'tmishdagi afsuslanishlarni ifodalash",
+      "Passive voice - turli zamonlardagi murakkab qurilmalar"
     ],
     "topic_vocab": [
       "The Internet (Internet)",
@@ -58,10 +59,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-09-08",
-    "topic": "Wish / If only - o'tmishdagi afsuslanishlarni ifodalash",
+    "date": "2026-09-10",
+    "topic": "Passive voice - turli zamonlardagi murakkab qurilmalar",
     "part": 1,
-    "video_url": "https://www.youtube.com/watch?v=B6Si3Op79Sw",
+    "video_url": null,
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -187,6 +188,13 @@
       "topic": "Wish / If only - o'tmishdagi afsuslanishlarni ifodalash",
       "parts": {
         "1": "📌 <b>Wish / If only</b>: O'tmishdagi afsuslanishlar (1/5-qism)\n\n💡 Hayotda ba'zan o'tmishda sodir bo'lgan voqealarni o'zgartirishni yoki boshqacha bo'lishini xohlab qolamiz. Ingliz tilida o'tib ketgan ish-harakatdan <b>afsuslanish</b> bildirish uchun <b>Wish</b> hamda <b>If only</b> iboralaridan foydalanamiz. Bu tuzilmalar o'tmishni ortga qaytarib bo'lmasligini tushungan holda, <i>\"qani edi shunday bo'lganda edi\"</i> degan ma'noni beradi. Qoidaga ko'ra, o'tmishdagi afsuslanishlar haqida gapirganda fe'lning <b>Past Perfect</b> shakli ishlatiladi.\n\n📖 Kelin, bir nechta oddiy misollarni ko'rib chiqamiz:\n\n• I wish I <b>had studied</b> harder for the exam.\n(<i>Katta imtihonga ko'proq tayyorlanganimda edi.</i>)\n\n• If only we <b>had taken</b> the train instead of the bus.\n(<i>Avtobus o'rniga poyezdga chiqqanimizda koshki edi.</i>)\n\n📝 Bugun ushbu grammatik mavzuning umumiy ma'nosi bilan tanishdik. Seriyamizning keyingi qismlarida <b>darak</b>, <b>inkor</b> va <b>so'roq</b> gaplarning hosil bo'lish qoidalarini batafsil ko'rib chiqamiz. Bizni kuzatishda davom eting!"
+      }
+    },
+    {
+      "date": "2026-09-10",
+      "topic": "Passive voice - turli zamonlardagi murakkab qurilmalar",
+      "parts": {
+        "1": "📌 <b>Passive Voice: Murakkab zamon qurilmalari</b> (1/5-qism)\n\n💡 Bugungi darsimizda ingliz tili grammatikasining eng muhim mavzularidan biri bo'lgan <b>Majhul nisbat (Passive Voice)</b> ning murakkab zamonlardagi qo'llanilishini ko'rib chiqamiz. Odatda, ish-harakatni kim bajargani nomalum bo'lganda yoki harakatning o'zi bajaruvchidan ko'ra muhimroq hisoblanganda majhul nisbat ishlatiladi. Murakkab zamonlarda (Continuous va Perfect) bu qurilmalar fikrni rasmiy, professional hamda akademik tarzda ifodalashga xizmat qiladi. Ushbu seriya orqali siz turli zamonlardagi murakkab passiv strukturani to'liq tushunib olasiz.\n\n📖 <b>Misollar:</b>\n\n🔹 <i>The new bridge <b>is being built</b> right now.</i> — Yangi ko'prik ayni damda <b>qurilmoqda</b>.\n\n🔹 <i>All the documents <b>have been checked</b> by the manager.</i> — Barcha hujjatlar menejer tomonidan <b>tekshirib bo'lindi</b>.\n\n📝 <b>Eslatma:</b> Ushbu seriyamizning keyingi qismlarida murakkab zamonlardagi majhul nisbatning <b>darak</b>, <b>inkor</b> va <b>so'roq</b> gap shakllarini alohida va batafsil tahlil qilamiz. Bizni kuzatishda davom eting!"
       }
     }
   ]
