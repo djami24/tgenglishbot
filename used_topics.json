@@ -75,9 +75,17 @@
   "grammar_daily": {
     "date": "2026-09-16",
     "topic": "Present Simple - kundalik odatlar va faktlar uchun (I work, She studies)",
-    "part": 1,
+    "part": 2,
     "video_url": null,
     "cycle_complete_today": false
   },
-  "grammar_archive": []
+  "grammar_archive": [
+    {
+      "date": "2026-09-16",
+      "topic": "Present Simple - kundalik odatlar va faktlar uchun (I work, She studies)",
+      "parts": {
+        "2": "🇬🇧 <b>Present Simple</b>: Darak gaplar (2/5-qism)\n\n📌 <b>Present Simple</b> zamoni doimiy odatlar, takrorlanib turadigan harakatlar va umumiy faktlarni ifodalash uchun xizmat qiladi.\n\n📝 <b>Darak gap formulasi:</b>\n• <b>I / You / We / They</b> + <b>V1</b> (fe'lning bosh shakli)\n• <b>He / She / It</b> + <b>V1</b> + <b>(-s / -es)</b>\n\n🗣️ <b>Misollar:</b>\n• <b>I work</b> in a big company. — <i>Men katta kompaniyada ishlayman.</i>\n• <b>She studies</b> IT at university. — <i>U universitetda IT sohasini o'rganadi.</i>\n• <b>We live</b> in Tashkent. — <i>Biz Toshkentda yashaymiz.</i>\n• <b>The sun rises</b> in the east. — <i>Quyosh sharqdan chiqadi.</i>\n\n❗ <b>Muhim eslatma:</b>\nEga <b>he, she, it</b> (uchinchi shaxs birlik) bo'lganda, fe'l oxiriga albatta <b>-s</b> yoki <b>-es</b> qo'shimchasi qo'shilishini unutmang!\n❌ <i>He work every day.</i>\n✅ <b>He works</b> every day."
+      }
+    }
+  ]
 }
