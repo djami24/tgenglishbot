@@ -10,21 +10,35 @@ on:
     - cron: '0 14 * * *'
 
     # KUNLIK GRAMMAR SERIYASI (grammar) - kuniga 5 marta:
-    # 08:00, 11:00, 14:00, 17:00, 20:00 Toshkent vaqti
-    # (= 03:00, 06:00, 09:00, 12:00, 15:00 UTC).
-    - cron: '0 3 * * *'
-    - cron: '0 6 * * *'
+    # 14:00, 15:00, 16:00, 17:00, 18:00 Toshkent vaqti
+    # (= 09:00, 10:00, 11:00, 12:00, 13:00 UTC).
+    # ESLATMA: Grammar postlari endi tushdan keyin (14:00-18:00 Toshkent).
     - cron: '0 9 * * *'
+    - cron: '0 10 * * *'
+    - cron: '0 11 * * *'
     - cron: '0 12 * * *'
-    - cron: '0 15 * * *'
+    - cron: '0 13 * * *'
 
     # "BILASIZMI?" (fun_fact) - kuniga 1 marta: 10:00 Toshkent vaqti
     # (= 05:00 UTC).
     - cron: '0 5 * * *'
 
-    # SPEAKING PART 1 mashqi (speaking_part1) - kuniga 1 marta: 12:05
-    # Toshkent vaqti (= 07:05 UTC).
-    - cron: '5 7 * * *'
+    # SPEAKING PART 1 mashqi (speaking_part1) - kuniga 1 marta: 12:00
+    # Toshkent vaqti (= 07:00 UTC).
+    - cron: '0 7 * * *'
+
+    # KUNLIK SO'ZLAR (daily_words) - kuniga 1 marta: 08:00 Toshkent vaqti
+    # (= 03:00 UTC).
+    - cron: '0 3 * * *'
+
+    # PHRASAL VERBS (phrasal_verbs) - haftada 3 marta (Du, Chor, Jum):
+    # 11:00 Toshkent vaqti (= 06:00 UTC).
+    - cron: '0 6 * * 1,3,5'
+
+    # IDIOMALAR (idioms) - haftada 3 marta (Se, Pay, Shan):
+    # 11:00 Toshkent vaqti (= 06:00 UTC).
+    - cron: '0 6 * * 2,4,6'
+
   workflow_dispatch:
     inputs:
       category:
@@ -37,6 +51,9 @@ on:
           - topic_vocab
           - fun_fact
           - speaking_part1
+          - daily_words
+          - phrasal_verbs
+          - idioms
 
 permissions:
   contents: write
@@ -56,25 +73,24 @@ jobs:
       - name: Kutubxonalarni o'rnatish
         run: pip install -r requirements.txt
 
-      - name: ffmpeg mavjudligini tekshirish (Speaking Part 1 audiosi uchun)
-        run: |
-          if ! which ffmpeg > /dev/null 2>&1; then
-            sudo apt-get update -qq
-            sudo apt-get install -y -qq ffmpeg
-          fi
-
       - name: Turkumni cron vaqtiga qarab aniqlash
         id: category
         run: |
           case "${{ github.event.schedule }}" in
             "0 4 * * *"|"0 14 * * *")
               echo "value=topic_vocab" >> "$GITHUB_OUTPUT" ;;
-            "0 3 * * *"|"0 6 * * *"|"0 9 * * *"|"0 12 * * *"|"0 15 * * *")
+            "0 9 * * *"|"0 10 * * *"|"0 11 * * *"|"0 12 * * *"|"0 13 * * *")
               echo "value=grammar" >> "$GITHUB_OUTPUT" ;;
             "0 5 * * *")
               echo "value=fun_fact" >> "$GITHUB_OUTPUT" ;;
-            "5 7 * * *")
+            "0 7 * * *")
               echo "value=speaking_part1" >> "$GITHUB_OUTPUT" ;;
+            "0 3 * * *")
+              echo "value=daily_words" >> "$GITHUB_OUTPUT" ;;
+            "0 6 * * 1,3,5")
+              echo "value=phrasal_verbs" >> "$GITHUB_OUTPUT" ;;
+            "0 6 * * 2,4,6")
+              echo "value=idioms" >> "$GITHUB_OUTPUT" ;;
             *)
               # Qo'lda ishga tushirilgan run (workflow_dispatch) - agar
               # turkum tanlangan bo'lsa o'shani, aks holda "grammar".
