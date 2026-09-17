@@ -62,7 +62,7 @@ GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
 TELEGRAM_BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 TELEGRAM_CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
 
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-flash-latest")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.6-flash")
 CHANNEL_LINK = "https://t.me/djami_teacher"
 
 # YouTube Data API v3 kaliti (ixtiyoriy). Berilgan bo'lsa, har kungi grammar
@@ -121,27 +121,42 @@ def choose_topic(state: dict, category: str, topics: list) -> str:
 #    ishlatilgach, ro'yxat qaytadan boshidan aylanadi.
 # ---------------------------------------------------------------------------
 GRAMMAR_DAILY_TOPICS = [
-    "Present Perfect Continuous (hozirgacha davom etayotgan harakatning davomiyligini ta'kidlash)",
-    "Past Perfect Continuous (o'tmishdagi boshqa harakatdan oldingi davomiylikni ta'kidlash)",
-    "Future Continuous (kelajakda davom etayotgan harakatlar)",
-    "Future Perfect (kelajakdagi ma'lum vaqtga qadar tugallanadigan harakatlar)",
-    "Future Perfect Continuous (kelajakdagi ma'lum vaqtga qadar davom etadigan harakat davomiyligi)",
-    "Modals for deduction and speculation (must have, might have, could have)",
-    "Modals for past advice, obligation and necessity (should have, could have, would have)",
-    "Third Conditional (o'tmishdagi xayoliy vaziyatlar)",
-    "Mixed Conditionals (turli vaqtlardagi shart va natijalarni birlashtirish)",
-    "Passive voice - turli zamonlardagi murakkab qurilmalar",
-    "Passive reporting structures (It is said that..., He is known to...)",
-    "Reported speech - fe'l zamoni, olmosh va vaqt ifodalarining o'zgarishi",
-    "Reported speech - buyruq, iltimos va savollarni ko'chirish",
-    "Reduced relative clauses (nisbiy olmoshni tushirib qoldirish)",
-    "Whose, where, when so'zlarining yuqori darajadagi qo'llanilishi",
-    "Wish / If only - hozirgi vaqtdagi afsus va xayoliy istaklar",
-    "Wish / If only - o'tmishdagi afsuslanishlarni ifodalash",
-    "Linking adverbials - sabab, natija, qo'shimcha va qarama-qarshilik (therefore, however, moreover, consequently)",
-    "Cleft sentences va inversion - urg'u berish uchun (It was John who..., Hardly had I...)",
-    "Quantifiers va intensifiers - miqdor va urg'u ifodalari (a great deal of, plenty of, such, so, quite, rather)",
-    "Subjunctive mood - zarurat va muhimlikni ifodalovchi that-clause'lar (It's essential that he be informed.)",
+    # Present tenses
+    "Present Simple (oddiy hozirgi zamon - odatlar va faktlar uchun)",
+    "Present Continuous (hozir davom etayotgan harakatlar uchun)",
+    "Present Perfect (hozirgi vaqt bilan bog'liq o'tmish harakatlari uchun)",
+    # Past tenses
+    "Past Simple (tugallangan o'tmish harakatlari uchun)",
+    "Past Continuous (o'tmishdagi davom etayotgan harakatlar uchun)",
+    "Past Perfect (o'tmish voqealar tartibini ko'rsatish uchun)",
+    # Future forms
+    "Will (bashorat, qaror va va'dalar uchun)",
+    "Going to (rejalar va niyatlar uchun)",
+    "Present Continuous for future (rejalashtirilgan kelajak tadbirlar uchun)",
+    # Modal verbs
+    "Can, Could (qobiliyat, imkoniyat va ruxsat uchun)",
+    "Must, Have to (majburiyat uchun)",
+    "Should (maslahat uchun)",
+    "Might, May (ehtimollik uchun)",
+    # Conditionals
+    "First Conditional (kelajakdagi real vaziyatlar uchun)",
+    "Second Conditional (hozir yoki kelajakdagi xayoliy vaziyatlar uchun)",
+    # Comparatives and superlatives
+    "Comparatives and Superlatives - muntazam va notartib shakllar",
+    # Question forms
+    "Yes/No questions va Wh-questions (ha/yo'q va so'roq savollari)",
+    "Tag questions (qo'shimcha savollar - isn't it?, don't they?)",
+    # Passive voice
+    "Passive voice - hozirgi va o'tmish zamonlardagi asosiy qurilmalar",
+    # Reported speech
+    "Reported speech - Statements (say va tell bilan gaplarni ko'chirish)",
+    "Reported speech - Questions (savol gaplarni ko'chirish)",
+    # Quantifiers
+    "Quantifiers (some, any, much, many, a lot of, few, little va boshqalar)",
+    # Relative clauses
+    "Relative clauses - Defining va Non-defining (who, which, that bilan)",
+    # Adverbs
+    "Adverbs and adverbial phrases (tarz, chastota, vaqt, joy ifodalari)",
 ]
 
 # Har kuni tanlangan mavzu shu 5 ta qismga bo'lib post qilinadi.
