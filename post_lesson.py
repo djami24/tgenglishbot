@@ -62,7 +62,7 @@ GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
 TELEGRAM_BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 TELEGRAM_CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
 
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.6-flash")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
 CHANNEL_LINK = "https://t.me/djami_teacher"
 
 # YouTube Data API v3 kaliti (ixtiyoriy). Berilgan bo'lsa, har kungi grammar
@@ -450,7 +450,10 @@ tugasin, hech qanday band yarim qoldirilmasin."""
 
 
 def _call_gemini(prompt: str, max_output_tokens: int = 2048) -> tuple[str, str | None]:
-    """Gemini'ga so'rov yuboradi va (matn, finish_reason) qaytaradi."""
+    """Gemini'ga so'rov yuboradi va (matn, finish_reason) qaytaradi.
+    503/500 xatoliklarida 3 marta qayta urinib ko'radi."""
+    import time
+
     url = (
         f"https://generativelanguage.googleapis.com/v1beta/models/"
         f"{GEMINI_MODEL}:generateContent?key={GEMINI_API_KEY}"
@@ -458,16 +461,22 @@ def _call_gemini(prompt: str, max_output_tokens: int = 2048) -> tuple[str, str |
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
-            # Pastroq temperatura - imlo/grammatikada tasodifiy xatolar
-            # va chalkash so'zlarni kamaytiradi, shu bilan birga matn
-            # hamon xilma-xil va qiziqarli chiqadi.
             "temperature": 0.6,
             "maxOutputTokens": max_output_tokens,
         },
     }
 
-    resp = requests.post(url, json=payload, timeout=30)
-    resp.raise_for_status()
+    max_retries = 4
+    for attempt in range(1, max_retries + 1):
+        resp = requests.post(url, json=payload, timeout=60)
+        if resp.status_code in (500, 503) and attempt < max_retries:
+            wait = attempt * 15  # 15s, 30s, 45s
+            print(f"Ogohlantirish: {resp.status_code} xatolik, {wait}s kutilmoqda (urinish {attempt}/{max_retries})...")
+            time.sleep(wait)
+            continue
+        resp.raise_for_status()
+        break
+
     data = resp.json()
 
     try:
