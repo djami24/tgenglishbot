@@ -1,18 +1,23 @@
 """
-Ingliz tili (IELTS Speaking Vocabulary + Grammar) postini Google Gemini
-orqali generatsiya qilib, Telegram kanaliga avtomatik yuboradi.
+Ingliz tili (IELTS Speaking Vocabulary + Grammar + Yangi so'zlar) postini
+Google Gemini orqali generatsiya qilib, Telegram kanaliga avtomatik yuboradi.
 
-Bot FAQAT ikkita turkumda post qiladi:
+Bot quyidagi turkumlarda post qiladi:
 
   1) MAVZUGA OID LUG'AT (topic_vocab) - kuniga 2 marta, har safar 50 ta
      IELTS Speaking mavzusidan (TOPIC_VOCAB_TOPICS) navbatdagi mavzu
      bo'yicha 10 ta so'z post qilinadi. 50 tasi tugamaguncha bironta mavzu
      takrorlanmaydi, tugagach qaytadan boshidan aylanadi.
-  2) KUNLIK GRAMMAR SERIYASI (grammar) - kuniga 5 marta. Har kuni
-     GRAMMAR_DAILY_TOPICS ro'yxatidan BITTA yangi mavzu tanlanadi va o'sha
-     kun davomida 5 ta postga bo'linadi: umumiy tushuncha -> darak gap ->
-     inkor gap -> so'roq gap -> amaliyot/xato tahlili. Ertasi kuni yangi
-     mavzuga o'tiladi, 21 tasi tugamaguncha takrorlanmaydi.
+  2) KUNLIK GRAMMAR SERIYASI (grammar) - kuniga 5 marta (tushdan keyin,
+     14:00-18:00 Toshkent). Har kuni GRAMMAR_DAILY_TOPICS ro'yxatidan BITTA
+     yangi mavzu tanlanadi va o'sha kun davomida 5 ta postga bo'linadi.
+     21 tasi tugamaguncha takrorlanmaydi.
+  3) KUNLIK SO'ZLAR (daily_words) - kuniga 1 marta (08:00 Toshkent). Mavzuga
+     oid 7 ta kundalik B1-B2 darajasidagi so'z. Mavzular takrorlanmaydi.
+  4) PHRASAL VERBS (phrasal_verbs) - haftada 3 marta (Du/Chor/Jum, 11:00
+     Toshkent). Har safar 5 ta phrasal verb, tematik guruhlar bo'yicha.
+  5) IDIOMALAR (idioms) - haftada 3 marta (Se/Pay/Shan, 11:00 Toshkent).
+     Har safar 4 ta idiom, tematik guruhlar bo'yicha.
 
 Qaysi run qaysi turkumni post qilishini .github/workflows/post_lesson.yml
 dagi cron jadvali (va shu jadvalga mos POST_CATEGORY muhit o'zgaruvchisi)
@@ -43,7 +48,7 @@ from quiz import send_daily_quiz
 from audio import extract_key_terms, build_pronunciation_audio
 from pdf_report import build_grammar_compendium_pdf
 from notify import notify_admin_on_error
-from speaking import generate_speaking_questions, build_speaking_post_text, build_speaking_audio
+from speaking import generate_speaking_questions, build_speaking_post_text
 
 # Toshkent DST bilmaydi (doim UTC+5), shuning uchun sodda fixed-offset yetarli.
 TASHKENT_TZ = timezone(timedelta(hours=5))
@@ -333,6 +338,50 @@ to'plami. Format:
 
 
 # ---------------------------------------------------------------------------
+# 3a) KUNLIK SO'ZLAR - kuniga 1 marta, 5-10 ta kundalik hayotda kerak
+#     bo'ladigan ingliz so'zlari (IELTS emas, oddiy B1-B2 darajasi).
+# ---------------------------------------------------------------------------
+DAILY_WORDS_INSTRUCTION = """Bu KUNLIK SO'ZLAR turkumidagi post - kundalik suhbatda va
+yozishmada eng kerak bo'ladigan ingliz so'zlari. Format:
+1. Qiziqarli sarlavha (emoji bilan, "Bugungi so'zlar" uslubida)
+2. Qisqacha kirish (1 gap) - bugungi so'zlar haqida umumiy fikr
+3. AYNAN 7 ta so'z, har biri uchun:
+   - Ingliz so'zi (so'z turkumi: noun/verb/adj/adv)
+   - O'zbekcha ma'nosi
+   - Bitta oddiy, qisqa misol jumla (ingliz + o'zbek tarjimasi)
+4. Oxirida qisqa maslahat yoki eslatma - bu so'zlarni qanday eslab qolish mumkin"""
+
+# ---------------------------------------------------------------------------
+# 3b) PHRASAL VERBS - haftada 2-3 marta, har safar 5 ta phrasal verb
+# ---------------------------------------------------------------------------
+PHRASAL_VERBS_INSTRUCTION = """Bu PHRASAL VERBS turkumidagi post - ingliz tilida keng
+qo'llaniladigan sehrli fe'l birikmalar. Format:
+1. Qiziqarli sarlavha (emoji bilan, "Phrasal Verbs" uslubida)
+2. Qisqacha kirish (1-2 gap) - phrasal verbs nima uchun muhim ekani haqida
+3. AYNAN 5 ta phrasal verb, har biri uchun:
+   - <b>Phrasal verb</b> (qalin)
+   - O'zbekcha ma'nosi
+   - Kamida 2 ta misol jumla (ingliz + o'zbekcha tarjima, farqli ma'nolarda
+     ishlatilsa, ikkinchi misol shu farqni ko'rsatsin)
+4. Oxirida qisqa maslahat - shu phrasal verblarni xotirada qoldirishga yordam
+   beruvchi biror usul yoki bog'lovchi fikr"""
+
+# ---------------------------------------------------------------------------
+# 3c) IDIOMALAR - haftada 2-3 marta, har safar 3-5 ta idiom
+# ---------------------------------------------------------------------------
+IDIOMS_INSTRUCTION = """Bu IDIOMLAR turkumidagi post - ingliz tilidagi qiziqarli
+va keng qo'llaniladigan iboralar. Format:
+1. Qiziqarli sarlavha (emoji bilan, "Idiomalar" yoki "Bugüngi Idiomlar" uslubida)
+2. Qisqacha kirish (1 gap) - bugungi idiomlar haqida
+3. AYNAN 4 ta idiom, har biri uchun:
+   - <b>Idiom</b> (qalin)
+   - So'zma-so'z tarjima (qavs ichida, masalan: "(So'zma-so'z: ...")
+   - Haqiqiy ma'nosi (o'zbekcha)
+   - Bitta real suhbat/yozuv kontekstida ishlatilgan misol jumla
+     (ingliz + o'zbek tarjimasi)
+4. Oxirida qisqa eslatma - bu idiomalarni qachon ishlatsa bo'ladi"""
+
+# ---------------------------------------------------------------------------
 # 3) "BILASIZMI?" - kuniga 1 marta, ingliz tili yoki til o'rganish haqida
 #    qiziqarli fakt yoki motivatsion fikr posti.
 # ---------------------------------------------------------------------------
@@ -425,6 +474,57 @@ def generate_post() -> tuple[str, dict, str | None, dict]:
         topic = choose_topic(state, "topic_vocab", TOPIC_VOCAB_TOPICS)
         prompt = PROMPT_TEMPLATE.format(topic=topic, instruction=TOPIC_VOCAB_INSTRUCTION)
         card_info = {"topic": topic, "category": "topic_vocab", "part": None}
+    elif category == "daily_words":
+        # Mavzu sifatida TOPIC_VOCAB_TOPICS ro'yxatidan foydalanamiz -
+        # shu mavzuga oid kundalik so'zlar post qilinadi, takrorlanmasin.
+        topic = choose_topic(state, "daily_words_topic", TOPIC_VOCAB_TOPICS)
+        prompt = PROMPT_TEMPLATE.format(
+            topic=f"Kundalik so'zlar: {topic.split('(')[0].strip()} mavzusiga oid so'zlar",
+            instruction=DAILY_WORDS_INSTRUCTION,
+        )
+        card_info = {"topic": f"Kunlik So'zlar – {topic.split('(')[0].strip()}", "category": "daily_words", "part": None}
+    elif category == "phrasal_verbs":
+        # Phrasal verblar tematik guruhlarda beriladi - bir xil gruppa takrorlanmasin.
+        PHRASAL_VERB_THEMES = [
+            "Movement & Travel (harakatlanish va sayohat)",
+            "Communication & Relationships (muloqot va munosabatlar)",
+            "Work & Study (ish va o'qish)",
+            "Money & Shopping (pul va xarid)",
+            "Emotions & Feelings (his-tuyg'ular)",
+            "Time & Daily Routines (vaqt va kundalik tartib)",
+            "Technology & Internet (texnologiya va internet)",
+            "Health & Body (sog'liq va tana)",
+            "Problems & Solutions (muammolar va yechimlar)",
+            "Success & Failure (muvaffaqiyat va muvaffaqiyatsizlik)",
+        ]
+        theme = choose_topic(state, "phrasal_verbs_theme", PHRASAL_VERB_THEMES)
+        prompt = PROMPT_TEMPLATE.format(
+            topic=f"Phrasal Verbs: {theme.split('(')[0].strip()} mavzusiga oid fe'l birikmalar",
+            instruction=PHRASAL_VERBS_INSTRUCTION,
+        )
+        card_info = {"topic": f"Phrasal Verbs – {theme.split('(')[0].strip()}", "category": "phrasal_verbs", "part": None}
+    elif category == "idioms":
+        # Idiomalar tematik guruhlarda beriladi - bir xil gruppa takrorlanmasin.
+        IDIOM_THEMES = [
+            "Time (vaqt haqida idiomlar)",
+            "Money (pul haqida idiomlar)",
+            "Work & Career (ish va karyera haqida)",
+            "Success & Failure (muvaffaqiyat va mag'lubiyat)",
+            "Emotions & Attitude (his-tuyg'u va munosabat)",
+            "Relationships & People (munosabatlar va odamlar)",
+            "Problems & Challenges (muammolar va qiyinchiliklar)",
+            "Communication (muloqot haqida idiomlar)",
+            "Food (ovqat haqida idiomlar)",
+            "Body Parts (tana a'zolari bilan idiomlar)",
+            "Nature & Weather (tabiat va ob-havo idiomlar)",
+            "Numbers & Quantity (son va miqdor idiomlar)",
+        ]
+        theme = choose_topic(state, "idioms_theme", IDIOM_THEMES)
+        prompt = PROMPT_TEMPLATE.format(
+            topic=f"Idiomlar: {theme.split('(')[0].strip()} mavzusiga oid iboralar",
+            instruction=IDIOMS_INSTRUCTION,
+        )
+        card_info = {"topic": f"Idiomalar – {theme.split('(')[0].strip()}", "category": "idioms", "part": None}
     elif category == "fun_fact":
         prompt = PROMPT_TEMPLATE.format(
             topic="Ingliz tili haqida qiziqarli fakt", instruction=FUN_FACT_INSTRUCTION
@@ -624,14 +724,7 @@ def main():
             except Exception as e:
                 print(f"Ogohlantirish: audio yuborilmadi: {e}")
 
-        # Speaking Part 1 mashqi uchun - savol/pauza audiosini qo'shish.
-        if card_info["category"] == "speaking_part1":
-            try:
-                audio_bytes = build_speaking_audio(card_info["speaking_questions"])
-                send_audio_to_telegram(audio_bytes, title=f"Speaking Part 1 - {card_info['topic']}")
-                print("Speaking Part 1 mashq audiosi yuborildi.")
-            except Exception as e:
-                print(f"Ogohlantirish: speaking audiosi yuborilmadi: {e}")
+        # Speaking Part 1 uchun audio olib tashlangan (faqat matnli post yuboriladi).
 
         # Kunlik grammar seriyasi 5/5-qismga yetganda: shu mavzu bo'yicha
         # 5 ta interaktiv quiz yuboriladi, va agar bugun 21 talik aylanish
