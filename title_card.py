@@ -47,6 +47,24 @@ _COLOR_SCHEMES = {
         "accent": (250, 204, 21),
         "label": "SPEAKING PART 1",
     },
+    "daily_words": {
+        "top": (2, 132, 199),      # sky blue
+        "bottom": (3, 105, 161),   # dark sky
+        "accent": (250, 204, 21),
+        "label": "KUNLIK SO'ZLAR",
+    },
+    "phrasal_verbs": {
+        "top": (22, 163, 74),      # green
+        "bottom": (4, 120, 87),    # emerald dark
+        "accent": (250, 204, 21),
+        "label": "PHRASAL VERBS",
+    },
+    "idioms": {
+        "top": (124, 45, 18),      # brown-red
+        "bottom": (153, 27, 27),   # red dark
+        "accent": (250, 204, 21),
+        "label": "IDIOMALAR",
+    },
 }
 
 
