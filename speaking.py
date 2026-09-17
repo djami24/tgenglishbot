@@ -12,13 +12,10 @@ standart o'rnatilgan bo'ladi, shuning uchun qo'shimcha o'rnatish shart emas.
 """
 
 import json
-from io import BytesIO
-
-from gtts import gTTS
-from pydub import AudioSegment
 
 SPEAKING_PART1_PROMPT = """Sen tajribali IELTS Speaking imtihonchisisan. "{topic}" mavzusi
-bo'yicha AYNAN 3 ta IELTS SPEAKING PART 1 uslubidagi savol tuz.
+bo'yicha AYNAN 3 ta IELTS SPEAKING PART 1 uslubidagi savol tuz va har biriga
+qisqa namunaviy javob yoz.
 
 QOIDALAR:
 - Savollar oddiy, qisqa va suhbat uslubida bo'lsin (haqiqiy IELTS Part 1'da
@@ -26,12 +23,19 @@ QOIDALAR:
   "Can you describe..." kabi boshlanishi mumkin.
 - Har bir savol ingliz tilida, 20 so'zdan oshmasin.
 - 3 ta savol bir-biridan farq qilib, mavzuning turli qirralarini qamrab olsin.
+- Namunaviy javob: 2-3 ta to'liq gap, IELTS band 6-7 darajasida, tabiiy va
+  speaking uslubida yozilsin. Javob savol so'ragan narsaga to'g'ridan-to'g'ri
+  javob bersin.
 
 Javobni FAQAT quyidagi JSON formatida qaytar, boshqa HECH QANDAY matn, izoh
 yoki markdown belgisi qo'shma, javob to'g'ridan-to'g'ri "{{" belgisidan
 boshlansin:
 
-{{"questions": ["...", "...", "..."]}}"""
+{{"questions": [
+  {{"q": "...", "example": "..."}},
+  {{"q": "...", "example": "..."}},
+  {{"q": "...", "example": "..."}}
+]}}"""
 
 
 def _clean_json_text(text: str) -> str:
@@ -48,67 +52,50 @@ def _clean_json_text(text: str) -> str:
 
 def generate_speaking_questions(topic: str, call_gemini_fn) -> list:
     """call_gemini_fn - post_lesson._call_gemini (prompt, max_output_tokens)
-    -> (text, finish_reason). AYNAN 3 ta savol (list[str]) qaytaradi."""
+    -> (text, finish_reason). AYNAN 3 ta {"q": ..., "example": ...} dict qaytaradi."""
     prompt = SPEAKING_PART1_PROMPT.format(topic=topic)
-    text, _finish_reason = call_gemini_fn(prompt, max_output_tokens=400)
+    text, _finish_reason = call_gemini_fn(prompt, max_output_tokens=700)
     cleaned = _clean_json_text(text)
     data = json.loads(cleaned)
 
-    questions = [str(q).strip() for q in data.get("questions", []) if str(q).strip()]
-    if len(questions) < 3:
-        raise ValueError(f"Gemini kutilganidek 3 ta savol qaytarmadi: {questions}")
-    return questions[:3]
+    raw = data.get("questions", [])
+    pairs = []
+    for item in raw:
+        if isinstance(item, dict):
+            q = str(item.get("q", "")).strip()
+            ex = str(item.get("example", "")).strip()
+        else:
+            # Eski format: faqat string (fallback)
+            q = str(item).strip()
+            ex = ""
+        if q:
+            pairs.append({"q": q, "example": ex})
+
+    if len(pairs) < 3:
+        raise ValueError(f"Gemini kutilganidek 3 ta savol qaytarmadi: {pairs}")
+    return pairs[:3]
 
 
-def _tts_segment(text: str) -> AudioSegment:
-    """Bitta matn bo'lagini (masalan bitta savol) tabiiy, shoshilmasdan
-    o'qiladigan (lekin haddan tashqari sekin ham emas) ingliz audiosiga
-    aylantiradi."""
-    tts = gTTS(text=text, lang="en", slow=False, tld="co.uk")
-    buf = BytesIO()
-    tts.write_to_fp(buf)
-    buf.seek(0)
-    return AudioSegment.from_file(buf, format="mp3")
 
-
-def build_speaking_audio(questions: list, answer_seconds: int = 30) -> bytes:
-    """Har bir savolni 2 marta o'qiydi (orada qisqa nafas-pauza), so'ng
-    talaba javob berishi uchun `answer_seconds` soniya jim turadi, keyin
-    navbatdagi savolga o'tadi. MP3 bytes qaytaradi."""
-    intro_pause = AudioSegment.silent(duration=500)
-    between_reads_pause = AudioSegment.silent(duration=1200)
-    answer_pause = AudioSegment.silent(duration=answer_seconds * 1000)
-
-    combined = intro_pause
-    for question in questions:
-        segment = _tts_segment(question)
-        # Savol 2 marta o'qiladi - talaba yaxshi tushunishi uchun.
-        combined += segment + between_reads_pause + segment
-        # Har bir savoldan keyin (oxirgisidan keyin ham) javob berish uchun
-        # to'liq pauza beriladi.
-        combined += answer_pause
-
-    buf = BytesIO()
-    combined.export(buf, format="mp3", bitrate="64k")
-    return buf.getvalue()
-
-
-def build_speaking_post_text(topic: str, questions: list, answer_seconds: int = 30) -> str:
+def build_speaking_post_text(topic: str, questions: list) -> str:
     """Postning yozma (matnli) qismini tuzadi. Birinchi qator sarlavha
     sifatida ishlatiladi (post_lesson.build_html_message shu birinchi
-    qatorni avtomatik qalin qiladi), qolgani <b> teg bilan ajratilgan
-    savollar."""
+    qatorni avtomatik qalin qiladi). Har bir savoldan keyin namunaviy
+    javob ko'rsatiladi. questions - [{"q": ..., "example": ...}] formatida."""
     clean_topic = topic.split("(")[0].strip()
     lines = [
         f"🗣️ Speaking Part 1 mashqi: {clean_topic}",
         "",
-        "Quyidagi 3 ta savolga ovozli javob berishga harakat qiling. Pastdagi "
-        f"audioda har bir savol 2 marta o'qiladi, so'ngra {answer_seconds} "
-        "soniya kutiladi - shu vaqt ichida ovoz chiqarib javob bering.",
+        "Quyidagi 3 ta savolga o'zingiz avval javob bering, so'ng namunaviy"
+        " javob bilan solishtiring.",
         "",
     ]
-    for i, q in enumerate(questions, start=1):
-        lines.append(f"{i}. <b>{q}</b>")
-    lines.append("")
-    lines.append("🎧 Mashq audiosi pastda - tinglab, har savoldan keyin javob bering.")
+    for i, item in enumerate(questions, start=1):
+        q = item["q"] if isinstance(item, dict) else str(item)
+        ex = item.get("example", "") if isinstance(item, dict) else ""
+        lines.append(f"<b>{i}. {q}</b>")
+        if ex:
+            lines.append(f"💬 Namunaviy javob: <i>{ex}</i>")
+        lines.append("")
+    lines.append("✏️ O'z javobingizni yozib, ularni solishtiring!")
     return "\n".join(lines)
