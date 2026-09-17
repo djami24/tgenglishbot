@@ -437,7 +437,7 @@ tugasin, hech qanday band yarim qoldirilmasin."""
 def _call_gemini(prompt: str, max_output_tokens: int = 2048) -> tuple[str, str | None]:
     """Gemini'ga so'rov yuboradi va (matn, finish_reason) qaytaradi."""
     url = (
-        f"https://generativelanguage.googleapis.com/v1/models/"
+        f"https://generativelanguage.googleapis.com/v1beta/models/"
         f"{GEMINI_MODEL}:generateContent?key={GEMINI_API_KEY}"
     )
     payload = {
