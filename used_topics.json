@@ -26,7 +26,8 @@
       "Relative Clauses - who, which, that bilan aniqlovchi va qo'shimcha nisbiy gaplar (The man who called, The book which I read)",
       "Adverbs va Adverbial Phrases - tarz, chastota, vaqt va joy ravishlar (quickly, always, yesterday, here)",
       "Third Conditional (o'tmishdagi xayoliy vaziyatlar)",
-      "Adverbs and adverbial phrases (tarz, chastota, vaqt, joy ifodalari)"
+      "Adverbs and adverbial phrases (tarz, chastota, vaqt, joy ifodalari)",
+      "Present Continuous (hozir davom etayotgan harakatlar uchun)"
     ],
     "topic_vocab": [
       "The Internet (Internet)",
@@ -86,10 +87,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-09-18",
-    "topic": "Adverbs and adverbial phrases (tarz, chastota, vaqt, joy ifodalari)",
+    "date": "2026-09-19",
+    "topic": "Present Continuous (hozir davom etayotgan harakatlar uchun)",
     "part": 1,
-    "video_url": "https://www.youtube.com/watch?v=1an0ZjR0zek",
+    "video_url": "https://www.youtube.com/watch?v=w04YVmJR4w4",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -118,6 +119,13 @@
       "topic": "Adverbs and adverbial phrases (tarz, chastota, vaqt, joy ifodalari)",
       "parts": {
         "1": "📌 <b>Adverbs and Adverbial Phrases</b> — Umumiy tushuncha (1/5-qism)\n\n📖 Ravishlar (<b>adverbs</b>) va ravishli iboralar (<b>adverbial phrases</b>) harakatning qanday, qachon, qayerda va qanday chastotada bajarilishini ifodalaydi. Ular fe'l, sifat yoki boshqa ravish ma'nosini to'ldirib, fikrimizni yanada aniq va tushunarli qilish uchun xizmat qiladi. Kundalik muloqotda voqea-hodisalarning tafsilotlarini bayon qilishda ushbu tuzilmalardan juda keng foydalanamiz. Ularsiz nutqimiz sodda va kam ma'lumotli bo'lib qoladi.\n\n💡 <b>Misollar:</b>\n\n• He runs <b>fast</b>. — U <b>tez</b> yuguradi.\n\n• They live <b>in London</b>. — Ular <b>Londonda</b> yashashadi.\n\n🔔 <b>Eslatma:</b> Ushbu seriyamizning keyingi qismlarida ravish va ravishli iboralarning darak, inkor hamda so'roq gaplardagi to'g'ri o'rni va tuzilish qoidalarini batafsil ko'rib chiqamiz."
+      }
+    },
+    {
+      "date": "2026-09-19",
+      "topic": "Present Continuous (hozir davom etayotgan harakatlar uchun)",
+      "parts": {
+        "1": "📌 <b>Present Continuous</b> zamoni: Hozir sodir bo'layotgan harakatlar (1/5-qism)\n\n💡 <b>Present Continuous</b> (Hozirgi davomli zamon) aynan ayni damda, gapirayotgan momentimizda sodir bo'layotgan harakatlarni ifodalash uchun ishlatiladi. Masalan, siz hozir ushbu postni <b>o'qiyapsiz</b>, men esa uni <b>yozyapman</b>. Bu zamon harakatning muayyan vaqt oralig'ida davom etayotganini va hali yakunlanmaganini ko'rsatadi. O'zbek tiliga ko'pincha fe'lga <b>-yap</b> qo'shimchasini qo'shish orqali tarjima qilinadi.\n\n📖 Misollar:\n\n• I am <b>reading</b> an interesting book right now. (Men hozir qiziqarli kitob <b>o'qiyapman</b>.)\n\n• Look! It is <b>raining</b> outside. (Qarang! Tashqarida yomg'ir <b>yog'yapti</b>.)\n\n• She is <b>speaking</b> on the phone at the moment. (U ayni damda telefonda <b>gaplashyapti</b>.)\n\n📝 Seriyamizning keyingi qismlarida ushbu zamonda darak, inkor va so'roq gap tuzilishini va ularning formulalarini birma-bir o'rganamiz. Kanalimizni kuzatib boring!"
       }
     }
   ]
