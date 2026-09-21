@@ -28,7 +28,8 @@
       "Third Conditional (o'tmishdagi xayoliy vaziyatlar)",
       "Adverbs and adverbial phrases (tarz, chastota, vaqt, joy ifodalari)",
       "Present Continuous (hozir davom etayotgan harakatlar uchun)",
-      "Second Conditional (hozir yoki kelajakdagi xayoliy vaziyatlar uchun)"
+      "Second Conditional (hozir yoki kelajakdagi xayoliy vaziyatlar uchun)",
+      "Going to (rejalar va niyatlar uchun)"
     ],
     "topic_vocab": [
       "The Internet (Internet)",
@@ -91,10 +92,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-09-20",
-    "topic": "Second Conditional (hozir yoki kelajakdagi xayoliy vaziyatlar uchun)",
-    "part": 2,
-    "video_url": "https://www.youtube.com/watch?v=iZnL2cb_w20",
+    "date": "2026-09-21",
+    "topic": "Going to (rejalar va niyatlar uchun)",
+    "part": 1,
+    "video_url": "https://www.youtube.com/watch?v=vZsFu3nyUiY",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -141,6 +142,13 @@
       "parts": {
         "1": "📌 <b>Second Conditional</b> – Xayoliy vaziyatlar (1/5-qism)\n\n💡 Ingliz tilida <b>Second Conditional</b> (Ikkinchi tur shart gaplari) hozirgi yoki kelajakdagi <b>xayoliy va real bo'lmagan</b> vaziyatlarni ifodalash uchun ishlatiladi. Bu grammatik tuzilma orqali biz \"agar shunday bo'lganida, bunday bo'lardi\" deb orzu-havaslarimiz yoki gipotezalarimiz haqida gapiramiz. Real hayotda ushbu vaziyatning sodir bo'lish ehtimoli juda past yoki umuman mavjud emas. Shuning uchun bu qoida nohaqiqiy shartlarni tushuntirishda eng kerakli grammatik vosita hisoblanadi.\n\n📖 Misollar:\n\n• If I <b>had</b> a million dollars, I <b>would buy</b> a bigger house.\n(Agar mening bir million dollarim <i>bo'lganida</i>, katta uy <i>sotib olardim</i>.)\n\n• If she <b>spoke</b> French, she <b>would move</b> to Paris.\n(Agar u fransuzcha <i>gapirganida</i>, Parijga <i>ko'chib o'tardi</i>.)\n\n📝 Keyingi qismlarda <b>Second Conditional</b> mavzusining darak, inkor va so'roq gap tuzilishlarini alohida va batafsil ko'rib chiqamiz. Kanalni kuzatib boring!",
         "2": "🇬🇧 <b>Grammar Time: Second Conditional</b> (2/5)\n\n📌 <b>Second Conditional</b> – hozirgi yoki kelajakdagi nohaqiqiy, xayoliy vaziyatlarni va ularning ehtimoldan yiroq natijasini ifodalaydi. Bugun darak gap tuzilishi haqida gaplashamiz.\n\n📐 <b>Formula:</b>\n<b>If + Subject + Past Simple, Subject + would + V1</b>\n\n<i>(Agarda \"If\" qismi gap oxirida kelsa, orasida vergul ishlatilmaydi).</i>\n\n💬 <b>Misollar:</b>\n\n• If I <b>had</b> more time, I <b>would learn</b> Spanish.\n(Agar mening ko'proq vaqtim <b>bo'lganida</b>, ispan tilini <b>o'rgangan bo'lardim</b>.)\n\n• If she <b>lived</b> in London, she <b>would speak</b> English fluently.\n(Agar u Londonda <b>yashaganida</b>, ingliz tilida ravon <b>gapirgan bo'lardi</b>.)\n\n• If we <b>won</b> the lottery, we <b>would buy</b> a new house.\n(Agar biz lotereyada <b>yutganimizda</b>, yangi uy <b>sotib olgan bo'lardik</b>.)\n\n• If I <b>were</b> you, I <b>would accept</b> this job offer.\n(Agar men sizning o'rningizda <b>bo'lganimda</b>, bu ish taklifini <b>qabul qilgan bo'lardim</b>.)\n\n💡 <b>Muhim eslatma:</b>\nNohaqiqiy vaziyatlarni ifodalashda <b>I</b>, <b>he</b>, <b>she</b>, <b>it</b> olmoshlari uchun <b>was</b> emas, balki <b>were</b> ishlatish grammatik jihatdan to'g'riroq va rasmiyroq hisoblanadi."
+      }
+    },
+    {
+      "date": "2026-09-21",
+      "topic": "Going to (rejalar va niyatlar uchun)",
+      "parts": {
+        "1": "📌 <b>Kelajak rejalar uchun:</b> \"Going to\" (1/5-qism)\n\n💡 Bugun ingliz tilida kelajakdagi rejalar va niyatlarimiz haqida gapirishni o'rganamiz. Har doim biror ishni qilishni oldindan <b>rejalashtirgan</b> bo'lsak va uni amalga oshirish niyatida bo'lsak, <b>be going to</b> iborasidan foydalanamiz. Bu ibora o'zbek tiliga ko'pincha <i>\"-moqchi bo'lmoq\"</i> yoki <i>\"-moqchiman\"</i> deb tarjima qilinadi. Misol uchun, bugun kechqurun kitob o'qimoqchi bo'lsangiz yoki dam olish kunida tog'ga bormoqchi bo'lsangiz, aynan ushbu grammatik iboradan foydalanasiz.\n\n📖 <b>Misollar:</b>\n\n🔹 I am <b>going to buy</b> a new car next week.\n(Men keyingi hafta yangi mashina <i>sotib olmoqchiman</i>.)\n\n🔹 She is <b>going to learn</b> English this year.\n(U bu yil ingliz tilini <i>o'rganmoqchi</i>.)\n\n🔔 Keyingi qismlarda <b>going to</b> iborasining darak, inkor va so'roq gaplarda yasalishi va ularning batafsil qoidalarini birma-bir ko'rib chiqamiz. Kanalimizni kuzatib boring!"
       }
     }
   ]
