@@ -30,7 +30,8 @@
       "Present Continuous (hozir davom etayotgan harakatlar uchun)",
       "Second Conditional (hozir yoki kelajakdagi xayoliy vaziyatlar uchun)",
       "Going to (rejalar va niyatlar uchun)",
-      "Present Perfect (hozirgi vaqt bilan bog'liq o'tmish harakatlari uchun)"
+      "Present Perfect (hozirgi vaqt bilan bog'liq o'tmish harakatlari uchun)",
+      "Must, Have to (majburiyat uchun)"
     ],
     "topic_vocab": [
       "The Internet (Internet)",
@@ -101,10 +102,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-09-22",
-    "topic": "Present Perfect (hozirgi vaqt bilan bog'liq o'tmish harakatlari uchun)",
+    "date": "2026-09-24",
+    "topic": "Must, Have to (majburiyat uchun)",
     "part": 1,
-    "video_url": "https://www.youtube.com/watch?v=553eeL1Dvho",
+    "video_url": "https://www.youtube.com/watch?v=HUXXgVElADg",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -165,6 +166,13 @@
       "topic": "Present Perfect (hozirgi vaqt bilan bog'liq o'tmish harakatlari uchun)",
       "parts": {
         "1": "🇬🇧 <b>Present Perfect zamoni: Umumiy tushuncha</b> (1/5-qism)\n\n📌 <b>Present Perfect</b> zamoni o'tmishda sodir bo'lgan, ammo natijasi va ta'siri hozirgi vaqt bilan bevosita bog'liq bo'lgan harakatlarni ifodalash uchun ishlatiladi. Bu zamonda harakatning aynan qachon ro'y bergani emas, balki uning <b>hozirgi vaqtdagi natijasi</b> va beradigan tajribasi muhim hisoblanadi. O'zbek tiliga ko'pincha o'tgan zamon shaklida tarjima qilinsa ham, u mohiyatan hozirgi holatimizga daxldordir.\n\n💡 <b>Misollar:</b>\n\n• I <b>have lost</b> my keys. — Men kalitlarimni yo'qotib qo'ydim. (<i>Natijada hozir yonimda kalit yo'q va uyga kira olmayman.</i>)\n\n• She <b>has finished</b> her homework. — U uy vazifasini bajarib bo'ldi. (<i>Natijada hozir uning vazifasi tayyor va u dam olishi mumkin.</i>)\n\n📝 <b>Keyingi qismlarda:</b>\n\nSeriyamizning kelgusi qismlarida <b>Present Perfect</b> zamonida darak, inkor va so'roq gaplarni to'g'ri tuzish hamda uning signal so'zlarini birma-bir ko'rib chiqamiz. Kanalingizni kuzatib boring!"
+      }
+    },
+    {
+      "date": "2026-09-24",
+      "topic": "Must, Have to (majburiyat uchun)",
+      "parts": {
+        "1": "📌 <b>Must</b> va <b>Have to</b>: Majburiyat ifodalash (1/5-qism)\n\n💡 Ingliz tilida biror ishni qilish <b>shart</b>, <b>zarur</b> yoki <b>majburiy</b> ekanligini ko'rsatish uchun asosan <b>must</b> va <b>have to</b> birikmalaridan foydalanamiz. Ikkala shakl ham o'zbek tiliga <i>\"-ishi kerak\"</i>, <i>\"-ishi shart\"</i> yoki <i>\"majbur\"</i> deb tarjima qilinadi. Umuman olganda, <b>must</b> ko'proq so'zlovchining shaxsiy qarori va ichki hissini ifodalasa, <b>have to</b> esa tashqi qoidalar hamda holatlar taqozosi bilan yuzaga kelgan majburiyatni anglatadi. Ushbu umumiy qoidani to'g me'yorida tushunish ingliz tilida erkin va aniq muloqot qilishga yordam beradi.\n\n📝 Misollar:\n\n• I <b>must study</b> hard for the exam. (Men imtihon uchun qattiq shug'ullanishim <b>shart</b>.)\n\n• You <b>have to stop</b> at the red light. (Siz qizil chiroqda to'xtashingiz <b>shart</b>.)\n\n🔔 Keyingi qismlarda ushbu birikmalarning darak, inkor va so'roq gaplarda ishlatilish tartibini alohida-alohida batafsil ko'rib chiqamiz. Kanalimizni kuzatib boring!"
       }
     }
   ]
