@@ -31,7 +31,8 @@
       "Second Conditional (hozir yoki kelajakdagi xayoliy vaziyatlar uchun)",
       "Going to (rejalar va niyatlar uchun)",
       "Present Perfect (hozirgi vaqt bilan bog'liq o'tmish harakatlari uchun)",
-      "Must, Have to (majburiyat uchun)"
+      "Must, Have to (majburiyat uchun)",
+      "Past Continuous (o'tmishdagi davom etayotgan harakatlar uchun)"
     ],
     "topic_vocab": [
       "Friends (Do'stlar)"
@@ -56,10 +57,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-09-24",
-    "topic": "Must, Have to (majburiyat uchun)",
+    "date": "2026-09-26",
+    "topic": "Past Continuous (o'tmishdagi davom etayotgan harakatlar uchun)",
     "part": 1,
-    "video_url": "https://www.youtube.com/watch?v=HUXXgVElADg",
+    "video_url": "https://www.youtube.com/watch?v=bTWa5M4UMO8",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -127,6 +128,13 @@
       "topic": "Must, Have to (majburiyat uchun)",
       "parts": {
         "1": "📌 <b>Must</b> va <b>Have to</b>: Majburiyat ifodalash (1/5-qism)\n\n💡 Ingliz tilida biror ishni qilish <b>shart</b>, <b>zarur</b> yoki <b>majburiy</b> ekanligini ko'rsatish uchun asosan <b>must</b> va <b>have to</b> birikmalaridan foydalanamiz. Ikkala shakl ham o'zbek tiliga <i>\"-ishi kerak\"</i>, <i>\"-ishi shart\"</i> yoki <i>\"majbur\"</i> deb tarjima qilinadi. Umuman olganda, <b>must</b> ko'proq so'zlovchining shaxsiy qarori va ichki hissini ifodalasa, <b>have to</b> esa tashqi qoidalar hamda holatlar taqozosi bilan yuzaga kelgan majburiyatni anglatadi. Ushbu umumiy qoidani to'g me'yorida tushunish ingliz tilida erkin va aniq muloqot qilishga yordam beradi.\n\n📝 Misollar:\n\n• I <b>must study</b> hard for the exam. (Men imtihon uchun qattiq shug'ullanishim <b>shart</b>.)\n\n• You <b>have to stop</b> at the red light. (Siz qizil chiroqda to'xtashingiz <b>shart</b>.)\n\n🔔 Keyingi qismlarda ushbu birikmalarning darak, inkor va so'roq gaplarda ishlatilish tartibini alohida-alohida batafsil ko'rib chiqamiz. Kanalimizni kuzatib boring!"
+      }
+    },
+    {
+      "date": "2026-09-26",
+      "topic": "Past Continuous (o'tmishdagi davom etayotgan harakatlar uchun)",
+      "parts": {
+        "1": "📌 <b>Past Continuous</b> zamoni: Umumiy tushuncha (1/5-qism)\n\n📖 <b>Past Continuous</b> (O'tmishdagi davomli zamon) o'tmishdagi ma'lum bir vaqtda sodir bo'layotgan va davom etayotgan harakatlarni ifodalash uchun ishlatiladi. Bu zamon harakatning tugallangan natijasiga emas, balki uning o'tmishdagi jarayoniga urg'u beradi. Masalan, kecha aniq bir vaqtda nima qilayotganingizni tasvirlashda ushbu grammatik qoidadan foydalanasiz. O'zbek tiliga bu zamon ko'pincha <i>\"-yotgan edi\"</i> iborasi orqali tarjima qilinadi.\n\n💡 Misollar:\n\n• I <b>was reading</b> a book yesterday at 5 PM. (Men kecha soat 5 da kitob <b>o'qiyotgan edim</b>.)\n\n• They <b>were playing</b> football all evening. (Ular butun kech bo'yi futbol <b>o'ynayotgan edilar</b>.)\n\n📝 Keyingi qismlarda ushbu zamonning darak, inkor va so'roq gap shakllarini hamda maxsus kalit so'zlarini batafsil ko'rib chiqamiz. Kanallimizni kuzatib boring!"
       }
     }
   ]
