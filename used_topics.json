@@ -34,7 +34,8 @@
       "Must, Have to (majburiyat uchun)",
       "Past Continuous (o'tmishdagi davom etayotgan harakatlar uchun)",
       "Reported speech - Statements (say va tell bilan gaplarni ko'chirish)",
-      "First Conditional (kelajakdagi real vaziyatlar uchun)"
+      "First Conditional (kelajakdagi real vaziyatlar uchun)",
+      "Relative clauses - Defining va Non-defining (who, which, that bilan)"
     ],
     "topic_vocab": [
       "Friends (Do'stlar)",
@@ -63,10 +64,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-09-28",
-    "topic": "First Conditional (kelajakdagi real vaziyatlar uchun)",
-    "part": 2,
-    "video_url": "https://www.youtube.com/watch?v=s59ygVYxpag",
+    "date": "2026-09-29",
+    "topic": "Relative clauses - Defining va Non-defining (who, which, that bilan)",
+    "part": 1,
+    "video_url": "https://www.youtube.com/watch?v=eFmfoeTkhH0",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -158,6 +159,13 @@
       "parts": {
         "1": "📌 <b>First Conditional</b>: Kelajakdagi real vaziyatlar (1/5-qism)\n\n💡 Ingliz tilida <b>First Conditional</b> shartli gaplar turi bo'lib, u kelajakda yuz berishi <b>real va ehtimoli yuqori</b> bo'lgan voqea-hodisalarni ifodalash uchun ishlatiladi. Agar ma'lum bir shart bajarilsa, uning natijasi kelajakda albatta sodir bo'ladi. Ushbu qoida kundalik hayotimizdagi rejalarni, ogohlantirishlarni yoki va'dalarni bildirishda juda keng qo'llaniladi. Shuning uchun ham bu grammatika muloqotda erkin bo'lish uchun o'ta muhimdir.\n\n📖 Misollarni ko'rib chiqamiz:\n\n🗣️ If it <b>rains</b> tomorrow, I <b>will stay</b> at home.\n<i>(Agar ertaga yomg'ir yog'sa, men uyda qolaman.)</i>\n\n🗣️ If you <b>study hard</b>, you <b>will pass</b> the exam.\n<i>(Agar sen qunt bilan o'qisang, imtihondan o'tasan.)</i>\n\n📝 Bugun ushbu grammatikaning umumiy ma'nosi va qo'llanishi bilan tanishib olgan bo'lsak, seriyamizning keyingi qismlarida <b>First Conditional</b> iboralarining darak, inkor va so'roq gap tuzilishlarini birma-bir ko'rib chiqamiz.",
         "2": "📌 <b>First Conditional</b>: Darak gaplar (2/5-qism)\n\n💡 <b>First Conditional</b> kelajakdagi real va amalga oshishi mumkin bo'lgan vaziyatlarni ifodalash uchun qo'llaniladi. Bugungi darsimizda uning darak gap tuzilishini ko'rib chiqamiz.\n\n📖 <b>Tuzilish formulasi:</b>\n<b>If</b> + <b>Present Simple</b>, <b>Subject</b> + <b>will</b> + <b>V1</b>\n\n🗣️ <b>Misollar:</b>\n\n• <b>If it rains</b> tomorrow, we <b>will stay</b> at home.\n(Ertaga yomg'ir yog'sa, biz uyda qolamiz.)\n\n• <b>If you study</b> hard, you <b>will pass</b> the exam.\n(Agar qunt bilan o'qsang, imtihondan o'tasan.)\n\n• <b>If she arrives</b> on time, we <b>will start</b> the meeting.\n(Agar u o'z vaqtida kelsa, biz majlisni boshlaymiz.)\n\n• They <b>will buy</b> a house <b>if they save</b> enough money.\n(Agar ular yetarlicha pul jamg'arishsa, uy sotib olishadi.)\n\n❗ <b>Muhim eslatma:</b>\n<b>If</b> qatnashgan ergash gap qismida hech qachon <b>will</b> kelajak zamon fe'li ishlatilmaydi, uning o'rniga har doim <b>Present Simple</b> qo'yiladi.\n\n❌ <i>If you will work hard, you will succeed.</i>\n✅ <b>If you work</b> hard, you <b>will succeed</b>."
+      }
+    },
+    {
+      "date": "2026-09-29",
+      "topic": "Relative clauses - Defining va Non-defining (who, which, that bilan)",
+      "parts": {
+        "1": "📌 <b>Relative Clauses: Defining va Non-defining</b> (1/5-qism)\n\n💡 <b>Relative clauses</b> (nisbiy ergash gaplar) ingliz tilida shaxs, narsa yoki joy haqida aniqroq ma'lumot berish uchun xizmat qiladi. Ular ikkita alohida gapni birlashtirib, nutqimizni yanada ravon va tabiiy qilishga yordam beradi. Bu iboralar asosan <b>who</b> (insonlar uchun), <b>which</b> (narsa-buyumlar uchun) va <b>that</b> (har ikkisi uchun) nisbiy olmoshlari yordamida bog'lanadi. Nisbiy ergash gaplar gap uchun ma'nosi o'ta zarur bo'lgan <b>Defining</b> hamda shunchaki qo'shimcha ma'lumot beruvchi <b>Non-defining</b> turlariga bo'linadi.\n\n📖 Misollar:\n\n• The boy <b>who</b> won the race is my brother.\n<i>(Poygada g'olib bo'lgan bola — mening akam.)</i>\n\n• I lost the watch <b>which</b> was a gift from my friend.\n<i>(Men do'stim sovg'a qilgan qo'l soatini yo'qotib qo'ydim.)</i>\n\n📝 Keyingi qismlarda ushbu mavzu bo'yicha darak, inkor va so'roq gap tuzilishini hamda vergullarning ishlatilish qoidalarini batafsil ko'rib chiqamiz. Bizni kuzatib boring!"
       }
     }
   ]
