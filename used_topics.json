@@ -35,7 +35,8 @@
       "Past Continuous (o'tmishdagi davom etayotgan harakatlar uchun)",
       "Reported speech - Statements (say va tell bilan gaplarni ko'chirish)",
       "First Conditional (kelajakdagi real vaziyatlar uchun)",
-      "Relative clauses - Defining va Non-defining (who, which, that bilan)"
+      "Relative clauses - Defining va Non-defining (who, which, that bilan)",
+      "Comparatives and Superlatives - muntazam va notartib shakllar"
     ],
     "topic_vocab": [
       "Friends (Do'stlar)",
@@ -67,10 +68,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-09-29",
-    "topic": "Relative clauses - Defining va Non-defining (who, which, that bilan)",
+    "date": "2026-09-30",
+    "topic": "Comparatives and Superlatives - muntazam va notartib shakllar",
     "part": 1,
-    "video_url": "https://www.youtube.com/watch?v=eFmfoeTkhH0",
+    "video_url": "https://www.youtube.com/watch?v=jz8Fy5qQXu8",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -169,6 +170,13 @@
       "topic": "Relative clauses - Defining va Non-defining (who, which, that bilan)",
       "parts": {
         "1": "📌 <b>Relative Clauses: Defining va Non-defining</b> (1/5-qism)\n\n💡 <b>Relative clauses</b> (nisbiy ergash gaplar) ingliz tilida shaxs, narsa yoki joy haqida aniqroq ma'lumot berish uchun xizmat qiladi. Ular ikkita alohida gapni birlashtirib, nutqimizni yanada ravon va tabiiy qilishga yordam beradi. Bu iboralar asosan <b>who</b> (insonlar uchun), <b>which</b> (narsa-buyumlar uchun) va <b>that</b> (har ikkisi uchun) nisbiy olmoshlari yordamida bog'lanadi. Nisbiy ergash gaplar gap uchun ma'nosi o'ta zarur bo'lgan <b>Defining</b> hamda shunchaki qo'shimcha ma'lumot beruvchi <b>Non-defining</b> turlariga bo'linadi.\n\n📖 Misollar:\n\n• The boy <b>who</b> won the race is my brother.\n<i>(Poygada g'olib bo'lgan bola — mening akam.)</i>\n\n• I lost the watch <b>which</b> was a gift from my friend.\n<i>(Men do'stim sovg'a qilgan qo'l soatini yo'qotib qo'ydim.)</i>\n\n📝 Keyingi qismlarda ushbu mavzu bo'yicha darak, inkor va so'roq gap tuzilishini hamda vergullarning ishlatilish qoidalarini batafsil ko'rib chiqamiz. Bizni kuzatib boring!"
+      }
+    },
+    {
+      "date": "2026-09-30",
+      "topic": "Comparatives and Superlatives - muntazam va notartib shakllar",
+      "parts": {
+        "1": "📚 <b>Comparatives and Superlatives</b> — Sifat darajalari (1/5-qism)\n\n📌 <b>Comparatives and Superlatives</b> (Sifatning qiyosiy va orttirma darajalari) ingliz tilida shaxslar, narsalar yoki voqealarni bir-biri bilan solishtirish uchun ishlatiladi. Ikki obyektni o'zaro solishtirganimizda <b>comparative</b> (qiyosiy daraja), uch yoki undan ortiq obyektlar orasida eng ustunini ko'rsatmoqchi bo'lganimizda esa <b>superlative</b> (orttirma daraja) shaklidan foydalanamiz. Bu qoida o'z fikrimizni aniqroq, boyroq va ta'sirchanroq ifodalashga yordam beradi. Kundalik muloqotda va yozma nutqda bu mavzu eng ko'p qo'llaniladigan grammatik tuzilmalardan biridir.\n\n📖 Misollarni ko'rib chiqamiz:\n\n• Anvar is <b>taller than</b> Jasur. — <i>Anvar Jasurdan ko'ra balandbo'yliroq.</i>\n• London is <b>the biggest</b> city in England. — <i>London Angliyadagi eng katta shahardir.</i>\n\n💡 <b>Eslatib o'tamiz:</b>\nUshbu seriyamizning keyingi qismlarida muntazam va notartib sifatlarning yasalishi hamda darak, inkor va so'roq gaplarda ishlatilish tuzilishini batafsil ko'rib chiqamiz."
       }
     }
   ]
