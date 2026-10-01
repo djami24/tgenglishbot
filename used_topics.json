@@ -36,7 +36,8 @@
       "Reported speech - Statements (say va tell bilan gaplarni ko'chirish)",
       "First Conditional (kelajakdagi real vaziyatlar uchun)",
       "Relative clauses - Defining va Non-defining (who, which, that bilan)",
-      "Comparatives and Superlatives - muntazam va notartib shakllar"
+      "Comparatives and Superlatives - muntazam va notartib shakllar",
+      "Past Perfect (o'tmish voqealar tartibini ko'rsatish uchun)"
     ],
     "topic_vocab": [
       "Friends (Do'stlar)",
@@ -69,10 +70,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-09-30",
-    "topic": "Comparatives and Superlatives - muntazam va notartib shakllar",
-    "part": 2,
-    "video_url": "https://www.youtube.com/watch?v=jz8Fy5qQXu8",
+    "date": "2026-10-01",
+    "topic": "Past Perfect (o'tmish voqealar tartibini ko'rsatish uchun)",
+    "part": 1,
+    "video_url": "https://www.youtube.com/watch?v=Jjj5-KnpdIQ",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -179,6 +180,13 @@
       "parts": {
         "1": "📚 <b>Comparatives and Superlatives</b> — Sifat darajalari (1/5-qism)\n\n📌 <b>Comparatives and Superlatives</b> (Sifatning qiyosiy va orttirma darajalari) ingliz tilida shaxslar, narsalar yoki voqealarni bir-biri bilan solishtirish uchun ishlatiladi. Ikki obyektni o'zaro solishtirganimizda <b>comparative</b> (qiyosiy daraja), uch yoki undan ortiq obyektlar orasida eng ustunini ko'rsatmoqchi bo'lganimizda esa <b>superlative</b> (orttirma daraja) shaklidan foydalanamiz. Bu qoida o'z fikrimizni aniqroq, boyroq va ta'sirchanroq ifodalashga yordam beradi. Kundalik muloqotda va yozma nutqda bu mavzu eng ko'p qo'llaniladigan grammatik tuzilmalardan biridir.\n\n📖 Misollarni ko'rib chiqamiz:\n\n• Anvar is <b>taller than</b> Jasur. — <i>Anvar Jasurdan ko'ra balandbo'yliroq.</i>\n• London is <b>the biggest</b> city in England. — <i>London Angliyadagi eng katta shahardir.</i>\n\n💡 <b>Eslatib o'tamiz:</b>\nUshbu seriyamizning keyingi qismlarida muntazam va notartib sifatlarning yasalishi hamda darak, inkor va so'roq gaplarda ishlatilish tuzilishini batafsil ko'rib chiqamiz.",
         "2": "📚 <b>Grammar Series: Comparatives & Superlatives</b> (2/5-qism)\n\n📌 <b>Darak gap qurilishi (Affirmative Structure):</b>\n\n• Qiyosiy daraja (Comparative):\n<b>Subject + verb + adj-er / more + adj + than + object</b>\n\n• Orttirma daraja (Superlative):\n<b>Subject + verb + the + adj-est / the most + adj + noun</b>\n\n📝 <b>Misollar:</b>\n\n• <b>Regular Comparative:</b>\nMy new phone is <b>faster than</b> my old one.\n<i>(Mening yangi telefonim eskisiga qaraganda tezroq.)</i>\n\n• <b>Regular Superlative:</b>\nShe is <b>the most intelligent</b> student in our class.\n<i>(U sinfimizdagi eng aqlli o'quvchidir.)</i>\n\n• <b>Irregular Comparative:</b>\nHis English is <b>better than</b> mine.\n<i>(Uning ingliz tili mening darajamdan ko'ra yaxshiroq.)</i>\n\n• <b>Irregular Superlative:</b>\nThis was <b>the worst</b> day of my life.\n<i>(Bu hayotimdagi eng yomon kun edi.)</i>\n\n❗ <b>Tez-tez uchraydigan xato:</b>\n\nBir vaqtning o'zida ham <b>more</b>, ham <b>-er</b> qo'shimchasini ishlatmang! Masalan, <i>\"more better\"</i> yoki <i>\"more taller\"</i> deyish grammatik jihatdan noto'g'ri. To'g'ri shakllar: <b>better</b> va <b>taller</b>."
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "topic": "Past Perfect (o'tmish voqealar tartibini ko'rsatish uchun)",
+      "parts": {
+        "1": "📌 <b>Past Perfect</b> zamoni: O'tmish voqealari ketma-ketligi (1/5-qism)\n\n📖 <b>Past Perfect</b> (O'tgan tugallangan zamon) o'tmishda sodir bo'lgan ikki yoki undan ortiq voqealarning sodir bo'lish tartibini ko'rsatish uchun ishlatiladi. Bu zamon o'tmishdagi biror harakat yoki vaqtdan <b>oldinroq</b> bajarilib bo'lingan ish-harakatni ifodalash uchun xizmat qiladi. Ya'ni, o'tmish ichidagi \"eng o'tmish\" harakat uchun aynan <b>Past Perfect</b> qo'llaniladi. Bu zamon orqali tinglovchi qaysi voqea birinchi, qaysi biri esa undan keyin yuz berganini aniq tushunib oladi.\n\n💡 Misollar:\n\n• When I arrived at the station, the train <b>had left</b>.\n(Men vokzalga yetib kelganimda, poyezd <b>jo'nab ketgan edi</b>.)\n<i>(Poyezd ketishi men yetib kelishimdan oldin sodir bo'lgan)</i>\n\n• She <b>had finished</b> her homework before her mother came home.\n(Oyisi uyga kelishidan oldin u uy vazifasini <b>bajarib bo me'yoriga yetkazgan edi</b>.)\n<i>(Vazifa bajarilishi oyisi kelishidan oldin yakunlangan)</i>\n\n📝 Keyingi qismlarda ushbu zamonda darak, inkor va so'roq gaplarni qanday to'g me'yorida va xatosiz tuzish qoidalarini birma-bir ko'rib chiqamiz. Kanalimizni kuzatib boring!"
       }
     }
   ]
