@@ -38,7 +38,8 @@
       "Relative clauses - Defining va Non-defining (who, which, that bilan)",
       "Comparatives and Superlatives - muntazam va notartib shakllar",
       "Past Perfect (o'tmish voqealar tartibini ko'rsatish uchun)",
-      "Reported speech - Questions (savol gaplarni ko'chirish)"
+      "Reported speech - Questions (savol gaplarni ko'chirish)",
+      "Passive voice - hozirgi va o'tmish zamonlardagi asosiy qurilmalar"
     ],
     "topic_vocab": [
       "Friends (Do'stlar)",
@@ -77,10 +78,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-10-02",
-    "topic": "Reported speech - Questions (savol gaplarni ko'chirish)",
+    "date": "2026-10-03",
+    "topic": "Passive voice - hozirgi va o'tmish zamonlardagi asosiy qurilmalar",
     "part": 1,
-    "video_url": "https://www.youtube.com/watch?v=eplQBhE0-Hg",
+    "video_url": "https://www.youtube.com/watch?v=N7uvEllP5Jg",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -202,6 +203,13 @@
       "topic": "Reported speech - Questions (savol gaplarni ko'chirish)",
       "parts": {
         "1": "📌 <b>Reported Speech - Questions</b>: Savol gaplarni ko'chirish (1/5-qism)\n\n💡 Kundalik muloqotda kimgadir boshqa bir inson bergan savolini yetkazib berishimizga to'g'ri keladi. Masalan, \"U mendan qayerda yashashimni so'radi\" kabi jumlalar ingliz tilida <b>Reported Questions</b> (ko'chirilgan savol gaplar) deb ataladi. To'g'ri savol gapni o'zlashtirma gapga o'tkazganimizda so'z tartibi o'zgarib, oddiy darak gap shakliga keladi hamda zamonlar bir qadam orqaga suriladi. Eng muhim qoida shundaki, ko'chirilgan savol gap oxirida so'roq belgisi qo'yilmaydi.\n\n📝 <b>Misollar:</b>\n\n🗣️ Direct: \"Where do you live?\" she asked.\n✅ Reported: She asked me where I <b>lived</b>.\n(<i>U mendan qayerda yashashimni so'radi.</i>)\n\n🗣️ Direct: \"Are you a student?\" he asked.\n✅ Reported: He asked if I <b>was</b> a student.\n(<i>U mendan talaba ekanligimni so'radi.</i>)\n\n🔔 Seriyamizning keyingi qismlarida savol gaplarning darak hamda inkor ko'rinishlari, <b>Yes/No questions</b> hamda <b>Wh-questions</b> turlarini o'zlashtirma gapga o'tkazish tartibini batafsil ko'rib chiqamiz. Kanalimizni kuzatib boring!"
+      }
+    },
+    {
+      "date": "2026-10-03",
+      "topic": "Passive voice - hozirgi va o'tmish zamonlardagi asosiy qurilmalar",
+      "parts": {
+        "1": "📌 <b>Grammar Time: Passive Voice</b> bilan tanishamiz! (1/5-qism)\n\n💡 Ingliz tilida <b>Passive Voice</b> (Majhul nisbat) harakatni kim bajarganidan ko'ra, harakatning o'zi yoki u yo'naltirilgan shaxs va buyum muhimroq bo'lganda ishlatiladi. Masalan, ishni kim qilgani noma'lum bo'lganda yoki buni ta'kidlash shart bo'lmaganda ushbu grammatik tuzilma qo'llanadi. Bu mavzu rasmiy nutq, yangiliklar va kundalik muloqotda juda ko'p uchraydi. Darslarimiz davomida <b>Present Simple</b> va <b>Past Simple</b> zamonlaridagi asosiy qurilmalarni o'rganamiz.\n\n📖 Oddiy misollarda ko'ramiz:\n\n✅ <i>This book <b>is read</b> every day.</i>\n📝 Bu kitob har kuni <b>o'qiladi</b>.\n\n✅ <i>The window <b>was broken</b> yesterday.</i>\n📝 Kecha deraza <b>sindirildi</b>.\n\n❗ Keyingi qismlarda ushbu zamonlarda darak, inkor va so'roq gaplarni to'g'ri yasash qoidalarini bosqichma-bosqich ko'rib chiqamiz. Bizni kuzatib boring!"
       }
     }
   ]
