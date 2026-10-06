@@ -40,7 +40,8 @@
       "Past Perfect (o'tmish voqealar tartibini ko'rsatish uchun)",
       "Reported speech - Questions (savol gaplarni ko'chirish)",
       "Passive voice - hozirgi va o'tmish zamonlardagi asosiy qurilmalar",
-      "Should (maslahat uchun)"
+      "Should (maslahat uchun)",
+      "Might, May (ehtimollik uchun)"
     ],
     "topic_vocab": [
       "Friends (Do'stlar)",
@@ -84,10 +85,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-10-04",
-    "topic": "Should (maslahat uchun)",
-    "part": 2,
-    "video_url": "https://www.youtube.com/watch?v=-N9te6dUqjw",
+    "date": "2026-10-06",
+    "topic": "Might, May (ehtimollik uchun)",
+    "part": 1,
+    "video_url": "https://www.youtube.com/watch?v=ZXN3wROCpfs",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -226,6 +227,13 @@
       "parts": {
         "1": "📌 <b>Should</b> modal fe'li: Maslahat berish (1/5-qism)\n\n💡 Ingliz tilida biror kishiga <b>maslahat berish</b>, to'g'ri va ma'qul taklif bildirish uchun <b>should</b> modal fe'lidan foydalanamiz. Bu so'z o'zbek tiliga ko'pincha <b>\"-ishi kerak\"</b> yoki <b>\"-sa yaxshi bo'lardi\"</b> deb tarjima qilinadi. Biz <b>should</b> yordamida birovga majburiy buyruq bermaymiz, balki do'stona va xushmuomala tarzda o'z fikrimizni bildiramiz. Masalan, do'stingiz charchagan bo'lsa yoki tishi og'riyotgan bo'lsa, unga nima qilish ma'qulligini ko'rsatishda ushbu qoida juda qo'l keladi.\n\n📖 <b>Misollar:</b>\n\n🗣️ You <b>should sleep</b> early tonight.\n<i>(Siz bugun tunda vaqliroq uxlashingiz kerak.)</i>\n\n🗣️ We <b>should drink</b> more water every day.\n<i>(Biz har kuni ko'proq suv ichishimiz kerak.)</i>\n\n📝 Keyingi qismlarda <b>should</b> ishtirokida darak, inkor va so'roq gaplar tuzilishini batafsil ko'rib chiqamiz. Biz bilan birga o'rganishda davom eting!",
         "2": "📌 <b>Grammar: Should (Maslahat berish) — 2/5-qism</b>\n\n💡 Bugungi darsimizda <b>Should</b> modal fe'li yordamida darak gaplar tuzishni o'rganamiz. Bu shakl kimgadir foydali maslahat berish yoki to'g'ri tavsiya bildirish uchun qo'llaniladi.\n\n📖 <b>Darak gap formulasi:</b>\n<b>Subject + should + Verb 1</b>\n\n🗣️ <b>Misollar:</b>\n\n• You <b>should drink</b> more water every day.\n<i>(Siz har kuni ko'proq suv ichishingiz kerak.)</i>\n\n• He <b>should see</b> a doctor as soon as possible.\n<i>(U imkon qadar tezroq shifokorga ko'rinishi kerak.)</i>\n\n• We <b>should learn</b> new English words daily.\n<i>(Biz har kuni yangi inglizcha so'zlarni o'rganishimiz kerak.)</i>\n\n• They <b>should rest</b> after a long journey.\n<i>(Ular uzoq yo'ldan keyin dam olishlari kerak.)</i>\n\n❗ <b>Muhim eslatma:</b>\n<b>Should</b> modal fe'lidan so'ng keladigan asosiy fe'l oldidan <i>to</i> yuklamasi ishlatilmaydi. Shuningdek, ega (he, she, it) o'zgarsa ham, fe'lga hech qanday qo'shimcha (masalan, <i>-s</i> yoki <i>-ed</i>) qo'shilmaydi.\n❌ Noto'g'ri: She should <i>to go</i> / He should <i>goes</i>.\n✅ To'g'ri: She <b>should go</b> / He <b>should go</b>."
+      }
+    },
+    {
+      "date": "2026-10-06",
+      "topic": "Might, May (ehtimollik uchun)",
+      "parts": {
+        "1": "📌 <b>Grammar:</b> <b>May</b> va <b>Might</b> (Ehtimollik) — 1/5-qism\n\n💡 Bugun ingliz tilida biror voqea yoki hodisaning sodir bo'lish <b>ehtimolligini</b> ifodalashni o'rganamiz. Kundalik hayotda \"Ahmad kelib qolishi mumkin\" yoki \"Bugun yomg'ir yog'sa kerak\" kabi gaplarni ko'p ishlatamiz. Ingliz tilida bunday noma'lum holatlar uchun <b>may</b> va <b>might</b> modalli fe'llari qo'llaniladi. Har ikkala fe'l ham hozirgi yoki kelajakdagi taxminlarni bildiradi, biroq <b>might</b> ishlatilganda ehtimollik darajasi <b>may</b>ga nisbatan biroz pastroq bo'ladi.\n\n📖 <b>Misollar:</b>\n\n🔹 It <b>may rain</b> this afternoon.\n(Bugun tushdan keyin yomg'ir <i>yog'ishi mumkin</i>.)\n\n🔹 She <b>might be</b> at home now.\n(U hozir uyda <i>bo'lishi mumkin</i>.)\n\n📝 Bu ushbu mavzu bo'yicha kirish qismi edi. Keyingi postlarda <b>may</b> va <b>might</b> fe'llari yordamida darak, inkor hamda so'roq gaplar tuzish qoidalarini alohida va batafsil o'rganamiz. Kanaldan uzoqlashmang!"
       }
     }
   ]
