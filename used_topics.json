@@ -41,7 +41,8 @@
       "Reported speech - Questions (savol gaplarni ko'chirish)",
       "Passive voice - hozirgi va o'tmish zamonlardagi asosiy qurilmalar",
       "Should (maslahat uchun)",
-      "Might, May (ehtimollik uchun)"
+      "Might, May (ehtimollik uchun)",
+      "Yes/No questions va Wh-questions (ha/yo'q va so'roq savollari)"
     ],
     "topic_vocab": [
       "Friends (Do'stlar)",
@@ -87,10 +88,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-10-06",
-    "topic": "Might, May (ehtimollik uchun)",
+    "date": "2026-10-08",
+    "topic": "Yes/No questions va Wh-questions (ha/yo'q va so'roq savollari)",
     "part": 1,
-    "video_url": "https://www.youtube.com/watch?v=ZXN3wROCpfs",
+    "video_url": "https://www.youtube.com/watch?v=YIkewDhlSwQ",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -236,6 +237,13 @@
       "topic": "Might, May (ehtimollik uchun)",
       "parts": {
         "1": "📌 <b>Grammar:</b> <b>May</b> va <b>Might</b> (Ehtimollik) — 1/5-qism\n\n💡 Bugun ingliz tilida biror voqea yoki hodisaning sodir bo'lish <b>ehtimolligini</b> ifodalashni o'rganamiz. Kundalik hayotda \"Ahmad kelib qolishi mumkin\" yoki \"Bugun yomg'ir yog'sa kerak\" kabi gaplarni ko'p ishlatamiz. Ingliz tilida bunday noma'lum holatlar uchun <b>may</b> va <b>might</b> modalli fe'llari qo'llaniladi. Har ikkala fe'l ham hozirgi yoki kelajakdagi taxminlarni bildiradi, biroq <b>might</b> ishlatilganda ehtimollik darajasi <b>may</b>ga nisbatan biroz pastroq bo'ladi.\n\n📖 <b>Misollar:</b>\n\n🔹 It <b>may rain</b> this afternoon.\n(Bugun tushdan keyin yomg'ir <i>yog'ishi mumkin</i>.)\n\n🔹 She <b>might be</b> at home now.\n(U hozir uyda <i>bo'lishi mumkin</i>.)\n\n📝 Bu ushbu mavzu bo'yicha kirish qismi edi. Keyingi postlarda <b>may</b> va <b>might</b> fe'llari yordamida darak, inkor hamda so'roq gaplar tuzish qoidalarini alohida va batafsil o'rganamiz. Kanaldan uzoqlashmang!"
+      }
+    },
+    {
+      "date": "2026-10-08",
+      "topic": "Yes/No questions va Wh-questions (ha/yo'q va so'roq savollari)",
+      "parts": {
+        "1": "🇬🇧 <b>Yes/No va Wh-questions</b>: Umumiy tushuncha (1/5-qism)\n\n📌 Ingliz tilida muloqot qilishning eng muhim qismi — to'g'ri <b>savol berish</b> ko'nikmasidir. Savollar mazmunan ikkita katta guruhga bo'linadi: <b>Yes/No questions</b> (Ha/Yo'q savollari) va <b>Wh-questions</b> (Maxsus savollar). Birinchi turdagi savollarga faqat \"ha\" yoki \"yo'q\" deb javob berish yetarli bo'ladi. Ikkinchi turdagilar esa <b>What</b>, <b>Where</b>, <b>When</b> kabi so'roq so'zlari bilan boshlanib, suhbatdoshdan aniq ma'lumot olish uchun ishlatiladi.\n\n💡 <b>Misollar:</b>\n\n• <b>Do you</b> speak English? — Siz ingliz tilida gapirasizmi? (<i>Yes/No question</i>)\n• <b>Where do</b> you live? — Siz qayerda yashaysiz? (<i>Wh-question</i>)\n\n📝 Seriyamizning keyingi qismlarida ushbu savollarning <b>darak</b>, <b>inkor</b> va <b>so me'yoriy</b> shakllanishi hamda turli zamonlardagi formulalarini atroflicha ko'rib chiqamiz. Kanalni kuzatib boring!"
       }
     }
   ]
