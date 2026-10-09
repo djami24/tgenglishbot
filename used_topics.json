@@ -42,7 +42,8 @@
       "Passive voice - hozirgi va o'tmish zamonlardagi asosiy qurilmalar",
       "Should (maslahat uchun)",
       "Might, May (ehtimollik uchun)",
-      "Yes/No questions va Wh-questions (ha/yo'q va so'roq savollari)"
+      "Yes/No questions va Wh-questions (ha/yo'q va so'roq savollari)",
+      "Present Continuous for future (rejalashtirilgan kelajak tadbirlar uchun)"
     ],
     "topic_vocab": [
       "Friends (Do'stlar)",
@@ -91,10 +92,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-10-08",
-    "topic": "Yes/No questions va Wh-questions (ha/yo'q va so'roq savollari)",
+    "date": "2026-10-09",
+    "topic": "Present Continuous for future (rejalashtirilgan kelajak tadbirlar uchun)",
     "part": 1,
-    "video_url": "https://www.youtube.com/watch?v=YIkewDhlSwQ",
+    "video_url": "https://www.youtube.com/watch?v=XFERsue0SuQ",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -247,6 +248,13 @@
       "topic": "Yes/No questions va Wh-questions (ha/yo'q va so'roq savollari)",
       "parts": {
         "1": "🇬🇧 <b>Yes/No va Wh-questions</b>: Umumiy tushuncha (1/5-qism)\n\n📌 Ingliz tilida muloqot qilishning eng muhim qismi — to'g'ri <b>savol berish</b> ko'nikmasidir. Savollar mazmunan ikkita katta guruhga bo'linadi: <b>Yes/No questions</b> (Ha/Yo'q savollari) va <b>Wh-questions</b> (Maxsus savollar). Birinchi turdagi savollarga faqat \"ha\" yoki \"yo'q\" deb javob berish yetarli bo'ladi. Ikkinchi turdagilar esa <b>What</b>, <b>Where</b>, <b>When</b> kabi so'roq so'zlari bilan boshlanib, suhbatdoshdan aniq ma'lumot olish uchun ishlatiladi.\n\n💡 <b>Misollar:</b>\n\n• <b>Do you</b> speak English? — Siz ingliz tilida gapirasizmi? (<i>Yes/No question</i>)\n• <b>Where do</b> you live? — Siz qayerda yashaysiz? (<i>Wh-question</i>)\n\n📝 Seriyamizning keyingi qismlarida ushbu savollarning <b>darak</b>, <b>inkor</b> va <b>so me'yoriy</b> shakllanishi hamda turli zamonlardagi formulalarini atroflicha ko'rib chiqamiz. Kanalni kuzatib boring!"
+      }
+    },
+    {
+      "date": "2026-10-09",
+      "topic": "Present Continuous for future (rejalashtirilgan kelajak tadbirlar uchun)",
+      "parts": {
+        "1": "📌 <b>Present Continuous for future</b>: Rejalashtirilgan kelajak (1/5-qism)\n\n💡 Ingliz tilida kelajakdagi voqealarni ifodalash uchun faqat <b>will</b> so'zidan foydalanilmaydi. Agar biror ish-harakat oldindan aniq <b>rejalashtirilgan</b> va unga tayyorgarlik ko'rib qo'yilgan bo'lsa, <b>Present Continuous</b> zamoni ishlatiladi. Bu qoida do'stlar bilan uchrashish, shifokor qabuliga yozilish yoki chipta sotib olingan sayohatlar haqida gapirganda juda qo'l keladi. Muhim jihati — bunday gaplarda harakat bajariladigan vaqt ko'pincha aniq ko'rsatiladi.\n\n📖 <b>Misollar:</b>\n\n• I <b>am meeting</b> my friend tomorrow.\n<i>(Ertaga do'stim bilan uchrashyapman.)</i>\n\n• We <b>are flying</b> to Tashkent next week.\n<i>(Kelasi hafta Toshkentga uchib ketyapmiz.)</i>\n\n🔔 Seriyamizning keyingi qismlarida ushbu qoida bo'yicha <b>darak</b>, <b>inkor</b> va <b>so'roq</b> gap tuzilishlarini alohida va batafsil ko'rib chiqamiz. Kanaldan uzoqlashmang!"
       }
     }
   ]
