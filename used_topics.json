@@ -43,7 +43,8 @@
       "Should (maslahat uchun)",
       "Might, May (ehtimollik uchun)",
       "Yes/No questions va Wh-questions (ha/yo'q va so'roq savollari)",
-      "Present Continuous for future (rejalashtirilgan kelajak tadbirlar uchun)"
+      "Present Continuous for future (rejalashtirilgan kelajak tadbirlar uchun)",
+      "Will (bashorat, qaror va va'dalar uchun)"
     ],
     "topic_vocab": [
       "Friends (Do'stlar)",
@@ -95,10 +96,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-10-09",
-    "topic": "Present Continuous for future (rejalashtirilgan kelajak tadbirlar uchun)",
+    "date": "2026-10-10",
+    "topic": "Will (bashorat, qaror va va'dalar uchun)",
     "part": 1,
-    "video_url": "https://www.youtube.com/watch?v=XFERsue0SuQ",
+    "video_url": "https://www.youtube.com/watch?v=n14zCZAvSjI",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -258,6 +259,13 @@
       "topic": "Present Continuous for future (rejalashtirilgan kelajak tadbirlar uchun)",
       "parts": {
         "1": "📌 <b>Present Continuous for future</b>: Rejalashtirilgan kelajak (1/5-qism)\n\n💡 Ingliz tilida kelajakdagi voqealarni ifodalash uchun faqat <b>will</b> so'zidan foydalanilmaydi. Agar biror ish-harakat oldindan aniq <b>rejalashtirilgan</b> va unga tayyorgarlik ko'rib qo'yilgan bo'lsa, <b>Present Continuous</b> zamoni ishlatiladi. Bu qoida do'stlar bilan uchrashish, shifokor qabuliga yozilish yoki chipta sotib olingan sayohatlar haqida gapirganda juda qo'l keladi. Muhim jihati — bunday gaplarda harakat bajariladigan vaqt ko'pincha aniq ko'rsatiladi.\n\n📖 <b>Misollar:</b>\n\n• I <b>am meeting</b> my friend tomorrow.\n<i>(Ertaga do'stim bilan uchrashyapman.)</i>\n\n• We <b>are flying</b> to Tashkent next week.\n<i>(Kelasi hafta Toshkentga uchib ketyapmiz.)</i>\n\n🔔 Seriyamizning keyingi qismlarida ushbu qoida bo'yicha <b>darak</b>, <b>inkor</b> va <b>so'roq</b> gap tuzilishlarini alohida va batafsil ko'rib chiqamiz. Kanaldan uzoqlashmang!"
+      }
+    },
+    {
+      "date": "2026-10-10",
+      "topic": "Will (bashorat, qaror va va'dalar uchun)",
+      "parts": {
+        "1": "📌 <b>Future Simple: Will</b> fe'li bilan tanishamiz! (1/5-qism)\n\n💡 Ingliz tilida kelasi zamon haqida gapirganda eng ko'p qo'llaniladigan vositalardan biri bu <b>will</b> yordamchi fe'lidir. Biz uni asosan muloqot jarayonida qabul qilingan <b>to'satdan qarorlar</b>, kelajak haqidagi <b>shaxsiy bashoratlar</b> hamda kimgadir berilgan <b>va'dalar</b>ni ifodalash uchun ishlatamiz. Ushbu fe'l oldindan rejalashtirilmagan harakatlarni ko'rsatish uchun juda qo'l keladi. Kundalik muloqotda fikringizni erkin yetkazish uchun <b>will</b> qoidasini yaxshi tushunib olish muhimdir.\n\n🗣️ <b>Misollar:</b>\n\n• I <b>will help</b> you with this project. (Men senga ushbu loyihada <b>yordam beraman</b>.) – <i>Va'da</i>\n\n• I think it <b>will rain</b> tomorrow. (O'ylashimcha, ertaga <b>yomg'ir yog'adi</b>.) – <i>Bashorat</i>\n\n• I am hungry. I <b>will order</b> a pizza. (Qornim ochdi. Pitsa <b>buyurtma qilaman</b>.) – <i>To'satdan qaror</i>\n\n📝 Seriyamizning keyingi qismlarida <b>will</b> yordamida darak, inkor va so'roq gap tuzilmalarini batafsil ko'rib chiqamiz."
       }
     }
   ]
