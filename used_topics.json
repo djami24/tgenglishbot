@@ -46,7 +46,8 @@
       "Present Continuous for future (rejalashtirilgan kelajak tadbirlar uchun)",
       "Will (bashorat, qaror va va'dalar uchun)",
       "Tag questions (qo'shimcha savollar - isn't it?, don't they?)",
-      "Present Simple (oddiy hozirgi zamon - odatlar va faktlar uchun)"
+      "Present Simple (oddiy hozirgi zamon - odatlar va faktlar uchun)",
+      "Can, Could (qobiliyat, imkoniyat va ruxsat uchun)"
     ],
     "topic_vocab": [
       "Friends (Do'stlar)",
@@ -112,10 +113,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-10-13",
-    "topic": "Present Simple (oddiy hozirgi zamon - odatlar va faktlar uchun)",
+    "date": "2026-10-15",
+    "topic": "Can, Could (qobiliyat, imkoniyat va ruxsat uchun)",
     "part": 1,
-    "video_url": "https://www.youtube.com/watch?v=nvVdIJ0las0",
+    "video_url": "https://www.youtube.com/watch?v=Yq9XCqOguzU",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -302,6 +303,13 @@
       "topic": "Present Simple (oddiy hozirgi zamon - odatlar va faktlar uchun)",
       "parts": {
         "1": "🇬🇧 <b>Present Simple</b>: Oddiy hozirgi zamon (1/5-qism)\n\n📌 <b>Present Simple</b> ingliz tilida eng ko'p ishlatiladigan asosiy zamonlardan biridir. U asosan hayotimizda doimiy takrorlanib turadigan <b>odatlar</b>, kunlik tartibimiz va o'zgarmas <b>faktlar</b>ni ifodalash uchun xizmat qiladi. Masalan, har kuni ertalab uyg'onishingiz yoki suvning 100 darajada qaynashi kabi doimiy haqiqatlarni aytganda ushbu zamondan foydalanamiz. Bu zamon ayni daqiqada sodir bo'layotgan emas, balki umumiy va doimiy voqealarni ko'rsatib beradi.\n\n💡 <b>Misollar:</b>\n\n• I <b>drink</b> tea every day. (Men har kuni choy <b>ichaman</b>.)\n\n• The Earth <b>revolves</b> around the Sun. (Yer Quyosh atrofida <b>aylanadi</b>.)\n\n📝 <b>Eslatma:</b>\nUshbu seriyamizning keyingi qismlarida <b>Present Simple</b> zamonida <b>darak</b>, <b>inkor</b> va <b>so'roq</b> gaplarni to'g'ri tuzish qoidalarini birma-bir atroflicha o'rganib chiqamiz. Biz bilan qoling!"
+      }
+    },
+    {
+      "date": "2026-10-15",
+      "topic": "Can, Could (qobiliyat, imkoniyat va ruxsat uchun)",
+      "parts": {
+        "1": "📌 <b>Grammar Series: Can va Could</b> (1/5-qism)\n\n💡 Ingliz tilida <b>Can</b> va <b>Could</b> fe'llari eng ko'p qo'llanadigan modal fe'llar hisoblanadi. Ular yordamida biz insonning biror ishni bajara olish <b>qobiliyati</b>, muayyan vaziyatdagi <b>imkoniyati</b> hamda birovdan <b>ruxsat</b> so'rash kabi ma'nolarni ifodalaymiz. <b>Can</b> shakli asosan hozirgi zamonga nisbatan ishlatilsa, <b>Could</b> uning o'tgan zamon shakli hamda xushmuomala iltimos ma'nosini bildiradi. Bu ikki fe'lni to'g'ri qo'llash muloqotni chiroyli va aniq qilishga yordam beradi.\n\n📖 <b>Misollar:</b>\n\n✅ I <b>can swim</b> very well.\n<i>(Men juda yaxshi suza olaman.)</i>\n\n✅ She <b>could play</b> the piano when she was seven.\n<i>(U yetti yoshligida pianino chala olardi.)</i>\n\n🗣️ <b>Could you help</b> me with this task?\n<i>(Menga ushbu topshiriqda yordam bera olasizmi?)</i>\n\n📝 <b>Keyingi qismlarda:</b>\nErtangi postlarimizda <b>Can</b> va <b>Could</b> fe'llarining darak, inkor hamda so'roq gaplardagi aniq tuzilish qoidalarini birma-bir atroflicha o'rganamiz. Kanalingizni kuzatib boring!"
       }
     }
   ]
