@@ -47,7 +47,8 @@
       "Will (bashorat, qaror va va'dalar uchun)",
       "Tag questions (qo'shimcha savollar - isn't it?, don't they?)",
       "Present Simple (oddiy hozirgi zamon - odatlar va faktlar uchun)",
-      "Can, Could (qobiliyat, imkoniyat va ruxsat uchun)"
+      "Can, Could (qobiliyat, imkoniyat va ruxsat uchun)",
+      "Past Simple (tugallangan o'tmish harakatlari uchun)"
     ],
     "topic_vocab": [
       "Friends (Do'stlar)",
@@ -116,10 +117,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-10-15",
-    "topic": "Can, Could (qobiliyat, imkoniyat va ruxsat uchun)",
-    "part": 2,
-    "video_url": "https://www.youtube.com/watch?v=Yq9XCqOguzU",
+    "date": "2026-10-16",
+    "topic": "Past Simple (tugallangan o'tmish harakatlari uchun)",
+    "part": 1,
+    "video_url": "https://www.youtube.com/watch?v=MI3S3kdkofo",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -314,6 +315,13 @@
       "parts": {
         "1": "📌 <b>Grammar Series: Can va Could</b> (1/5-qism)\n\n💡 Ingliz tilida <b>Can</b> va <b>Could</b> fe'llari eng ko'p qo'llanadigan modal fe'llar hisoblanadi. Ular yordamida biz insonning biror ishni bajara olish <b>qobiliyati</b>, muayyan vaziyatdagi <b>imkoniyati</b> hamda birovdan <b>ruxsat</b> so'rash kabi ma'nolarni ifodalaymiz. <b>Can</b> shakli asosan hozirgi zamonga nisbatan ishlatilsa, <b>Could</b> uning o'tgan zamon shakli hamda xushmuomala iltimos ma'nosini bildiradi. Bu ikki fe'lni to'g'ri qo'llash muloqotni chiroyli va aniq qilishga yordam beradi.\n\n📖 <b>Misollar:</b>\n\n✅ I <b>can swim</b> very well.\n<i>(Men juda yaxshi suza olaman.)</i>\n\n✅ She <b>could play</b> the piano when she was seven.\n<i>(U yetti yoshligida pianino chala olardi.)</i>\n\n🗣️ <b>Could you help</b> me with this task?\n<i>(Menga ushbu topshiriqda yordam bera olasizmi?)</i>\n\n📝 <b>Keyingi qismlarda:</b>\nErtangi postlarimizda <b>Can</b> va <b>Could</b> fe'llarining darak, inkor hamda so'roq gaplardagi aniq tuzilish qoidalarini birma-bir atroflicha o'rganamiz. Kanalingizni kuzatib boring!",
         "2": "📌 Modal fe'llar: <b>Can va Could</b> (2/5-qism)\n\n📖 Bugun ushbu modal fe'llarning darak gap (affirmative) shaklini va ularning to'g'ri qo'llanilishini o'rganamiz. Bu fe'llar barcha shaxslar (I, you, he, she, it, we, they) uchun bir xil shaklda ishlatiladi.\n\n🛠 <b>Darak gap formulasi:</b>\n<b>Subject + can / could + Verb (base form)</b>\n\n<i>Eslatma:</i> Hozirgi zamon qobiliyati va imkoniyati uchun <b>can</b>, o'tgan zamon qobiliyati uchun esa <b>could</b> ishlatiladi.\n\n💬 <b>Misollar:</b>\n\n🔹 She <b>can speak</b> three languages fluently.\n<i>U uchta tilda ravon gapira oladi.</i>\n\n🔹 We <b>can meet</b> at the cafe tomorrow.\n<i>Ertaga kafelarda uchrashishimiz mumkin.</i>\n\n🔹 When I was young, I <b>could run</b> very fast.\n<i>Yoshligimda men juda tez yugura olardim.</i>\n\n🔹 You <b>can use</b> my phone if you need it.\n<i>Agar kerak bo'lsa, telefonimdan foydalanishingiz mumkin.</i>\n\n❗ <b>Tez-tez uchraydigan xato:</b>\n<b>Can</b> va <b>Could</b> fe'llaridan so'ng keladigan asosiy fe'l oldidan <i>to</i> yuklamasi ishlatilmaydi hamda uchinchi shaxs (he/she/it) uchun fe'lga <i>-s</i> qo'shimchasi qo'shilmaydi.\n\n❌ <i>Noto'g'ri:</i> He <b>cans</b> swim / She can <b>to dance</b>.\n✅ <i>To'g'ri:</i> He <b>can swim</b> / She <b>can dance</b>."
+      }
+    },
+    {
+      "date": "2026-10-16",
+      "topic": "Past Simple (tugallangan o'tmish harakatlari uchun)",
+      "parts": {
+        "1": "📌 <b>Past Simple</b> zamoni: Tugallangan o'tmish harakatlari (1/5-qism)\n\n📖 Bugungi darsimizda o'tmishda sodir bo'lgan va to'liq yakunlangan harakatlarni ifodalash uchun ishlatiladigan <b>Past Simple</b> (Oddiy o'tgan zamon) haqida gaplashamiz. Bu zamon aniq bir vaqtda yuz bergan hamda hozirgi vaqt bilan bevosita bog'liq bo'lmagan voqealarni tasvirlash uchun xizmat qiladi. U ingliz tilida kundalik muloqot va o'tgan voqealarni so'zlab berishda eng ko'p qo'llaniladigan grammatik shakllardan biridir. Odatda gapda harakat bajarilgan vaqtni ko'rsatuvchi <i>yesterday</i> (kecha) yoki <i>last week</i> (o'tgan hafta) kabi iboralar birga keladi.\n\n🗣️ Misollar:\n\n✅ I <b>visited</b> my grandparents yesterday. (Men kecha bobom va buvimni borib ko'rdim.)\n\n✅ She <b>watched</b> an interesting movie last night. (U kecha tunda qiziqarli film tomosha qildi.)\n\n💡 Keyingi qismlarda nimani o'rganamiz?\nUshbu seriyamizning davomida <b>Past Simple</b> zamonida darak, inkor va so'roq gaplarni to'g'ri tuzish hamda to'g'ri va noto'g'ri fe'llar o'rtasidagi farqlarni batafsil ko'rib chiqamiz."
       }
     }
   ]
