@@ -48,7 +48,8 @@
       "Tag questions (qo'shimcha savollar - isn't it?, don't they?)",
       "Present Simple (oddiy hozirgi zamon - odatlar va faktlar uchun)",
       "Can, Could (qobiliyat, imkoniyat va ruxsat uchun)",
-      "Past Simple (tugallangan o'tmish harakatlari uchun)"
+      "Past Simple (tugallangan o'tmish harakatlari uchun)",
+      "Quantifiers (some, any, much, many, a lot of, few, little va boshqalar)"
     ],
     "topic_vocab": [
       "Friends (Do'stlar)",
@@ -120,10 +121,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-10-16",
-    "topic": "Past Simple (tugallangan o'tmish harakatlari uchun)",
+    "date": "2026-10-17",
+    "topic": "Quantifiers (some, any, much, many, a lot of, few, little va boshqalar)",
     "part": 1,
-    "video_url": "https://www.youtube.com/watch?v=MI3S3kdkofo",
+    "video_url": "https://www.youtube.com/watch?v=2rH3zGr0u1g",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -325,6 +326,13 @@
       "topic": "Past Simple (tugallangan o'tmish harakatlari uchun)",
       "parts": {
         "1": "📌 <b>Past Simple</b> zamoni: Tugallangan o'tmish harakatlari (1/5-qism)\n\n📖 Bugungi darsimizda o'tmishda sodir bo'lgan va to'liq yakunlangan harakatlarni ifodalash uchun ishlatiladigan <b>Past Simple</b> (Oddiy o'tgan zamon) haqida gaplashamiz. Bu zamon aniq bir vaqtda yuz bergan hamda hozirgi vaqt bilan bevosita bog'liq bo'lmagan voqealarni tasvirlash uchun xizmat qiladi. U ingliz tilida kundalik muloqot va o'tgan voqealarni so'zlab berishda eng ko'p qo'llaniladigan grammatik shakllardan biridir. Odatda gapda harakat bajarilgan vaqtni ko'rsatuvchi <i>yesterday</i> (kecha) yoki <i>last week</i> (o'tgan hafta) kabi iboralar birga keladi.\n\n🗣️ Misollar:\n\n✅ I <b>visited</b> my grandparents yesterday. (Men kecha bobom va buvimni borib ko'rdim.)\n\n✅ She <b>watched</b> an interesting movie last night. (U kecha tunda qiziqarli film tomosha qildi.)\n\n💡 Keyingi qismlarda nimani o'rganamiz?\nUshbu seriyamizning davomida <b>Past Simple</b> zamonida darak, inkor va so'roq gaplarni to'g'ri tuzish hamda to'g'ri va noto'g'ri fe'llar o'rtasidagi farqlarni batafsil ko'rib chiqamiz."
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "topic": "Quantifiers (some, any, much, many, a lot of, few, little va boshqalar)",
+      "parts": {
+        "1": "📌 <b>Quantifiers</b> (Miqdor bildiruvchi so'zlar) — 1/5-qism\n\n📖 Bugungi darsimizda ingliz tilidagi eng muhim grammatik mavzulardan biri — <b>quantifiers</b>, ya'ni miqdor bildiruvchi so'zlar haqida gaplashamiz. Bu so'zlar otlardan oldin kelib, shaxs, narsa yoki hodisalarning qancha miqdorda ekanligini ko'rsatish uchun xizmat qiladi. Ular yordamida biz <i>sanaladigan</i> va <i>sanalmaydigan</i> otlarning aniq yoki taxminiy miqdorini ifodalaymiz. Ingliz tilida to'g'ri va ravon so'zlashish uchun ushbu so'zlarning qo'llanilish qoidalarini bilish juda muhimdir.\n\n📝 <b>Misollar:</b>\n\n🔹 I have <b>some</b> friends in London.\n(Mening Londonda <i>bir nechta</i> do'stlarim bor.)\n\n🔹 There is <b>a lot of</b> water in the bottle.\n(Butilkada <i>juda ko'p</i> suv bor.)\n\n💡 Keyingi qismlarda ushbu so'zlarning darak, inkor va so'roq gaplarda ishlatilishi hamda ularning o'zaro farqlarini batafsil ko'rib chiqamiz. Kanalimizni kuzatib boring!"
       }
     }
   ]
