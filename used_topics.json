@@ -4,7 +4,8 @@
       "Might, May (ehtimollik uchun)",
       "Past Perfect (o'tmish voqealar tartibini ko'rsatish uchun)",
       "Present Simple (oddiy hozirgi zamon - odatlar va faktlar uchun)",
-      "Can, Could (qobiliyat, imkoniyat va ruxsat uchun)"
+      "Can, Could (qobiliyat, imkoniyat va ruxsat uchun)",
+      "Should (maslahat uchun)"
     ],
     "topic_vocab": [
       "Friends (Do'stlar)",
@@ -90,10 +91,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-10-21",
-    "topic": "Can, Could (qobiliyat, imkoniyat va ruxsat uchun)",
+    "date": "2026-10-22",
+    "topic": "Should (maslahat uchun)",
     "part": 1,
-    "video_url": "https://www.youtube.com/watch?v=-aZLQHU0psM",
+    "video_url": "https://www.youtube.com/watch?v=P6R1V2uQM4M",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -340,6 +341,13 @@
       "topic": "Can, Could (qobiliyat, imkoniyat va ruxsat uchun)",
       "parts": {
         "1": "📌 <b>Grammar Time: Can va Could</b> (1/5-qism)\n\nIngliz tilida <b>Can</b> va <b>Could</b> fe'llari eng ko'p ishlatiladigan modal fe'llar sirasiga kiradi. Ular asosan insonning biror ishni bajara olish <b>qobiliyati</b>, biror voqeaning sodir bo'lish <b>imkoniyati</b> hamda kimsadan <b>ruxsat</b> so'rash yoki ruxsat berish uchun qo'llaniladi. Odatda <b>Can</b> hozirgi zamon uchun, <b>Could</b> esa uning o'tgan zamondagi shakli hamda xushmuomalalik bilan murojaat qilish uchun ishlatiladi. Ushbu fe'llarni to'g'ri qo'llash muloqotingizni yanada tabiiy va ravon qiladi.\n\n📖 <b>Misollar:</b>\n\n🔹 I <b>can speak</b> English fluently.\n<i>(Men ingliz tilida ravon gapira olaman.)</i>\n\n🔹 She <b>could swim</b> when she was six.\n<i>(U altti yoshida suza olardi.)</i>\n\n🔹 <b>Can I take</b> this chair?\n<i>(Ushbu stulni olsam bo'ladimi?)</i>"
+      }
+    },
+    {
+      "date": "2026-10-22",
+      "topic": "Should (maslahat uchun)",
+      "parts": {
+        "1": "📌 <b>Grammar Time: Should</b> (Maslahat berish) — <b>1/5-qism</b>\n\n💡 Kundalik hayotimizda kimgadir maslahat berish, tavsiya qilish yoki biror ishni qilish to'g'ri ekanligini aytish uchun ingliz tilida <b>should</b> modal fe'lidan foydalanamiz. Bu so'z o'zbek tiliga <b>\"-ishi kerak\"</b> yoki <b>\"-sa yaxshi bo'lardi\"</b> deb tarjima qilinadi. <b>Should</b> qat'iy majburiyat emas, balki do'stona va muloyim maslahatni ifodalaydi. Uni barcha kishilik olmoshlari bilan bir xil ko'rinishda o'zgartirmay ishlatamiz.\n\n📖 Misollar:\n\n• You <b>should drink</b> more water. (Siz ko'proq suv <b>ichishingiz kerak</b>.)\n\n• He <b>should rest</b> a little. (U biroz <b>dam olgani yaxshi</b>.)\n\n📝 Keyingi qismlarda <b>should</b> modal fe'li yordamida darak, inkor va so'roq gaplarni to'g'ri tuzish qoidalarini bosqichma-bosqich ko'rib chiqamiz. Kuzatib boring!"
       }
     }
   ]
