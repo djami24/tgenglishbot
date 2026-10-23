@@ -5,7 +5,8 @@
       "Past Perfect (o'tmish voqealar tartibini ko'rsatish uchun)",
       "Present Simple (oddiy hozirgi zamon - odatlar va faktlar uchun)",
       "Can, Could (qobiliyat, imkoniyat va ruxsat uchun)",
-      "Should (maslahat uchun)"
+      "Should (maslahat uchun)",
+      "Present Continuous (hozir davom etayotgan harakatlar uchun)"
     ],
     "topic_vocab": [
       "Friends (Do'stlar)",
@@ -94,10 +95,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-10-22",
-    "topic": "Should (maslahat uchun)",
-    "part": 5,
-    "video_url": "https://www.youtube.com/watch?v=P6R1V2uQM4M",
+    "date": "2026-10-23",
+    "topic": "Present Continuous (hozir davom etayotgan harakatlar uchun)",
+    "part": 1,
+    "video_url": "https://www.youtube.com/watch?v=w04YVmJR4w4",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -355,6 +356,13 @@
         "3": "📌 <b>Should</b> (maslahat uchun): Inkor shakli (3/5-qism)\n\n💡 Biror kishiga biror harakatni <b>qilmaslikni</b> maslahat berish yoki bu noto'g'ri ekanligini aytish uchun <b>should not</b> birikmasidan foydalanamiz. Og'zaki nutqda ko'pincha uning qisqartmasi — <b>shouldn't</b> ishlatiladi.\n\n⚙️ <b>Inkor gap formulasi:</b>\n<b>Subject + should not (shouldn't) + V1</b>\n\n🗣️ <b>Misollar:</b>\n\n• You <b>shouldn't stay up</b> late before the exam.\n<i>(Imtihondan oldin kechgacha uxlamay o'tirmasliging kerak.)</i>\n\n• He <b>shouldn't eat</b> too much fast food.\n<i>(U juda ko'p fast-fud yemasligi kerak.)</i>\n\n• We <b>shouldn't ignore</b> safety rules.\n<i>(Biz xavfsizlik qoidalariga e'tiborsiz bo'lmasligimiz kerak.)</i>\n\n• They <b>shouldn't spend</b> all their money on video games.\n<i>(Ular barcha pullarini kompyuter o'yinlariga sarflamasliklari kerak.)</i>\n\n❗ <b>Tez-tez uchraydigan xato:</b>\n<b>Shouldn't</b> modal fe'lidan keyin <b>to</b> yuklamasini ishlatmang! Masalan, \"You shouldn't <i>to go</i>\" deyish grammatik xato hisoblanadi. Har doim \"You <b>shouldn't go</b>\" ko'rinishida fe'lning bosh shaklini qo'llang.",
         "4": "❓ <b>Should</b> yordamida so'roq gaplar tuzish (4/5-qism)\n\n📌 Ingliz tilida kimsadan <b>maslahat so'rash</b> yoki biror ishni qilish to'g'ri-bo'lmasligini bilish uchun <b>Should</b> fe'lidan foydalanamiz.\n\n💡 <b>Umumiy so'roq gap (Yes/No questions) formulasi:</b>\n<b>Should</b> + ega + asosiy fe'l + ...?\n\n🔤 <b>Maxsus so'roq gap (Wh- questions) formulasi:</b>\n<b>Wh-so'z</b> + <b>should</b> + ega + asosiy fe'l + ...?\n\n🗣️ <b>Misollar:</b>\n\n🔹 <b>Should I call</b> him now?\n(Men unga hozir qo'ng'iroq qilishim <i>kerakmi</i>?)\n\n🔹 <b>Should we wait</b> for the bus?\n(Biz avtobusni kutishimiz <i>kerakmi</i>?)\n\n🔹 <b>What should I wear</b> for the interview?\n(Suhbat uchun nima kiyishim <i>kerak</i>?)\n\n🔹 <b>Where should we go</b> this weekend?\n(Bu dam olish kunlarida qayerga borishimiz <i>kerak</i>?)\n\n❗ <b>Eslatma:</b> Umumiy savollarga qisqa javob berishda <b>Yes, you should</b> yoki <b>No, you shouldn't</b> shakllari ishlatiladi.",
         "5": "📌 <b>Grammar: Should</b> (maslahat uchun) — <b>5/5-qism</b>\n\n❗ <b>Keng tarqalgan xatolar:</b>\n\n1. <b>Should</b> modal fe'lidan so'ng <i>to</i> yuklamasini ishlatmang. Masalan, <i>You should to study</i> emas, balki <b>You should study</b> bo'ladi.\n2. <b>Should</b> dan keyin fe'lga <i>-ing</i> yoki <i>-ed</i> qo'shimchalarini qo'shmang. Har doim fe'lning <b>boshlang'ich shakli</b> (V1) ishlatiladi.\n\n📝 <b>Bo'sh joylarni to'ldiring:</b>\n\n1. You look tired. You <b>___</b> (take) a short break.\n2. It is raining outside. He <b>___</b> (not / go) out without an umbrella.\n3. <b>___</b> I (call) the manager right now?\n4. We <b>___</b> (eat) more fresh fruits for our health.\n\n✅ <b>Javoblar:</b>\n\n1. <b>should take</b> — kelayotgan fe'l boshlang'ich shaklda saqlanadi.\n2. <b>shouldn't go</b> (yoki <i>should not go</i>) — inkor maslahat.\n3. <b>Should</b> — so'roq gapda egadan oldinga o'tadi.\n4. <b>should eat</b> — ijobiy maslahat berish formasi."
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "topic": "Present Continuous (hozir davom etayotgan harakatlar uchun)",
+      "parts": {
+        "1": "📌 <b>Present Continuous</b> zamoni: Umumiy tushuncha (1/5-qism)\n\n💡 Bugun ingliz tilida eng koʻp qoʻllaniladigan zamonlardan biri — <b>Present Continuous</b> (Hozirgi davomli zamon) haqida gaplashamiz. Bu zamon ayni damda, yaʼni <b>gapirayotgan vaqtimizda</b> sodir boʻlayotgan harakatlarni ifodalash uchun ishlatiladi. Masalan, siz hozir ushbu postni <b>oʻqiyapsiz</b>, men esa uni <b>yozyapman</b>. Harakat aynan hozir davom etayotganini koʻrsatish ushbu grammatik qoidaning asosiy vazifasidir.\n\n📖 Keling, sodda misollarni koʻrib chiqamiz:\n\n✅ I am <b>reading</b> a book right now.\n<i>(Men hozir kitob oʻqiyapman.)</i>\n\n✅ She is <b>listening</b> to music at the moment.\n<i>(U ayni damda musiqa tinglayapti.)</i>\n\n✅ Look! It is <b>raining</b> outside.\n<i>(Qarang! Tashqarida yomgʻir yogʻyapti.)</i>\n\n📝 Seriyamizning keyingi qismlarida Present Continuous zamonida darak, inkor va soʻroq gaplarni toʻgʻri tuzish qoidalarini birma-bir koʻrib chiqamiz. Kanalimizni kuzatib boring!"
       }
     }
   ]
