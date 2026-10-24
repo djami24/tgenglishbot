@@ -101,7 +101,7 @@
   "grammar_daily": {
     "date": "2026-10-24",
     "topic": "Yes/No questions va Wh-questions (ha/yo'q va so'roq savollari)",
-    "part": 1,
+    "part": 2,
     "video_url": "https://www.youtube.com/watch?v=YIkewDhlSwQ",
     "cycle_complete_today": false
   },
@@ -377,7 +377,8 @@
       "date": "2026-10-24",
       "topic": "Yes/No questions va Wh-questions (ha/yo'q va so'roq savollari)",
       "parts": {
-        "1": "📌 <b>Savol turlari: Yes/No va Wh-questions</b> (1/5-qism)\n\n💡 Ingliz tilida muloqot qilish va ma'lumot olish uchun savol berishni bilish juda muhimdir. Til o'rganishda barcha savollar asosan ikki guruhga bo'linadi: <b>Yes/No questions</b> hamda <b>Wh-questions</b>. Birinchi turdagi savollarga qisqa qilib faqat \"ha\" yoki \"yo'q\" deb javob beriladi. Ikkinchi turdagi savollar esa aniqroq ma'lumot berishni talab qiladi va maxsus savol so'zlari orqali tuziladi. Ushbu tushunchalarni egallash ingliz tilida erkin so'zlashishning poydevori hisoblanadi.\n\n📖 <b>Misollar:</b>\n\n🗣️ <b>Do you like coffee?</b> — <i>Siz qahvani yoqtirasizmi?</i> (<b>Yes/No</b> savol)\n\n🗣️ <b>What is your name?</b> — <i>Ismingiz nima?</i> (<b>Wh-question</b> savol)\n\n📝 <b>Eslatib o'tamiz:</b>\nUshbu seriyamizning keyingi qismlarida har bir savol turining darak, inkor va so'roq gaplarda tuzilish qoidalarini hamda yordamchi fe'llardan foydalanishni bosqichma-bosqich ko'rib chiqamiz."
+        "1": "📌 <b>Savol turlari: Yes/No va Wh-questions</b> (1/5-qism)\n\n💡 Ingliz tilida muloqot qilish va ma'lumot olish uchun savol berishni bilish juda muhimdir. Til o'rganishda barcha savollar asosan ikki guruhga bo'linadi: <b>Yes/No questions</b> hamda <b>Wh-questions</b>. Birinchi turdagi savollarga qisqa qilib faqat \"ha\" yoki \"yo'q\" deb javob beriladi. Ikkinchi turdagi savollar esa aniqroq ma'lumot berishni talab qiladi va maxsus savol so'zlari orqali tuziladi. Ushbu tushunchalarni egallash ingliz tilida erkin so'zlashishning poydevori hisoblanadi.\n\n📖 <b>Misollar:</b>\n\n🗣️ <b>Do you like coffee?</b> — <i>Siz qahvani yoqtirasizmi?</i> (<b>Yes/No</b> savol)\n\n🗣️ <b>What is your name?</b> — <i>Ismingiz nima?</i> (<b>Wh-question</b> savol)\n\n📝 <b>Eslatib o'tamiz:</b>\nUshbu seriyamizning keyingi qismlarida har bir savol turining darak, inkor va so'roq gaplarda tuzilish qoidalarini hamda yordamchi fe'llardan foydalanishni bosqichma-bosqich ko'rib chiqamiz.",
+        "2": "📖 <b>Grammar darsi</b>: Darak gap shakli (2/5-qism)\n\n📌 So'roq gaplarni to'g'ri tuzish uchun, eng avvalo, <b>darak gap (affirmative sentence)</b> tartibini mukammal bilish kerak.\n\n📐 <b>Darak gap formulasi:</b>\n<b>Subject</b> + <b>Verb</b> + <b>Object / Complement</b>\n<i>(Ega + Fe'l + To'ldiruvchi / Qoldiq)</i>\n\n📝 <b>Misollar:</b>\n\n• <b>She works</b> at an international company.\n<i>(U xalqaro kompaniyada ishlaydi.)</i>\n\n• <b>They are watching</b> an interesting movie now.\n<i>(Ular hozir qiziqarli kino ko'rishyapti.)</i>\n\n• <b>Ali visited</b> his grandparents last weekend.\n<i>(Ali o'tgan dam olish kunlari buva-buvisinikiga bordi.)</i>\n\n• <b>We have completed</b> the second module.\n<i>(Biz ikkinchi modulni yakunladik.)</i>\n\n💡 <b>Muhim eslatma:</b>\nO'zbek tilidan farqli o'laroq, ingliz tilida so'z tartibi qat'iy belgilangan. Fe'l har doim egadan keyin kelishi shart. Masalan, <i>\"I English learn\"</i> deyish xato hisoblanadi, to'g'ri shakli: <b>I learn English</b>."
       }
     }
   ]
