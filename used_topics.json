@@ -6,7 +6,8 @@
       "Present Simple (oddiy hozirgi zamon - odatlar va faktlar uchun)",
       "Can, Could (qobiliyat, imkoniyat va ruxsat uchun)",
       "Should (maslahat uchun)",
-      "Present Continuous (hozir davom etayotgan harakatlar uchun)"
+      "Present Continuous (hozir davom etayotgan harakatlar uchun)",
+      "Yes/No questions va Wh-questions (ha/yo'q va so'roq savollari)"
     ],
     "topic_vocab": [
       "Friends (Do'stlar)",
@@ -98,10 +99,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-10-23",
-    "topic": "Present Continuous (hozir davom etayotgan harakatlar uchun)",
-    "part": 5,
-    "video_url": "https://www.youtube.com/watch?v=w04YVmJR4w4",
+    "date": "2026-10-24",
+    "topic": "Yes/No questions va Wh-questions (ha/yo'q va so'roq savollari)",
+    "part": 1,
+    "video_url": "https://www.youtube.com/watch?v=YIkewDhlSwQ",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -370,6 +371,13 @@
         "3": "🇬🇧 <b>Present Continuous: Inkor gaplar</b> (3/5-qism)\n\n📌 Bugungi darsimizda Present Continuous zamonida <b>inkor gaplar</b> (Negative form) tuzishni o'rganamiz. Ushbu tuzilma ayni damda sodir <b>bo'lmayotgan</b> harakatlarni ifodalash uchun qo'llanadi.\n\n📝 <b>Inkor gap formulasi:</b>\n<b>Subject + am / is / are + not + V-ing</b>\n\n<i>(Qisqartma shakllari: <b>am not</b>, <b>is not = isn't</b>, <b>are not = aren't</b>)</i>\n\n🗣️ <b>Misollar:</b>\n\n🔹 I <b>am not working</b> at the moment.\n(Men ayni damda <i>ishlamayapman</i>.)\n\n🔹 Look! It <b>isn't raining</b> outside.\n(Qarang! Tashqarida yomg'ir <i>yog'mayapti</i>.)\n\n🔹 They <b>aren't watching</b> TV right now.\n(Ular hozir televizor <i>ko'rishmayapti</i>.)\n\n🔹 She <b>isn't sleeping</b>, she is studying.\n(U <i>uxlamayapti</i>, u dars tayyorlayapti.)\n\n💡 <b>Ko'p uchraydigan xato:</b>\nInkor ma'nosi berilganda ham fe'l oxiridagi <b>-ing</b> qo'shimchasi saqlanib qolishi shart. Yordamchi fe'l bor deb <b>-ing</b>ni tushirib qoldirmang!\n❌ <i>He isn't work.</i>\n✅ <b>He isn't working.</b>",
         "4": "📌 <b>Present Continuous: So'roq gaplar</b> (4/5-qism)\n\n💡 Bugun <b>Present Continuous</b> zamonida so'roq gaplar shakllantirishni o'rganamiz. So'roq gaplar ikki turga bo'linadi: <b>umumiy</b> va <b>maxsus</b> so'roqlar.\n\n❓ <b>Umumiy (Yes/No) so'roq gap formulasi:</b>\n<b>Am / Is / Are</b> + ega + <b>fe'l+-ing</b> ...?\n\n🔍 <b>Maxsus (Wh-) so'roq gap formulasi:</b>\n<b>Wh-so'z</b> + <b>am / is / are</b> + ega + <b>fe'l+-ing</b> ...?\n\n🗣️ <b>Amaliy misollar:</b>\n\n• <b>Are you listening</b> to the teacher?\n<i>(O'qituvchini eshityapsizmi?)</i>\n\n• <b>Is he reading</b> a book now?\n<i>(U hozir kitob o'qiyaptimi?)</i>\n\n• <b>What are you doing</b> at the moment?\n<i>(Ayni damda nima qilyapsiz?)</i>\n\n• <b>Where is she going</b> so early?\n<i>(U barvaqt qayerga ketyapti?)</i>\n\n❗ <b>Qisqa eslatma:</b>\nUmumiy so'roq gaplarda <b>am / is / are</b> yordamchi fe'li egadan oldinga o'tadi. Maxsus so'roqlarda esa <b>what</b>, <b>where</b>, <b>why</b> kabi so'roq so'zlari jumla boshida keladi.",
         "5": "📌 <b>Present Continuous: Amaliyot va yakun</b> (5/5-qism)\n\n❗ <b>Ko'p yo'l qo'yiladigan xatolar:</b>\n\n1. <b>\"To be\" fe'lini tushirib qoldirish:</b> Ko'pchilik <i>\"He working now\"</i> deb xato qiladi. To'g'ri shakli: <b>\"He is working now\"</b>.\n\n2. <b>\"-ing\" qo'shimchasini unutish:</b> <i>\"She is read at the moment\"</i> emas, balki <b>\"She is reading at the moment\"</b> bo'lishi kerak.\n\n📝 <b>Bilimingizni sinab ko'ring:</b>\n\n1. Look! The children ___ (play) in the yard right now.\n\n2. Listen! Someone ___ (sing) a beautiful song.\n\n3. Be quiet! The baby ___ (sleep) at the moment.\n\n4. I cannot talk now because I ___ (cook) dinner.\n\n✅ <b>Javoblar:</b>\n\n1. <b>are playing</b>\n2. <b>is singing</b>\n3. <b>is sleeping</b>\n4. <b>am cooking</b>\n\nO'ylaymizki, ushbu 5 qismli grammatik seriyamiz siz uchun juda foydali bo'ldi!"
+      }
+    },
+    {
+      "date": "2026-10-24",
+      "topic": "Yes/No questions va Wh-questions (ha/yo'q va so'roq savollari)",
+      "parts": {
+        "1": "📌 <b>Savol turlari: Yes/No va Wh-questions</b> (1/5-qism)\n\n💡 Ingliz tilida muloqot qilish va ma'lumot olish uchun savol berishni bilish juda muhimdir. Til o'rganishda barcha savollar asosan ikki guruhga bo'linadi: <b>Yes/No questions</b> hamda <b>Wh-questions</b>. Birinchi turdagi savollarga qisqa qilib faqat \"ha\" yoki \"yo'q\" deb javob beriladi. Ikkinchi turdagi savollar esa aniqroq ma'lumot berishni talab qiladi va maxsus savol so'zlari orqali tuziladi. Ushbu tushunchalarni egallash ingliz tilida erkin so'zlashishning poydevori hisoblanadi.\n\n📖 <b>Misollar:</b>\n\n🗣️ <b>Do you like coffee?</b> — <i>Siz qahvani yoqtirasizmi?</i> (<b>Yes/No</b> savol)\n\n🗣️ <b>What is your name?</b> — <i>Ismingiz nima?</i> (<b>Wh-question</b> savol)\n\n📝 <b>Eslatib o'tamiz:</b>\nUshbu seriyamizning keyingi qismlarida har bir savol turining darak, inkor va so'roq gaplarda tuzilish qoidalarini hamda yordamchi fe'llardan foydalanishni bosqichma-bosqich ko'rib chiqamiz."
       }
     }
   ]
