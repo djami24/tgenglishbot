@@ -9,7 +9,8 @@
       "Present Continuous (hozir davom etayotgan harakatlar uchun)",
       "Yes/No questions va Wh-questions (ha/yo'q va so'roq savollari)",
       "Relative clauses - Defining va Non-defining (who, which, that bilan)",
-      "Past Simple (tugallangan o'tmish harakatlari uchun)"
+      "Past Simple (tugallangan o'tmish harakatlari uchun)",
+      "Adverbs and adverbial phrases (tarz, chastota, vaqt, joy ifodalari)"
     ],
     "topic_vocab": [
       "Friends (Do'stlar)",
@@ -106,10 +107,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-10-26",
-    "topic": "Past Simple (tugallangan o'tmish harakatlari uchun)",
-    "part": 4,
-    "video_url": "https://www.youtube.com/watch?v=MI3S3kdkofo",
+    "date": "2026-10-27",
+    "topic": "Adverbs and adverbial phrases (tarz, chastota, vaqt, joy ifodalari)",
+    "part": 1,
+    "video_url": "https://www.youtube.com/watch?v=1an0ZjR0zek",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -409,6 +410,13 @@
         "2": "📌 <b>Past Simple: Darak gaplar</b> (2/5-qism)\n\n📖 O'tmishda sodir bo'lgan va to'liq tugallangan harakatlarni aytish uchun <b>Past Simple</b> zamonining darak shaklidan foydalanamiz.\n\n⚙️ <b>Darak gap formulasi:</b>\n<b>Subject + V2</b> (<b>Verb + -ed</b> / <b>Noto'g'ri fe'l 2-shakli</b>)\n\n💡 To'g'ri fe'llarga <b>-ed</b> qo'shimchasi qo'shiladi (masalan: <i>work - worked</i>), noto'g'ri fe me'llarning esa maxsus 2-shakli ishlatiladi (masalan: <i>go - went</i>).\n\n🗣️ <b>Misollar:</b>\n\n• I <b>visited</b> my grandparents yesterday.\n(Men kecha buvim va bobomni <i>ziyorat qildim</i>.)\n\n• She <b>bought</b> a new car last week.\n(U o'tgan haftada yangi mashina <i>sotib oldi</i>.)\n\n• They <b>played</b> football in the afternoon.\n(Ular tushdan keyin futbol <i>o'ynashdi</i>.)\n\n• We <b>went</b> to the museum two days ago.\n(Biz ikki kun oldin muzeyga <i>bordik</i>.)\n\n❗ <b>Tez-tez uchraydigan xato:</b>\nPast Simple darak gaplarida ega (<i>I, you, he, she, it, we, they</i>) kim bo'lishidan qat'i nazar, fe'l shakli o'zgarmaydi. Barcha shaxslar uchun bir xil <b>V2</b> shakli qo'llanadi! Masalan: <i>He worked</i> / <i>They worked</i>.",
         "3": "📌 <b>Past Simple: Inkor gaplar</b> (3/5-qism)\n\n💡 O'tmishda sodir bo'lmagan tugallangan harakatlarni ifodalash uchun <b>did not</b> (qisqartmasi <b>didn't</b>) yordamchi fe me'yoridan foydalanamiz.\n\n⚙️ <b>Formulasi:</b>\n<b>Subject + didn't + Verb (V1)</b>\n\n📝 <b>Misollar:</b>\n\n• I <b>didn't watch</b> TV yesterday.\n(Men kecha televizor ko'rmadim.)\n\n• She <b>didn't go</b> to school last Monday.\n(U o'tgan dushanba kuni maktabga bormadi.)\n\n• We <b>didn't buy</b> a new car.\n(Biz yangi mashina sotib olmadik.)\n\n• They <b>didn't finish</b> the project on time.\n(Ular loyihani o'z vaqtida tugatishmadi.)\n\n⚠️ <b>Tez-tez uchraydigan xato:</b>\n\nInkor gapda <b>didn't</b> ishlatilganda, asosiy fe'l o'zining dastlabki (V1) shakliga qaytadi. Bitta gapda bir vaqtning o'zida ikkita o'tmish shaklini qo'llash xatodir!\n\n❌ <i>He didn't went there.</i>\n✅ <b>He didn't go there.</b> (U u yerga bormadi.)",
         "4": "📌 <b>Past Simple</b>: So'roq gaplar tuzilishi (<b>4/5-qism</b>)\n\n📖 O'tmishda sodir bo'lgan harakatlar haqida so'rash uchun <b>Did</b> yordamchi fe'lidan foydalanamiz. So'roq gapda asosiy fe'l har doim <b>boshlang'ich shaklida</b> (V1) keladi.\n\n❓ <b>Umumiy so'roq (Yes/No questions) formulasi:</b>\n<b>Did</b> + ega + <b>V1</b> ...?\n\n❓ <b>Maxsus so'roq (Wh- questions) formulasi:</b>\n<b>Wh-so'z</b> (What, Where, Why...) + <b>did</b> + ega + <b>V1</b> ...?\n\n🗣️ <b>Amaliy misollar:</b>\n\n🔹 <b>Did you watch</b> the football match yesterday?\n<i>(Kecha futbol o'yinini tomosha qildingizmi?)</i>\n\n🔹 <b>Did she call</b> you this morning?\n<i>(U bugun ertalab sizga qo'ng'iroq qildimi?)</i>\n\n🔹 <b>Where did you go</b> last weekend?\n<i>(O'tgan dam olish kunlari qayerga bordingiz?)</i>\n\n🔹 <b>What did they buy</b> at the supermarket?\n<i>(Ular supermarkatdan nima sotib olishdi?)</i>\n\n💡 <b>Muhim eslatma:</b>\nSo'roq gapda <b>Did</b> yordamchi fe'li kelgani uchun asosiy fe'lga <b>-ed</b> qo'shimchasi qo'shilmaydi va fe'lning o'tmish shakli ishlatilmaydi. Masalan: <i>Did you went?</i> emas, <b>Did you go?</b> deyish to'g'ri bo'ladi."
+      }
+    },
+    {
+      "date": "2026-10-27",
+      "topic": "Adverbs and adverbial phrases (tarz, chastota, vaqt, joy ifodalari)",
+      "parts": {
+        "1": "📌 <b>Adverbs and Adverbial Phrases</b> — Ravish va ravishli iboralar (1/5-qism)\n\n📖 Ingliz tilida <b>adverbs</b> (ravishlar) va <b>adverbial phrases</b> (ravishli iboralar) harakatning qanday, qanchalik tez-tez, qachon va qayerda bajarilishini ko'rsatish uchun ishlatiladi. Ular fe'l, sifat yoki boshqa ravishga qo'shimcha ma'no berib, nutqimizni yanada boy va aniq qiladi. Ushbu tuzilmalar orqali biz ish-harakatning <b>tarzi</b>, <b>chastotasi</b>, <b>vaqti</b> hamda <b>joyi</b> haqida ma'lumot beramiz. Ularni to'g'ri ishlatish gapdagi fikrni mantiqiy va tushunarli yetkazishga yordam beradi.\n\n🗣️ <b>Misollar:</b>\n\n• She sings <b>beautifully</b>. — <i>U chiroyli kuylaydi.</i>\n• They <b>usually</b> study <b>in the library</b> <b>in the evening</b>. — <i>Ular odatda kechqurun kutubxonada dars qilishadi.</i>\n\n💡 Keyingi qismlarda har bir ravish turining darak, inkor va so'roq gaplardagi o'rni hamda gapdagi to'g'ri ketma-ketligini batafsil ko'rib chiqamiz. Kanalimizni kuzatib boring!"
       }
     }
   ]
