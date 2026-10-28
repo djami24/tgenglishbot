@@ -10,7 +10,8 @@
       "Yes/No questions va Wh-questions (ha/yo'q va so'roq savollari)",
       "Relative clauses - Defining va Non-defining (who, which, that bilan)",
       "Past Simple (tugallangan o'tmish harakatlari uchun)",
-      "Adverbs and adverbial phrases (tarz, chastota, vaqt, joy ifodalari)"
+      "Adverbs and adverbial phrases (tarz, chastota, vaqt, joy ifodalari)",
+      "Quantifiers (some, any, much, many, a lot of, few, little va boshqalar)"
     ],
     "topic_vocab": [
       "Friends (Do'stlar)",
@@ -91,10 +92,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-10-27",
-    "topic": "Adverbs and adverbial phrases (tarz, chastota, vaqt, joy ifodalari)",
-    "part": 5,
-    "video_url": "https://www.youtube.com/watch?v=1an0ZjR0zek",
+    "date": "2026-10-28",
+    "topic": "Quantifiers (some, any, much, many, a lot of, few, little va boshqalar)",
+    "part": 1,
+    "video_url": "https://www.youtube.com/watch?v=-oll5WNHWAk",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -405,6 +406,13 @@
         "3": "📌 <b>Adverbs and Adverbial Phrases</b>: Inkor gaplar (3/5-qism)\n\n<b>Adverbs</b> (ravishlar) va <b>adverbial phrases</b> (ravishli iboralar) qatnashgan inkor gaplarni tuzishda yordamchi fe'llar hamda <b>not</b> inkor yuklamasidan foydalanamiz. Chastota ravishlari odatda asosiy fe'ldan oldin, tarz, joy va vaqt ko'rsatkichlari esa gap oxirida keladi.\n\n📝 <b>Inkor gap formulasi:</b>\n<b>Subject + auxiliary verb + not + (Frequency Adverb) + Main Verb + (Manner/Place/Time)</b>\n\n📖 <b>Misollar:</b>\n\n1. She <b>doesn't usually</b> drive her car to work.\n(U odatda ishga mashinasida bormaydi.)\n\n2. They <b>didn't finish</b> the test <b>quickly</b> yesterday.\n(Ular kecha testni tezda yakunlashmadi.)\n\n3. We <b>cannot meet</b> <b>in the office</b> today.\n(Biz bugun idorada uchrasha olmaymiz.)\n\n4. He <b>has not played</b> football <b>well</b> recently.\n(U oxirgi paytlarda futbolni yaxshi o'ynamayapti.)\n\n⚠️ <b>Tez-tez uchraydigan xato:</b>\nIngliz tilida bir gapda ikkita inkor shakli ishlatilmaydi. <b>Never</b>, <b>hardly</b>, <b>seldom</b> kabi o'zida inkor ma'nosini tashuvchi ravishlar bo'lgan gapda <b>not</b> yuklamasi ishlatilmaydi.\n\n<i>Xato:</i> He <b>doesn't never</b> speak politely. ❌\n<i>To'g'ri:</i> He <b>never</b> speaks politely. ✅",
         "4": "📌 <b>Adverbs and Adverbial Phrases</b>: So'roq gaplar (4/5)\n\nSo'roq gaplarda ravishlar va hol iboralarining (adverbs & adverbial phrases) to'g'ri o'rni va tuzilishi bilan tanishamiz.\n\n💡 <b>Umumiy so'roq gaplar (Yes/No questions):</b>\n<b>Yordamchi fe'l + Ega + Chastota ravishi + Asosiy fe'l + Tarz / Joy / Vaqt holi?</b>\n\n💡 <b>Maxsus so'roq gaplar (Wh- questions):</b>\n<b>Wh-so'z + Yordamchi fe'l + Ega + Asosiy fe'l + Joy / Vaqt holi?</b>\n\n📖 <b>Misollar:</b>\n\n❓ Do you <b>always</b> wake up <b>early in the morning</b>?\n(Siz <b>har doim</b> <b>ertalab barvaqt</b> uyg'onasizmi?)\n\n❓ Did he drive <b>carefully</b> <b>yesterday</b>?\n(U <b>kecha</b> mashinani <b>ehtiyotkorlik bilan</b> boshqardimi?)\n\n❓ Where do you <b>usually</b> meet your friends <b>on Sundays</b>?\n(Siz <b>yakshanba kunlari</b> odatda do'stlaringiz bilan qayerda uchrashasiz?)\n\n❓ Why did she leave the party <b>so early</b>?\n(Nega u bazmni <b>juda barvaqt</b> tark etdi?)\n\n📝 <b>Eslatma:</b>\nChastota ravishlari (<i>always, usually, often</i>) so'roq gaplarda <b>ega va asosiy fe'l orasida</b> keladi. Tarz, joy va vaqt hollari esa odatda gapning <b>oxirida</b> joylashadi.",
         "5": "📌 <b>Grammar Series: Adverbs and Adverbial Phrases</b> (5/5) — Amaliyot\n\n⚠️ <b>Ko'p qilinadigan xatolar:</b>\n\n1. Sifat va ravishni chalkashtirish: <i>\"He drives <b>careful</b>\"</i> emas, <b>carefully</b> bo'lishi kerak. Harakat qanday bajarilganini ko'rsatish uchun ravish ishlatiladi.\n2. Chastota ravishlarining o'rni: <i>\"I go <b>always</b> there\"</i> emas, <b>always go</b> shaklida asosiy fe'ldan oldin keladi.\n\n📝 <b>Nuqtalar o'rnini mos ravish yoki ibora bilan to'ldiring:</b>\n\n1. She spoke ___ so that everyone could understand her. <i>(sekin)</i>\n2. They ___ start their morning meeting on time. <i>(har doim)</i>\n3. We are going to visit our grandparents ___. <i>(shu dam olish kunida)</i>\n4. Please put all the heavy boxes ___. <i>(ichkariga)</i>\n\n✅ <b>Javoblar:</b>\n\n1. <b>slowly</b> — tarz ravishi\n2. <b>always</b> — chastota ravishi\n3. <b>this weekend</b> — vaqt iborasi\n4. <b>inside</b> — joy ravishi"
+      }
+    },
+    {
+      "date": "2026-10-28",
+      "topic": "Quantifiers (some, any, much, many, a lot of, few, little va boshqalar)",
+      "parts": {
+        "1": "📚 <b>Quantifiers</b> haqida umumiy tushuncha (1/5-qism)\n\n📌 Ingliz tilida biror narsaning miqdorini yoki sanog'ini ko'rsatish uchun <b>quantifiers</b> (miqdor bildiruvchi so'zlar) qo'llaniladi. Ular otlardan oldin kelib, <i>\"qancha?\"</i> yoki <i>\"nechta?\"</i> degan savollarga javob beradi. Bu so'zlar orqali biz aniq sonni aytmasdan, narsalarning ko'p yoki kamligini ko'rsatishimiz mumkin. Ingliz tilida to'g'ri va ravon gapirishda ushbu grammatik mavzuni egallash juda muhimdir.\n\n📖 Misollar:\n• I have <b>some</b> friends in London. (Mening Londonda <b>bir qancha</b> do'stlarim bor.)\n• She needs <b>a lot of</b> water. (Unga <b>juda ko'p</b> suv kerak.)\n\n💡 Ushbu seriyamizning keyingi qismlarida darak, inkor va so'roq gaplarda <b>quantifiers</b> so'zlarining ishlatilish qoidalarini alohida va batafsil ko'rib chiqamiz. Kanalni kuzatib boring!"
       }
     }
   ]
