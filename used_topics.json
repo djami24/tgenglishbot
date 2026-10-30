@@ -12,7 +12,8 @@
       "Past Simple (tugallangan o'tmish harakatlari uchun)",
       "Adverbs and adverbial phrases (tarz, chastota, vaqt, joy ifodalari)",
       "Quantifiers (some, any, much, many, a lot of, few, little va boshqalar)",
-      "Going to (rejalar va niyatlar uchun)"
+      "Going to (rejalar va niyatlar uchun)",
+      "Reported speech - Questions (savol gaplarni ko'chirish)"
     ],
     "topic_vocab": [
       "Friends (Do'stlar)",
@@ -99,10 +100,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-10-29",
-    "topic": "Going to (rejalar va niyatlar uchun)",
-    "part": 2,
-    "video_url": "https://www.youtube.com/watch?v=IpmmTWcjVbM",
+    "date": "2026-10-30",
+    "topic": "Reported speech - Questions (savol gaplarni ko'chirish)",
+    "part": 1,
+    "video_url": "https://www.youtube.com/watch?v=eplQBhE0-Hg",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -430,6 +431,13 @@
       "parts": {
         "1": "📌 <b>Going to</b> iborasi: Rejalar va niyatlar (1/5-qism)\n\n📖 Bugungi darsimizda ingliz tilida kelajakdagi rejalar va niyatlarni ifodalash uchun ishlatiladigan <b>be going to</b> iborasi haqida gaplashamiz. Biz ushbu birikmani sodir bo'lishi oldindan rejalashtirilgan yoki qaror qilib bo'lingan ish-harakatlar uchun qo'llaymiz. Ya'ni, siz biror ishni qilishni oldindan niyat qilgansiz va uni amalga oshirishga qaror qilgansiz. O'zbek tiliga bu ibora asosan <b>-moqchi bo'lmoq</b> deb tarjima qilinadi.\n\n🗣️ Misollar:\n\n• I <b>am going to learn</b> English this year.\n(Men bu yil ingliz tilini o'rgan<b>moqchiman</b>.)\n\n• She <b>is going to buy</b> a new car tomorrow.\n(U ertaga yangi mashina sotib ol<b>moqchi</b>.)\n\n💡 Keyingi darslarimizda ushbu grammatik qoidaning darak, inkor va so'roq gaplardagi shakllanishini alohida va batafsil ko'rib chiqamiz. Bizni kuzatishda davom eting!",
         "2": "🎯 <b>Going to</b> iborasi: Darak gaplar (2/5-qism)\n\n📌 Kelajakda bajarilishi rejalashtirilgan <b>aniq maqsad va niyatlar</b> haqida so'zlaganda <b>be going to</b> iborasi ishlatiladi. Bugun ushbu iboraning darak gap shaklini ko'rib chiqamiz.\n\n📖 <b>Darak gap formulasi:</b>\n<b>Subject + am / is / are + going to + Verb</b>\n\n🗣️ <b>Misollar:</b>\n\n• I <b>am going to learn</b> English this year.\n(Men bu yil ingliz tilini <i>o'rganmoqchiman</i>.)\n\n• She <b>is going to buy</b> a new phone tomorrow.\n(U ertaga yangi telefon <i>sotib olmoqchi</i>.)\n\n• We <b>are going to watch</b> a good movie tonight.\n(Biz bugun kechqurun yaxshi kino <i>tomosha qilmoqchimiz</i>.)\n\n• They <b>are going to move</b> to a new house next month.\n(Ular keyingi oy yangi uyga <i>ko'chib o'tmoqchi</i>.)\n\n💡 <b>Keng tarqalgan xato:</b>\nKo'pincha <b>to be</b> (am/is/are) fe'lini tushirib qoldirishadi. Masalan, <i>\"I going to play\"</i> deyish mutlaqo noto'g'ri. Har doim egalarga mos ravishda <b>\"I am going to play\"</b> shaklida to'g'ri ishlating."
+      }
+    },
+    {
+      "date": "2026-10-30",
+      "topic": "Reported speech - Questions (savol gaplarni ko'chirish)",
+      "parts": {
+        "1": "📌 <b>Reported Speech: Questions</b> (1/5-qism) — Kirish va umumiy tushuncha\n\n📖 Birov bergan savolni boshqa bir shaxsga yetkazib berish uchun ingliz tilida <b>Reported Questions</b> (o'zlashtirma savol gaplar) qoidasidan foydalanamiz. Odatda \"U nima deb so'radi?\" degan savolga javob berayotganda ushbu tuzilma yordamga keladi. Asosiy qoida shundaki, ko'chirilgan savol gapda darak gap tartibi qo'llanadi va savol belgisi ishlatilmaydi. Shuningdek, zamonlar bir pog'ona orqaga suriladi hamda oloshlar ma'nosiga qarab o'zgaradi.\n\n🗣️ <b>Oddiy misollar:</b>\n\n• Direct: He said, \"<b>Where do you live?</b>\"\n<i>(U: \"Qayerda yashaysan?\" deb so'radi.)</i>\n• Reported: He asked <b>where I lived</b>.\n<i>(U qayerda yashashimni so'radi.)</i>\n\n• Direct: She asked, \"<b>Are you hungry?</b>\"\n<i>(U: \"Qorning ochmi?\" deb so'radi.)</i>\n• Reported: She asked <b>if I was hungry</b>.\n<i>(U qornim ochligini so'radi.)</i>\n\n💡 Keyingi qismlarda <b>Yes/No questions</b> va <b>Wh-questions</b> turlarining darak hamda inkor ko'rinishidagi batafsil tuzilishini ko'rib chiqamiz. Bizni kuzatishda davom eting!"
       }
     }
   ]
