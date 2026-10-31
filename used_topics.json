@@ -13,7 +13,8 @@
       "Adverbs and adverbial phrases (tarz, chastota, vaqt, joy ifodalari)",
       "Quantifiers (some, any, much, many, a lot of, few, little va boshqalar)",
       "Going to (rejalar va niyatlar uchun)",
-      "Reported speech - Questions (savol gaplarni ko'chirish)"
+      "Reported speech - Questions (savol gaplarni ko'chirish)",
+      "Comparatives and Superlatives - muntazam va notartib shakllar"
     ],
     "topic_vocab": [
       "Friends (Do'stlar)",
@@ -103,10 +104,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-10-30",
-    "topic": "Reported speech - Questions (savol gaplarni ko'chirish)",
-    "part": 2,
-    "video_url": "https://www.youtube.com/watch?v=eplQBhE0-Hg",
+    "date": "2026-10-31",
+    "topic": "Comparatives and Superlatives - muntazam va notartib shakllar",
+    "part": 1,
+    "video_url": "https://www.youtube.com/watch?v=jz8Fy5qQXu8",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -442,6 +443,13 @@
       "parts": {
         "1": "📌 <b>Reported Speech: Questions</b> (1/5-qism) — Kirish va umumiy tushuncha\n\n📖 Birov bergan savolni boshqa bir shaxsga yetkazib berish uchun ingliz tilida <b>Reported Questions</b> (o'zlashtirma savol gaplar) qoidasidan foydalanamiz. Odatda \"U nima deb so'radi?\" degan savolga javob berayotganda ushbu tuzilma yordamga keladi. Asosiy qoida shundaki, ko'chirilgan savol gapda darak gap tartibi qo'llanadi va savol belgisi ishlatilmaydi. Shuningdek, zamonlar bir pog'ona orqaga suriladi hamda oloshlar ma'nosiga qarab o'zgaradi.\n\n🗣️ <b>Oddiy misollar:</b>\n\n• Direct: He said, \"<b>Where do you live?</b>\"\n<i>(U: \"Qayerda yashaysan?\" deb so'radi.)</i>\n• Reported: He asked <b>where I lived</b>.\n<i>(U qayerda yashashimni so'radi.)</i>\n\n• Direct: She asked, \"<b>Are you hungry?</b>\"\n<i>(U: \"Qorning ochmi?\" deb so'radi.)</i>\n• Reported: She asked <b>if I was hungry</b>.\n<i>(U qornim ochligini so'radi.)</i>\n\n💡 Keyingi qismlarda <b>Yes/No questions</b> va <b>Wh-questions</b> turlarining darak hamda inkor ko'rinishidagi batafsil tuzilishini ko'rib chiqamiz. Bizni kuzatishda davom eting!",
         "2": "📌 <b>Reported Speech: Savol gaplar</b> (2/5-qism) — <b>Darak gap</b> tartibi\n\n💡 Bevosita savol gapni o'zlashtirma gapga aylantirganda, eng muhim qoida — gap tartibining <b>darak gap</b> (affirmative) shakliga o'tishidir. Ya'ni, egadan oldin yordamchi fe'l qo'yilmaydi va so'roq belgisi tushib qoladi.\n\n📖 <b>O'zlashtirma savol formulasi:</b>\n<b>Subject + asked + Question word / If / Whether + Subject + Verb</b>\n\n📝 <b>Misollar:</b>\n\n🔹 Direct: <i>\"Where do you live?\"</i>\n   Reported: He asked me <b>where I lived</b>.\n   (U mendan qayerda yashashimni so'radi.)\n\n🔹 Direct: <i>\"What are you doing?\"</i>\n   Reported: She asked <b>what I was doing</b>.\n   (U mening nima qilayotganimni so'radi.)\n\n🔹 Direct: <i>\"Did you finish the work?\"</i>\n   Reported: They asked <b>if I had finished</b> the work.\n   (Ular ishni tugatganim yoki tugatmaganimni so'rashdi.)\n\n🔹 Direct: <i>\"Why is he late?\"</i>\n   Reported: Teacher asked <b>why he was late</b>.\n   (O'qituvchi uning nima uchun kechikkanini so'radi.)\n\n❗ <b>Tez-tez uchraydigan xato:</b>\nO'zlashtirma savol gaplarda <b>do, does, did</b> yordamchi fe'llari ishlatilmaydi va fe'l egadan oldinga o'tmaydi.\n❌ He asked me <i>where did I live</i>.\n✅ He asked me <b>where I lived</b>."
+      }
+    },
+    {
+      "date": "2026-10-31",
+      "topic": "Comparatives and Superlatives - muntazam va notartib shakllar",
+      "parts": {
+        "1": "📌 <b>Comparatives and Superlatives</b>: Umumiy tushuncha (1/5)\n\n💡 Ingliz tilida ikkita yoki undan ortiq shaxs, narsa va tushunchalarni o'zaro solishtirish uchun <b>Sifat darajalari</b> (Comparatives and Superlatives) ishlatiladi. <b>Comparative</b> (qiyosiy daraja) ikkita ob'ektni o'zaro solishtirib, birining xususiyati ikkinchisidan ustunroq ekanini ko'rsatadi. <b>Superlative</b> (orttirma daraja) esa biror guruh ichida eng ustun, alohida ajralib turuvchi ob'ektni ifodalash uchun xizmat qiladi. Bu qoida kundalik muloqotda narsa va hodisalarni o'zaro to'g'ri taqqoslash uchun juda muhim hisoblanadi.\n\n📖 Misollar:\n\n• Tashkent is <b>bigger</b> than Samarkand.\n<i>(Toshkent Samarqanddan kattaroq.)</i>\n\n• Russia is the <b>biggest</b> country in the world.\n<i>(Rossiya dunyodagi eng katta mamlakatdir.)</i>\n\n📝 <b>Eslatma:</b> Ushbu grammatik seriyamizning keyingi qismlarida sifat darajalari yordamida darak, inkor va so'roq gaplarni to'g'ri tuzish hamda ularning maxsus qoidalarini batafsil ko'rib chiqamiz. Kanaldan uzoqlashmang!"
       }
     }
   ]
