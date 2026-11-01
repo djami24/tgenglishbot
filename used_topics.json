@@ -14,7 +14,8 @@
       "Quantifiers (some, any, much, many, a lot of, few, little va boshqalar)",
       "Going to (rejalar va niyatlar uchun)",
       "Reported speech - Questions (savol gaplarni ko'chirish)",
-      "Comparatives and Superlatives - muntazam va notartib shakllar"
+      "Comparatives and Superlatives - muntazam va notartib shakllar",
+      "Reported speech - Statements (say va tell bilan gaplarni ko'chirish)"
     ],
     "topic_vocab": [
       "Friends (Do'stlar)",
@@ -106,10 +107,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-10-31",
-    "topic": "Comparatives and Superlatives - muntazam va notartib shakllar",
-    "part": 4,
-    "video_url": "https://www.youtube.com/watch?v=jz8Fy5qQXu8",
+    "date": "2026-11-01",
+    "topic": "Reported speech - Statements (say va tell bilan gaplarni ko'chirish)",
+    "part": 1,
+    "video_url": "https://www.youtube.com/watch?v=eplQBhE0-Hg",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -455,6 +456,13 @@
         "2": "📌 <b>Grammar Time: Comparatives & Superlatives</b> (2/5-qism)\n\n📖 <b>Darak gaplar tuzilishi (Affirmative Form)</b>\n\nSifatlarning qiyosiy va orttirma darajalarida darak gap tuzish uchun quyidagi qoidalarga amal qilamiz:\n\n🔹 <b>Comparative formula:</b> Subject + verb + <b>adjective-er / more adjective</b> + <b>than</b> + object\n🔹 <b>Superlative formula:</b> Subject + verb + <b>the</b> + <b>adjective-est / most adjective</b>\n\n📝 <b>Misollar:</b>\n\n1. This house is <b>larger than</b> our previous apartment.\n<i>(Bu uy bizning oldingi xonadonimizdan ko'ra kattaroq.)</i>\n\n2. She is <b>the most talented</b> artist in our city.\n<i>(U shahrimizdagi eng iqtidorli rassomdir.)</i>\n\n3. Today my mood is much <b>better than</b> yesterday.\n<i>(Bugun kayfiyatim kechagidan ko'ra ancha yaxshiroq.)</i>\n\n4. This is <b>the worst</b> movie I have ever watched.\n<i>(Bu men hayotimda tomosha qilgan eng yomon filmdir.)</i>\n\n💡 <b>Muhim eslatma:</b>\n\nQiyosiy darajada ishlatiladigan <b>than</b> <i>(qaraganda, ko'ra)</i> so'zini <b>then</b> <i>(undan keyin, so'ng)</i> so'zi bilan adashtirmang. Shuningdek, orttirma darajadagi sifatlar oldidan har doim <b>the</b> artiklini qo'yishni unutmang!",
         "3": "📌 <b>Comparatives & Superlatives</b>: Inkor gaplar (3/5-qism)\n\n💡 Sifatlarni taqqoslashda inkor (negative) ma'noni berish uchun asosan <b>not as ... as</b> (dek emas) birikmasi yoki fe'lning inkor shaklidan foydalaniladi.\n\n📖 <b>Asosiy formula:</b>\n<b>Subject + verb + not + as + oddiy sifat + as + Object</b>\n\n📝 <b>Misollar:</b>\n\n🗣️ <b>This task is not as difficult as</b> it seems.\n(Bu topshiriq ko'ringanidek <i>qiyin emas</i>.)\n\n🗣️ <b>English is not as hard as</b> Chinese.\n(Ingliz tili xitoy tilidek <i>murakkab emas</i>.)\n\n🗣️ <b>Today is not warmer than</b> yesterday.\n(Bugun kechagidan <i>issiqroq emas</i>.)\n\n🗣️ <b>This is not the best</b> solution to our problem.\n(Bu muammoyimiz uchun <i>eng yaxshi</i> yechim emas.)\n\n❗ <b>Tez-tez uchraydigan xato:</b>\n<b>not as ... as</b> qolipi orasida sifat har doim <b>boshlang'ich (oddiy) shaklda</b> keladi. Masalan, <b>not as faster as</b> deyish grammatik xato, to'g'risi: <b>not as fast as</b>.",
         "4": "📌 <b>Comparatives and Superlatives: So'roq gaplar</b> (4/5-qism)\n\n💡 Bugun sifatlarning qiyosiy va orttirma darajalarida <b>so'roq gaplar</b> tuzish qoidalarini ko'rib chiqamiz.\n\n📖 <b>Tuzilish formulalari:</b>\n\n• <b>Umumiy so'roq (Yes/No questions):</b>\n<b>To be + ega + qiyosiy sifat + than + to'ldiruvchi?</b>\n<b>To be + ega + the + orttirma sifat...?</b>\n\n• <b>Maxsus so'roq (Wh- questions):</b>\n<b>Wh-so'z + to be + qiyosiy / orttirma sifat...?</b>\n\n🗣️ <b>Misollar bilan tanishamiz:</b>\n\n• Is English <b>easier than</b> German?\n(Ingliz tili nemis tilidan <b>osonroqmi</b>?)\n\n• Is your phone <b>more expensive than</b> mine?\n(Sizning telefoningiz menikidan <b>qimmatroqmi</b>?)\n\n• Who is <b>the tallest</b> student in your class?\n(Sinfingizdagi <b>eng baland</b> bo'yli o'quvchi kim?)\n\n• Which city is <b>the most beautiful</b> in Europe?\n(Yevropada qaysi shahar <b>eng go'zal</b>?)\n\n❗ <b>Eslatma:</b> Ikkita narsa yoki shaxs orasidan tanlash so'ralganda ko'pincha <b>Which</b> so'rog'i va <b>qiyosiy daraja</b> birga keladi. Masalan: <i>Which book is better?</i> (Qaysi kitob yaxshiroq?)."
+      }
+    },
+    {
+      "date": "2026-11-01",
+      "topic": "Reported speech - Statements (say va tell bilan gaplarni ko'chirish)",
+      "parts": {
+        "1": "📌 <b>Reported Speech</b>: O'zgalar gapini yetkazish (1/5-qism)\n\n💡 <b>Reported Speech</b> (o'zlashtirma gap) biror kishining aytgan so'zlarini boshqa shaxsga yetkazib berish uchun xizmat qiladi. Muloqot davomida <b>boshqalarning fikrini</b> yoki xabarini qayta aytib berishda bu grammatik qoidadan keng foydalanamiz. O'zgalar gapini ko'chirishda asosan <b>say</b> va <b>tell</b> fe'llari qo'llaniladi. Bunda aytilgan gapning mazmuni saqlangan holda zamonlar va kishilik oloshlari mos ravishda o'zgaradi.\n\n🗣️ <b>To'g'ri gap (Direct Speech):</b>\n<i>\"I am tired,\" said Jasur.</i>\n(<b>\"Men charchadim,\"</b> dedi Jasur.)\n\n📖 <b>O'zlashtirma gap (Reported Speech):</b>\n<i>Jasur said that he was tired.</i>\n(Jasur <b>charchaganini</b> aytdi.)\n\n🗣️ <b>To'g'ri gap (Direct Speech):</b>\n<i>\"I live in Tashkent,\" she told me.</i>\n(<b>\"Men Toshkentda yashayman,\"</b> dedi u menga.)\n\n📖 <b>O'zlashtirma gap (Reported Speech):</b>\n<i>She told me that she lived in Tashkent.</i>\n(U menga <b>Toshkentda yashashini</b> aytdi.)\n\n📝 Ushbu seriyamizning keyingi qismlarida <b>say</b> va <b>tell</b> fe'llari o'rtasidagi farqlar hamda darak, inkor va so'roq gaplarning zamonlar bo'yicha o'zgarish qoidalarini birma-bir o'rganamiz. Kanalimizni kuzatib boring!"
       }
     }
   ]
