@@ -18,7 +18,8 @@
       "Reported speech - Statements (say va tell bilan gaplarni ko'chirish)",
       "Tag questions (qo'shimcha savollar - isn't it?, don't they?)",
       "Present Continuous for future (rejalashtirilgan kelajak tadbirlar uchun)",
-      "Passive voice - hozirgi va o'tmish zamonlardagi asosiy qurilmalar"
+      "Passive voice - hozirgi va o'tmish zamonlardagi asosiy qurilmalar",
+      "Past Continuous (o'tmishdagi davom etayotgan harakatlar uchun)"
     ],
     "topic_vocab": [
       "Friends (Do'stlar)",
@@ -124,10 +125,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-11-05",
-    "topic": "Passive voice - hozirgi va o'tmish zamonlardagi asosiy qurilmalar",
-    "part": 4,
-    "video_url": "https://www.youtube.com/watch?v=N7uvEllP5Jg",
+    "date": "2026-11-06",
+    "topic": "Past Continuous (o'tmishdagi davom etayotgan harakatlar uchun)",
+    "part": 1,
+    "video_url": "https://www.youtube.com/watch?v=bTWa5M4UMO8",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -514,6 +515,13 @@
         "2": "📌 <b>Passive Voice</b>: Hozirgi va o'tmish zamonlar (2/5-qism)\n\n💡 Majhul nisbatning <b>darak gap</b> (affirmative) shaklini hosil qilish uchun <b>to be</b> fe'lining kerakli zamon shakli hamda asosiy fe'lning <b>V3</b> (Past Participle) formasi ishlatiladi.\n\n🔤 <b>Hozirgi zamon (Present Simple):</b>\n<b>Subject + am / is / are + V3</b>\n\n🔤 <b>O'tmish zamon (Past Simple):</b>\n<b>Subject + was / were + V3</b>\n\n📖 <b>Misollar:</b>\n\n🔹 English <b>is spoken</b> all over the world.\n<i>(Ingliz tili butun dunyoda gapiriladi.)</i>\n\n🔹 Hundreds of emails <b>are sent</b> every day.\n<i>(Har kuni yuzlab elektron xatlar yuboriladi.)</i>\n\n🔹 This house <b>was built</b> in 2010.\n<i>(Bu uy 2010-yilda qurilgan.)</i>\n\n🔹 These letters <b>were delivered</b> yesterday.\n<i>(Bu xatlar kecha yetkazib berildi.)</i>\n\n❗ <b>Muhim eslatma:</b> Noto'g'ri fe'llardan foydalanayotganda <b>V2</b> emas, albatta <b>V3</b> shaklini qo'llash shart. Masalan, <i>was wrote</i> deyish grammatik xato hisoblanadi, to'g'ri shakli — <b>was written</b> bo'lishi kerak.",
         "3": "📌 <b>Passive Voice</b>: Inkor gaplar (3/5-qism)\n\n📖 Bugungi darsimizda <b>Passive Voice</b> (Majhul nisbat) mavzusida inkor gaplar (<b>negative sentences</b>) qanday yasalishini ko'rib chiqamiz. Inkor ma'nosini berish uchun yordamchi fe'ldan so'ng <b>not</b> yuklamasi qo'shiladi.\n\n💡 <b>Asosiy formulalar:</b>\n\n- Present Simple: <b>Subject + am / is / are + not + V3</b>\n- Past Simple: <b>Subject + was / were + not + V3</b>\n- Present Continuous: <b>Subject + am / is / are + not + being + V3</b>\n- Past Continuous: <b>Subject + was / were + not + being + V3</b>\n- Present Perfect: <b>Subject + have / has + not + been + V3</b>\n- Past Perfect: <b>Subject + had + not + been + V3</b>\n\n📝 <b>Misollar:</b>\n\n- The office <b>is not cleaned</b> every day. (Idora har kuni <i>tozalanmaydi</i>.)\n- The letter <b>was not sent</b> yesterday. (Xat kecha <i>yuborilmadi</i>.)\n- The car <b>is not being repaired</b> right now. (Mashina hozir <i>tuzatilmayapti</i>.)\n- The project <b>has not been finished</b> yet. (Loyiha hali <i>tugatilmadi</i>.)\n\n❗ <b>Eslatma va tez-tez uchraydigan xato:</b>\nInkor shaklidagi <b>not</b> yuklamasi har doim birinchi yordamchi fe'ldan keyin kelishi kerak. Masalan, <i>\"has been not done\"</i> deyish xato, to'g'ri shakli: <b>has not been done</b>.",
         "4": "📌 <b>Passive Voice</b>: So'roq gaplar tuzilishi (4/5-qism)\n\n💡 Majhul nisbatda so'roq gap tuzish uchun <b>to be</b> (am/is/are/was/were) fe'li har doim egadan oldinga o'tkaziladi. <b>Do</b>, <b>does</b> yoki <b>did</b> yordamchi fe'llari bu yerda ishlatilmaydi.\n\n📖 <b>Umumiy so'roq gap (Yes/No questions):</b>\n<b>Am / Is / Are / Was / Were</b> + <b>Ega</b> + <b>V3 (Past Participle)</b>?\n\n📖 <b>Maxsus so'roq gap (Wh- questions):</b>\n<b>So'roq so'z</b> + <b>Am / Is / Are / Was / Were</b> + <b>Ega</b> + <b>V3 (Past Participle)</b>?\n\n🗣️ <b>Amaliy misollar:</b>\n\n🔹 <b>Is this office cleaned</b> every day?\n<i>(Bu mehmFormat qilgan idora har kuni tozalanadimi?)</i>\n\n🔹 <b>Was the letter sent</b> yesterday?\n<i>(Xat kecha yuborildimi?)</i>\n\n🔹 <b>Where are these cars made</b>?\n<i>(Bu avtomobillar qayerda ishlab chiqariladi?)</i>\n\n🔹 <b>Why was the match postponed</b>?\n<i>(Nima uchun o'yin qoldirildi?)</i>\n\n📝 <b>Eslatma:</b> Maxsus so'roq gaplarda so'roq so me'yori (<b>Where</b>, <b>When</b>, <b>Why</b>, <b>How</b>) har doim gapning eng birinchi o'rnida keladi va undan keyin darhol <b>to be</b> fe'li qo'yiladi."
+      }
+    },
+    {
+      "date": "2026-11-06",
+      "topic": "Past Continuous (o'tmishdagi davom etayotgan harakatlar uchun)",
+      "parts": {
+        "1": "📌 <b>Past Continuous</b> zamoni bilan tanishamiz! (1/5-qism)\n\n📖 <b>Past Continuous</b> (O'tmishdagi davomli zamon) o'tmishdagi ma'lum bir vaqtda sodir bo'layotgan va davom etayotgan harakatlarni ifodalash uchun ishlatiladi. Bu zamon harakatning natijasiga emas, balki uning muayyan vaqtdagi <b>jarayoni</b>ga e'tibor qaratadi. Masalan, kecha soat 5 da nima qilayotganingizni aytmoqchi bo'lsangiz, aynan shu zamondan foydalanasiz. O'zbek tiliga bu zamon ko'pincha <i>\"-yotgan edi\"</i> qo'shimchasi orqali tarjima qilinadi.\n\n💡 Misollar:\n\n🗣️ I <b>was reading</b> a book yesterday at 5 PM.\n(Kecha soat 5 da men kitob <i>o'qiyotgan edim</i>.)\n\n🗣️ They <b>were playing</b> football all evening.\n(Ular kechqurun bo'yi futbol <i>o'ynashayotgan edi</i>.)\n\n📝 Keyingi qismlarda ushbu zamonda darak, inkor va so'roq gaplar qanday tuzilishini alohida ko'rib chiqamiz. Kanalimizni kuzatib boring!"
       }
     }
   ]
