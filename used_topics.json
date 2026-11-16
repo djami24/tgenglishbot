@@ -4,7 +4,8 @@
       "Reported speech - Questions (savol gaplarni ko'chirish)",
       "Might, May (ehtimollik uchun)",
       "Adverbs and adverbial phrases (tarz, chastota, vaqt, joy ifodalari)",
-      "Second Conditional (hozir yoki kelajakdagi xayoliy vaziyatlar uchun)"
+      "Second Conditional (hozir yoki kelajakdagi xayoliy vaziyatlar uchun)",
+      "Passive voice - hozirgi va o'tmish zamonlardagi asosiy qurilmalar"
     ],
     "topic_vocab": [
       "People & Personality (Insonlar va xarakter)",
@@ -94,10 +95,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-11-16",
-    "topic": "Second Conditional (hozir yoki kelajakdagi xayoliy vaziyatlar uchun)",
+    "date": "2026-11-17",
+    "topic": "Passive voice - hozirgi va o'tmish zamonlardagi asosiy qurilmalar",
     "part": 1,
-    "video_url": "https://www.youtube.com/watch?v=iZnL2cb_w20",
+    "video_url": null,
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -586,6 +587,13 @@
       "topic": "Second Conditional (hozir yoki kelajakdagi xayoliy vaziyatlar uchun)",
       "parts": {
         "1": "📌 <b>Grammar Series: Second Conditional</b> (1/5-qism)\n\n💡 Bugungi darsimizda <b>Second Conditional</b>, ya'ni ikkinchi tur shart gaplari bilan tanishamiz. Bu grammatik qoida hozirgi yoki kelajakdagi <b>xayoliy</b>, <b>noreal</b> va amalga oshish ehtimoli juda kam bo'lgan vaziyatlarni ifodalash uchun ishlatiladi. Masalan, hayotimizda hozir mavjud bo'lmagan sharoitlar haqida orzu qilganimizda yoki faraz bildirganimizda ushbu tuzilma yordamga keladi. Oddiy qilib aytganda, bu \"agar shunday bo'lganida, men bunday qilgan bo'lardim\" degan ma'noni beradi.\n\n📖 <b>Misollar:</b>\n\n• If I <b>had</b> more time, I <b>would travel</b> around the world.\n<i>(Agar mening ko'proq vaqtim bo'lganida, dunyo bo'ylab sayohat qilgan bo'lardim.)</i>\n\n• If he <b>knew</b> her number, he <b>would call</b> her.\n<i>(Agar u qizning telefon raqamini bilganida, unga qo'ng'iroq qilgan bo'lardi.)</i>\n\n❗ <b>Eslatma:</b> Bu gaplardagi vaziyatlar hozirgi zamonga tegishli, lekin ular haqiqat emas, shunchaki bizning xayolimizdagi farazdir.\n\n📝 Keyingi qismlarda ushbu mavzuning darak, inkor va so'roq gap shakllari hamda formulalarini birma-bir ko'rib chiqamiz. Kanalimizni kuzatib boring!"
+      }
+    },
+    {
+      "date": "2026-11-17",
+      "topic": "Passive voice - hozirgi va o'tmish zamonlardagi asosiy qurilmalar",
+      "parts": {
+        "1": "📌 <b>Passive Voice</b>: Hozirgi va o'tmish zamonlar (1/5-qism)\n\n📖 Ingliz tilida <b>Passive Voice</b> (Majhul nisbat) ish-harakatni kim bajargani noma'lum bo'lganda yoki bajaruvchidan ko'ra <b>harakatning o'zi</b> muhimroq bo'lganda ishlatiladi. Bu tuzilmada diqqat-e'tibor harakatni bajaruvchi shaxsga emas, balki harakat yo'naltirilgan <b>obyektga</b> qaratiladi. Masalan, \"Kimdir eshikni ochdi\" deyish o'rniga \"Eshik ochildi\" deb aytmoqchi bo'lsak, aynan shu qoidadan foydalanamiz.\n\n💡 <b>Asosiy misollar:</b>\n\n📝 English: <b>The office is cleaned</b> every evening.\n<i>O'zbekcha: Ofis har oqshom tozalanadi.</i>\n\n📝 English: <b>The window was broken</b> yesterday.\n<i>O'zbekcha: Oyna kecha sindirildi.</i>\n\n🗣️ <b>Eslatma:</b> Ushbu seriyamizning keyingi qismlarida Present Simple va Past Simple zamonlarida darak, inkor hamda so'roq gaplarni to'g'ri shakllantirish formulalarini atroflicha ko'rib chiqamiz."
       }
     }
   ]
