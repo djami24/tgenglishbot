@@ -6,7 +6,8 @@
       "Adverbs and adverbial phrases (tarz, chastota, vaqt, joy ifodalari)",
       "Second Conditional (hozir yoki kelajakdagi xayoliy vaziyatlar uchun)",
       "Passive voice - hozirgi va o'tmish zamonlardagi asosiy qurilmalar",
-      "Will (bashorat, qaror va va'dalar uchun)"
+      "Will (bashorat, qaror va va'dalar uchun)",
+      "Yes/No questions va Wh-questions (ha/yo'q va so'roq savollari)"
     ],
     "topic_vocab": [
       "People & Personality (Insonlar va xarakter)",
@@ -49,10 +50,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-11-18",
-    "topic": "Will (bashorat, qaror va va'dalar uchun)",
-    "part": 2,
-    "video_url": "https://www.youtube.com/watch?v=n14zCZAvSjI",
+    "date": "2026-11-20",
+    "topic": "Yes/No questions va Wh-questions (ha/yo'q va so'roq savollari)",
+    "part": 1,
+    "video_url": "https://www.youtube.com/watch?v=YIkewDhlSwQ",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -560,6 +561,13 @@
       "parts": {
         "1": "📌 <b>Will</b> yordamchi fe'li: Umumiy tushuncha (1/5-qism)\n\nIngliz tilida kelajak haqida gapirganda eng ko'p ishlatiladigan so'zlardan biri bu <b>will</b> yordamchi fe'lidir. Biz ushbu fe'ldan asosan uchta asosiy holatda foydalanamiz: kelajak haqida shaxsiy <b>bashorat</b> bildirganda, muloqot davomida <b>tezkor qaror</b> qabul qilganda hamda kimgadir <b>va'da</b> berganda. Ushbu fe'l kelajakdagi harakatlarni sodda va aniq ifodalash uchun xizmat qiladi.\n\n📖 Misollarni ko'rib chiqamiz:\n\n🗣️ I <b>will help</b> you with your homework.\n<i>(Men senga uy vazifangda yordam beraman. — Va'da)</i>\n\n🗣️ It <b>will rain</b> tomorrow.\n<i>(Ertaga yomg'ir yog'adi. — Bashorat)</i>\n\n🗣️ I am tired. I <b>will take</b> a rest.\n<i>(Men charchadim. Biroz dam olaman. — Tezkor qaror)</i>\n\n💡 <b>Eslatma:</b> Seriyamizning keyingi qismlarida <b>will</b> fe'li yordamida darak, inkor va so'roq gaplarni to'g'ri yasash qoidalarini birma-bir ko'rib chiqamiz.",
         "2": "📌 <b>Will</b> yordamida darak gaplar tuzish (2/5-qism)\n\n💡 Kelajakda sodir bo'ladigan voqea-hodisalar, va'dalar va tezkor qarorlarni ifodalash uchun darak gaplarda <b>will</b> yordamchi fe'lidan foydalanamiz.\n\n📖 Darak gap formulasi:\n<b>Subject + will + V1</b>\n\n🗣️ Misollar:\n\n• <b>I will call</b> you tonight.\n<i>(Men senga bugun o'xshom qo'ng'iroq qilaman — va'da)</i>\n\n• <b>It will rain</b> tomorrow afternoon.\n<i>(Ertaga tushdan keyin yomg'ir yog'adi — bashorat)</i>\n\n• <b>I will buy</b> this coat.\n<i>(Men ushbu paltoni sotib olaman — tezkor qaror)</i>\n\n• <b>They will win</b> the match easily.\n<i>(Ular o'yinni osongina yutib olishadi — bashorat)</i>\n\n❗ <b>Muhim eslatma:</b>\n<b>Will</b> dan so'ng keladigan fe'l har doim asosiy shaklida keladi. Unga <b>-s</b>, <b>-ing</b> yoki <b>-ed</b> qo'shimchalari qo me'yorida qo'shilmaydi hamda <b>to</b> yuklamasi ishlatilmaydi.\n\n❌ <i>She will goes to the store.</i>\n✅ <b>She will go</b> to the store.\n\n📝 <b>Kichik maslahat:</b> So'zlashuv nutqida <b>will</b> ko'pincha qisqartirilib, <b>'ll</b> ko'rinishida yoziladi (masalan: <b>I'll</b>, <b>you'll</b>, <b>they'll</b>)."
+      }
+    },
+    {
+      "date": "2026-11-20",
+      "topic": "Yes/No questions va Wh-questions (ha/yo'q va so'roq savollari)",
+      "parts": {
+        "1": "🇬🇧 <b>Ingliz tilida savol berish san'ati: Yes/No va Wh-questions</b> (1/5-qism)\n\n📌 Ingliz tilida muloqot qilishning eng muhim bosqichlaridan biri bu — <b>to'g'ri savol berish</b>ni o'rganishdir. Savollar orqali biz yangi ma'lumot olamiz, suhbatni davom ettiramiz va fikrimizga aniqlik kiritamiz. Ingliz grammatikasida savollar asosan ikki katta guruhga bo'linadi: <b>Yes/No questions</b> (ha/yo'q savollari) va <b>Wh-questions</b> (maxsus so'roq savollari). Birinchi turi faqat tasdiq yoki inkor javobini talab qilsa, ikkinchi turi ko'proq ma'lumot olish uchun ishlatiladi.\n\n📖 Misollarga e'tibor bering:\n\n🗣️ <b>Are you a student?</b> — Siz talabasiz-mi? (Javob: <i>Yes, I am</i> yoki <i>No, I am not</i>)\n\n🗣️ <b>Where do you live?</b> — Siz qayerda yashaysiz? (Javob: <i>I live in Tashkent</i>)\n\n💡 Ushbu 5 qismli dars seriyamizning keyingi sonlarida savollarning darak, inkor va so'roq shakllarida qanday tuzilishini batafsil ko'rib chiqamiz. Biz bilan birga o'rganishda davom eting!"
       }
     }
   ]
