@@ -10,7 +10,8 @@
       "Yes/No questions va Wh-questions (ha/yo'q va so'roq savollari)",
       "Reported speech - Statements (say va tell bilan gaplarni ko'chirish)",
       "Going to (rejalar va niyatlar uchun)",
-      "Past Continuous (o'tmishdagi davom etayotgan harakatlar uchun)"
+      "Past Continuous (o'tmishdagi davom etayotgan harakatlar uchun)",
+      "Can, Could (qobiliyat, imkoniyat va ruxsat uchun)"
     ],
     "topic_vocab": [
       "People & Personality (Insonlar va xarakter)",
@@ -61,10 +62,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-11-23",
-    "topic": "Past Continuous (o'tmishdagi davom etayotgan harakatlar uchun)",
+    "date": "2026-11-24",
+    "topic": "Can, Could (qobiliyat, imkoniyat va ruxsat uchun)",
     "part": 1,
-    "video_url": "https://www.youtube.com/watch?v=bTWa5M4UMO8",
+    "video_url": "https://www.youtube.com/watch?v=-aZLQHU0psM",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -611,6 +612,13 @@
       "topic": "Past Continuous (o'tmishdagi davom etayotgan harakatlar uchun)",
       "parts": {
         "1": "📌 <b>Past Continuous</b> zamoni: <b>Umumiy tushuncha</b> (1/5-qism)\n\n💡 <b>Past Continuous</b> (O'tmishdagi davomli zamon) o'tmishdagi ma'lum bir vaqtda <b>davom etayotgan</b> harakat va jarayonlarni ifodalash uchun ishlatiladi. Bu zamonda harakatning natijasi yoki yakuni emas, balki aynan o'sha paytda <b>bajarilayotgan jarayon</b> muhim hisoblanadi. Masalan, kecha soat 5 da nima qilayotganingizni aytishda ushbu zamon qo'llaniladi. O'zbek tiliga bu shakl ko'pincha <b>\"-yotgan edi\"</b> qo'shimchasi bilan tarjima qilinadi.\n\n📖 Misollar bilan tushunib olamiz:\n\n• I <b>was reading</b> a book at 5 p.m. yesterday.\n<i>(Men kecha soat 5 da kitob <b>o'qiyotgan edim</b>.)</i>\n\n• They <b>were playing</b> football all evening.\n<i>(Ular kunning ikkinchi yarmida futbol <b>o'ynayotgan edilar</b>.)</i>\n\n📝 Seriyamizning keyingi qismlarida <b>Past Continuous</b> zamonida darak, inkor hamda so'roq gaplarni to'g me'yorda tuzish qoidalarini birma-bir ko'rib chiqamiz. Kanalimizni kuzatib boring!"
+      }
+    },
+    {
+      "date": "2026-11-24",
+      "topic": "Can, Could (qobiliyat, imkoniyat va ruxsat uchun)",
+      "parts": {
+        "1": "📌 <b>Can</b> va <b>Could</b>: Qobiliyat, imkoniyat va ruxsat (1/5)\n\n💡 Ingliz tilida eng ko'p qo'llaniladigan modal fe'llardan biri <b>can</b> va <b>could</b> hisoblanadi. Bu fe'llar insonning <i>qobiliyati</i>, muayyan vaziyatdagi <i>imkoniyati</i> yoki birovdan so'raladigan <i>ruxsat</i>ni ifodalash uchun xizmat qiladi. Hozirgi zamon uchun <b>can</b> ishlatilsa, o'tgan zamon hamda xushmuomala iltimoslar uchun <b>could</b> qo'llaniladi. Eng muhimi, bu fe'llardan so'ng keladigan asosiy fe'l hech qanday qo'shimchasiz, ya'ni bosh shaklda keladi.\n\n📖 <b>Misollar:</b>\n\n• I <b>can speak</b> English very well.\n(Men ingliz tilida juda yaxshi <i>gapira olaman</i>.)\n\n• She <b>could swim</b> when she was five years old.\n(U besh yoshida <i>suzishni bilardi</i>.)\n\n• <b>Could you help</b> me with this task?\n(Menga ushbu topshiriqda <i>yordam bera olasizmi</i>?)\n\n📝 <b>Eslatma:</b>\nSeriyamizning keyingi qismlarida <b>can</b> va <b>could</b> yordamida darak, inkor va so'roq gap tuzilishini bosqichma-bosqich ko'rib chiqamiz. Kanalimizni kuzatib boring!"
       }
     }
   ]
