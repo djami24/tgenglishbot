@@ -12,7 +12,8 @@
       "Going to (rejalar va niyatlar uchun)",
       "Past Continuous (o'tmishdagi davom etayotgan harakatlar uchun)",
       "Can, Could (qobiliyat, imkoniyat va ruxsat uchun)",
-      "Past Simple (tugallangan o'tmish harakatlari uchun)"
+      "Past Simple (tugallangan o'tmish harakatlari uchun)",
+      "Relative clauses - Defining va Non-defining (who, which, that bilan)"
     ],
     "topic_vocab": [
       "People & Personality (Insonlar va xarakter)",
@@ -67,10 +68,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-11-25",
-    "topic": "Past Simple (tugallangan o'tmish harakatlari uchun)",
-    "part": 5,
-    "video_url": "https://www.youtube.com/watch?v=MI3S3kdkofo",
+    "date": "2026-11-26",
+    "topic": "Relative clauses - Defining va Non-defining (who, which, that bilan)",
+    "part": 1,
+    "video_url": "https://www.youtube.com/watch?v=eFmfoeTkhH0",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -638,6 +639,13 @@
         "3": "📌 <b>Past Simple</b>: Inkor gaplar (3/5-qism)\n\n💡 O'tmishda sodir bo'lmagan harakat haqida gapirganda, barcha egaliklar uchun <b>didn't</b> (did not) yordamchi fe'lidan foydalanamiz.\n\n📝 Inkor gap formulasi: <b>Subject + didn't + Verb 1</b>\n\n🗣️ Misollarni ko'rib chiqamiz:\n\n• I <b>didn't see</b> him yesterday.\n<i>(Men kecha uni ko'rmadim.)</i>\n\n• She <b>didn't go</b> to school last Monday.\n<i>(U o'tgan dushanba kuni maktabga bormadi.)</i>\n\n• They <b>didn't watch</b> the movie last night.\n<i>(Ular kecha kechqurun kinoni tomosha qilishmadi.)</i>\n\n• We <b>didn't buy</b> a new car.\n<i>(Biz yangi mashina sotib olmadik.)</i>\n\n❗ <b>Muhim eslatma:</b>\nGapda <b>didn't</b> ishlatilganda, undan keyingi asosiy fe'l har doim o'zining <b>boshlang'ich shaklida (V1)</b> keladi. Fe'lga <i>-ed</i> qo'shimchasi yoki 2-shakl (V2) qo'shilmadi!\n\n❌ Xato: I didn't <b>went</b> there.\n✅ To'g'ri: I didn't <b>go</b> there.",
         "4": "📌 <b>Past Simple</b> – So'roq gaplar (4/5-qism)\n\n❓ O'tmishda sodir bo'lgan harakatlar haqida so'rash uchun <b>Past Simple</b> zamonining so'roq shaklidan foydalanamiz.\n\n📌 <b>Umumiy so'roq gaplar (Yes/No):</b>\n<b>Did</b> + ega + <b>fe'l (V1)</b> + ...?\n\n📌 <b>Maxsus so'roq gaplar (Wh- questions):</b>\n<b>Wh-so'z</b> + <b>did</b> + ega + <b>fe'l (V1)</b> + ...?\n\n🗣️ <b>Misollar:</b>\n\n▪️ <b>Did you watch</b> the movie yesterday?\n(Kecha filmni <i>ko'rdingizmi</i>?)\n\n▪️ <b>Did she call</b> you last night?\n(U kecha tunda sizga <i>qo'ng'iroq qildimi</i>?)\n\n▪️ <b>Where did you go</b> last weekend?\n(O'tgan dam olish kunida <i>qayerga bordingiz</i>?)\n\n▪️ <b>What did they buy</b> at the store?\n(Ular do'kondan <i>nima sotib olishdi</i>?)\n\n💡 <b>Qisqa eslatma:</b> So'roq gapda <b>Did</b> yordamchi fe'li kelgani uchun asosiy fe'l har doim o'zining boshlang'ich shaklida (<b>V1</b>) ishlatiladi. Unga <b>-ed</b> qo'shimchasi qo me'yoran qo'shilmaydi va noto'g'ri fe'llarning ikkinchi shakli ishlatilmaydi.",
         "5": "📌 <b>Past Simple: Amaliyot va yakun</b> (5/5-qism)\n\n⚠️ <b>Ko'p qilinadigan xatolar</b>\n\nO'quvchilar ushbu mavzuda ko me'yorda quyidagi ikkita xatoga yo'l qo'yishadi:\n\n1. Inkor va so'roq gaplarda <b>did</b> yordamchi fe'li ishlatilgandan so'ng ham asosiy fe'lni o'tmish zamon shaklida qoldirish. Masalan: <i>I didn't went</i> (xato) ❌ ➔ <b>I didn't go</b> (to'g'ri) ✅\n\n2. Harakat fe'li bo'lgan gaplarda <b>did</b> va <b>was/were</b> fe'llarini birga aralashtirib yuborish. Masalan: <i>Did you were there?</i> (xato) ❌ ➔ <b>Were you there?</b> (to'g'ri) ✅\n\n📝 <b>Mashq: Qavs ichidagi fe'llarni Past Simple shaklida yozing:</b>\n\n1. She ___ (visit) her grandparents last weekend.\n2. They ___ (not / watch) the movie yesterday.\n3. ___ you ___ (buy) a new car last month?\n4. We ___ (be) very tired after the long trip.\n\n✅ <b>Javoblar:</b>\n\n1. <b>visited</b> (to'g'ri fe'lga <i>-ed</i> qo'shimchasi qo'shiladi)\n2. <b>didn me'yoriy / didn't watch</b> (inkorda <i>did not</i> va fe'lning boshlang'ich shakli keladi)\n3. <b>Did ... buy</b> (so'roq gapda <i>Did</i> oldinga o'tadi va fe'l o'zgarmaydi)\n4. <b>were</b> (<i>we</i> kishilik olmoshi uchun <i>be</i> fe'li <i>were</i> shakliga o'tadi)"
+      }
+    },
+    {
+      "date": "2026-11-26",
+      "topic": "Relative clauses - Defining va Non-defining (who, which, that bilan)",
+      "parts": {
+        "1": "📌 <b>Relative Clauses</b> haqida umumiy tushuncha (1/5-qism)\n\n📖 <b>Relative clauses</b> (nisbiy ergash gaplar) ingliz tilida shaxs, narsa yoki joy haqida aniqlik kiritish va ma'lumot berish uchun xizmat qiladi. Ular bir nechta qisqa gaplarni bitta mukammal va ravon gapga biriktirishga yordam beradi. Bunday ergash gaplar asosan <b>who</b>, <b>which</b> va <b>that</b> kabi nisbiy olmoshlar vositasida bog'lanadi. Ushbu mavzu ikkita asosiy turga bo'linadi: <b>Defining</b> (muhim ma'lumot beruvchi) va <b>Non-defining</b> (qo'shimcha ma'lumot beruvchi).\n\n💡 <b>Misollar:</b>\n\n🔹 The girl <b>who</b> called you is my sister.\n<i>(Sizga qo'ng'iroq qilgan qiz mening singlim.)</i>\n\n🔹 This is the phone <b>which</b> I bought last week.\n<i>(Bu men o'tgan haftada sotib olgan telefon.)</i>\n\n📝 Seriyamizning keyingi qismlarida <b>Defining</b> hamda <b>Non-defining</b> turlarining farqlarini, turli gap shakllarida ushbu olmoshlarning to'g'ri ishlatilishini bosqichma-bosqich o'rganamiz. Kanallni kuzatib boring!"
       }
     }
   ]
