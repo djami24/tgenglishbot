@@ -14,7 +14,8 @@
       "Can, Could (qobiliyat, imkoniyat va ruxsat uchun)",
       "Past Simple (tugallangan o'tmish harakatlari uchun)",
       "Relative clauses - Defining va Non-defining (who, which, that bilan)",
-      "Present Continuous (hozir davom etayotgan harakatlar uchun)"
+      "Present Continuous (hozir davom etayotgan harakatlar uchun)",
+      "Past Perfect (o'tmish voqealar tartibini ko'rsatish uchun)"
     ],
     "topic_vocab": [
       "People & Personality (Insonlar va xarakter)",
@@ -71,10 +72,10 @@
     ]
   },
   "grammar_daily": {
-    "date": "2026-11-27",
-    "topic": "Present Continuous (hozir davom etayotgan harakatlar uchun)",
+    "date": "2026-11-28",
+    "topic": "Past Perfect (o'tmish voqealar tartibini ko'rsatish uchun)",
     "part": 1,
-    "video_url": "https://www.youtube.com/watch?v=w04YVmJR4w4",
+    "video_url": "https://www.youtube.com/watch?v=Jjj5-KnpdIQ",
     "cycle_complete_today": false
   },
   "grammar_archive": [
@@ -657,6 +658,13 @@
       "topic": "Present Continuous (hozir davom etayotgan harakatlar uchun)",
       "parts": {
         "1": "📌 <b>Present Continuous</b>: Hozir davom etayotgan harakatlar (1/5-qism)\n\n📖 Bugungi darsimizda ingliz tilidagi eng ko'p ishlatiladigan zamonlardan biri — <b>Present Continuous</b> (Hozirgi davomli zamon) haqida umumiy tushunchaga ega bo'lamiz.\n\n💡 Ushbu zamon <b>aynan hozir</b>, ya'ni so'zlanayotgan lahzada sodir bo'layotgan va hali yakunlanmagan harakat-jarayonlarni ifodalash uchun xizmat qiladi. Masalan, siz ayni daqiqada ushbu postni <b>o'qiyapsiz</b> va ingliz tili qoidasini <b>o'rganyapsiz</b>. Harakatning ayni daqiqada davom etayotgani ushbu zamonning eng asosiy belgisidir.\n\n📝 <b>Misollarni ko'rib chiqamiz:</b>\n\n✅ I <b>am reading</b> an interesting post right now.\n<i>(Men hozir qiziqarli postni o'qiyapman.)</i>\n\n✅ They <b>are playing</b> football in the yard at the moment.\n<i>(Ular ayni damda hovlida futbol o'ynashyapti.)</i>\n\n❗ <b>Eslatma:</b> Seriyamizning kelgusi qismlarida Present Continuous zamonida darak, inkor hamda so'roq gaplarni to'g'ri tuzish qoidalarini birma-bir batafsil ko'rib chiqamiz. Bizni kuzatib boring!"
+      }
+    },
+    {
+      "date": "2026-11-28",
+      "topic": "Past Perfect (o'tmish voqealar tartibini ko'rsatish uchun)",
+      "parts": {
+        "1": "⏳ <b>Past Perfect</b> zamoni: O'tmish voqealari ketma-ketligi (1/5)\n\n📌 <b>Past Perfect</b> (O'tgan tugallangan zamon) o'tmishda sodir bo'lgan ikki yoki undan ortiq voqea-hodisalarning ketma-ketligini ko'rsatish uchun ishlatiladi. Agar o'tmishda ikkita ish-harakat yuz bergan bo'lsa, ulardan <b>birinchisi</b> (oldinroq bajarilgani) Past Perfect zamonida, <b>ikkinchisi</b> (keyinroq bajarilgani) esa Simple Past zamonida ifodalanadi. Bu zamon o'tmishdagi voqealar zanjirida qaysi harakat ilgariroq sodir bo'lganini aniq ko'rsatib beradi.\n\n📖 <b>Misollar:</b>\n\n🔹 When I arrived at the station, the train <b>had already left</b>.\n(Men vokzalga yetib kelganimda, poyezd <b>allaqachon jo'nab ketgan edi</b>.)\n\n🔹 She <b>had finished</b> her homework before her mother came home.\n(Onasi uyga kelishidan oldin u uy vazifasini <b>bajarib bo'lgan edi</b>.)\n\n💡 <b>Eslatma:</b> Bugungi kirish qismida ushbu zamonning asosiy mazmunini ko'rib chiqdik. Seriyamizning keyingi qismlarida <b>Past Perfect</b> zamonida darak, inkor va so'roq gaplar qanday tuzilishini batafsil o'rganamiz. Kanalni kuzatib boring!"
       }
     }
   ]
